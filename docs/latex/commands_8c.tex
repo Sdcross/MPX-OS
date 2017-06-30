@@ -1,0 +1,71 @@
+\hypertarget{commands_8c}{}\section{kernel/core/commands.c File Reference}
+\label{commands_8c}\index{kernel/core/commands.\+c@{kernel/core/commands.\+c}}
+{\ttfamily \#include $<$core/commands.\+h$>$}\\*
+{\ttfamily \#include $<$core/version.\+h$>$}\\*
+{\ttfamily \#include $<$core/help.\+h$>$}\\*
+{\ttfamily \#include $<$core/serial.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$regex.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+Include dependency graph for commands.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{commands_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{commands_8c_a52a5f8d5a6cddf91cd85fb09b8d48dce}{version} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{commands_8c_ad9c2acc4a9daa1ebf06b295a4cef9aed}{date} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{commands.\+c@{commands.\+c}!date@{date}}
+\index{date@{date}!commands.\+c@{commands.\+c}}
+\subsubsection[{\texorpdfstring{date(char $\ast$$\ast$args, int num\+Args)}{date(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ date (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8c_ad9c2acc4a9daa1ebf06b295a4cef9aed}{}\label{commands_8c_ad9c2acc4a9daa1ebf06b295a4cef9aed}
+Returns the current date/time in I\+S\+O-\/8601 format. Improperly specified date/times are ignored.
+
+Usage\+: date \mbox{[}--date\mbox{]} \mbox{[}--time\mbox{]} \mbox{[}--setdate yyyy-\/\+M\+M-\/dd\mbox{]} \mbox{[}--settime hh\+:mm\+:ss\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Return the date and time --date -\/ Return the date --time -\/ Return the time --setdate -\/ Sets the date to the specified date (returns the new date) --settime -\/ Sets the time to the specified time (returns the new time)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The I\+S\+O-\/8601 formatted date 
+\end{DoxyReturn}
+\index{commands.\+c@{commands.\+c}!version@{version}}
+\index{version@{version}!commands.\+c@{commands.\+c}}
+\subsubsection[{\texorpdfstring{version(char $\ast$$\ast$args, int num\+Args)}{version(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ version (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8c_a52a5f8d5a6cddf91cd85fb09b8d48dce}{}\label{commands_8c_a52a5f8d5a6cddf91cd85fb09b8d48dce}
+Returns the current version of the OS.
+
+Usage\+: version
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Returns the version
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The version of the OS. 
+\end{DoxyReturn}

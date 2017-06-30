@@ -1,0 +1,198 @@
+\hypertarget{paging_8c}{}\section{kernel/mem/paging.c File Reference}
+\label{paging_8c}\index{kernel/mem/paging.\+c@{kernel/mem/paging.\+c}}
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}mem/heap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mem/paging.\+h\char`\"{}}\\*
+Include dependency graph for paging.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{paging_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{paging_8c_a70101fc152ff58caafbe36ab391a9a68}{set\+\_\+bit} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} addr)
+\item 
+void \hyperlink{paging_8c_adcef508c82c20a032508f871e79e1b92}{clear\+\_\+bit} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} addr)
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_a317b4797bc81f65bd01cfa190800ecdd}{get\+\_\+bit} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} addr)
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_acb3c25257061521382c7ba900c1c1ab4}{first\+\_\+free} ()
+\item 
+\hyperlink{structpage__entry}{page\+\_\+entry} $\ast$ \hyperlink{paging_8c_a69b165b3d1adf3aeaae126ca7a5aac3e}{get\+\_\+page} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} addr, \hyperlink{structpage__dir}{page\+\_\+dir} $\ast$dir, int make\+\_\+table)
+\item 
+void \hyperlink{paging_8c_a919b727f386797a8b9d8eceb5c4e7313}{init\+\_\+paging} ()
+\item 
+void \hyperlink{paging_8c_a31e6c585cbda542534f1b0fc83e40689}{load\+\_\+page\+\_\+dir} (\hyperlink{structpage__dir}{page\+\_\+dir} $\ast$new\+\_\+dir)
+\item 
+void \hyperlink{paging_8c_a04bce9da2c1d7c59f6efd8e4d9b54db7}{new\+\_\+frame} (\hyperlink{structpage__entry}{page\+\_\+entry} $\ast$page)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_abf8475f59bfb67fac4b6b5a254dfe56d}{mem\+\_\+size} = 0x4000000
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_a1cc472551ec40b65eef931fde01054e7}{page\+\_\+size} = 0x1000
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_abf36580d5618820f15388083c9313e60}{nframes}
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} $\ast$ \hyperlink{paging_8c_a76492529572a1a20a06076ac40d66b29}{frames}
+\item 
+\hyperlink{structpage__dir}{page\+\_\+dir} $\ast$ \hyperlink{paging_8c_a61ce943ba80d9dfab89a826cae9ddc4a}{kdir} = 0
+\item 
+\hyperlink{structpage__dir}{page\+\_\+dir} $\ast$ \hyperlink{paging_8c_af7da380833e92d5c7d3c3db41484713b}{cdir} = 0
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{paging_8c_a6dfa4ef84e115e891b3679e4932b5c49}{phys\+\_\+alloc\+\_\+addr}
+\item 
+\hyperlink{structheap}{heap} $\ast$ \hyperlink{paging_8c_a61825456a33b09780a5493c95adcae8a}{kheap}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{paging.\+c@{paging.\+c}!clear\+\_\+bit@{clear\+\_\+bit}}
+\index{clear\+\_\+bit@{clear\+\_\+bit}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{clear\+\_\+bit(u32int addr)}{clear_bit(u32int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_adcef508c82c20a032508f871e79e1b92}{}\label{paging_8c_adcef508c82c20a032508f871e79e1b92}
+Marks a page frame bit as free (0).
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The address of the frame \\
+\hline
+\end{DoxyParams}
+\index{paging.\+c@{paging.\+c}!first\+\_\+free@{first\+\_\+free}}
+\index{first\+\_\+free@{first\+\_\+free}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{first\+\_\+free()}{first_free()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} first\+\_\+free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_acb3c25257061521382c7ba900c1c1ab4}{}\label{paging_8c_acb3c25257061521382c7ba900c1c1ab4}
+Finds the first free page frame.
+
+\begin{DoxyReturn}{Returns}
+The first free page frame 
+\end{DoxyReturn}
+\index{paging.\+c@{paging.\+c}!get\+\_\+bit@{get\+\_\+bit}}
+\index{get\+\_\+bit@{get\+\_\+bit}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+bit(u32int addr)}{get_bit(u32int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} get\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a317b4797bc81f65bd01cfa190800ecdd}{}\label{paging_8c_a317b4797bc81f65bd01cfa190800ecdd}
+Checks if page frame is in use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The address of the frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it is in use 
+\end{DoxyReturn}
+\index{paging.\+c@{paging.\+c}!get\+\_\+page@{get\+\_\+page}}
+\index{get\+\_\+page@{get\+\_\+page}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+page(u32int addr, page\+\_\+dir $\ast$dir, int make\+\_\+table)}{get_page(u32int addr, page_dir *dir, int make_table)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+\_\+entry}$\ast$ get\+\_\+page (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{addr, }
+\item[{{\bf page\+\_\+dir} $\ast$}]{dir, }
+\item[{int}]{make\+\_\+table}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a69b165b3d1adf3aeaae126ca7a5aac3e}{}\label{paging_8c_a69b165b3d1adf3aeaae126ca7a5aac3e}
+Finds and returns a page, allocating a new page table if necessary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The address of the page \\
+\hline
+{\em dir} & The page directory \\
+\hline
+{\em make\+\_\+table} & Boolean to create a table if necessary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the page 
+\end{DoxyReturn}
+\index{paging.\+c@{paging.\+c}!init\+\_\+paging@{init\+\_\+paging}}
+\index{init\+\_\+paging@{init\+\_\+paging}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+paging()}{init_paging()}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+paging (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a919b727f386797a8b9d8eceb5c4e7313}{}\label{paging_8c_a919b727f386797a8b9d8eceb5c4e7313}
+Initializes the kernel page directory and initial kernel heap area. Performs identity mapping of the kernel frames such that the virtual addresses are equivalent to the physical addresses. \index{paging.\+c@{paging.\+c}!load\+\_\+page\+\_\+dir@{load\+\_\+page\+\_\+dir}}
+\index{load\+\_\+page\+\_\+dir@{load\+\_\+page\+\_\+dir}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{load\+\_\+page\+\_\+dir(page\+\_\+dir $\ast$new\+\_\+dir)}{load_page_dir(page_dir *new_dir)}}]{\setlength{\rightskip}{0pt plus 5cm}void load\+\_\+page\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf page\+\_\+dir} $\ast$}]{new\+\_\+dir}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a31e6c585cbda542534f1b0fc83e40689}{}\label{paging_8c_a31e6c585cbda542534f1b0fc83e40689}
+Sets a page directory as the current directory and enables paging via the C\+R0 register, The C\+R3 register enables address translation from linear to physical address.
+
+\href{http://en.wikipedia.org/wiki/Control_register#Control_registers_in_x86_series}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Control\+\_\+register\#\+Control\+\_\+registers\+\_\+in\+\_\+x86\+\_\+series}
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+page\+\_\+dir} & The page directory to set as the current \\
+\hline
+\end{DoxyParams}
+\index{paging.\+c@{paging.\+c}!new\+\_\+frame@{new\+\_\+frame}}
+\index{new\+\_\+frame@{new\+\_\+frame}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{new\+\_\+frame(page\+\_\+entry $\ast$page)}{new_frame(page_entry *page)}}]{\setlength{\rightskip}{0pt plus 5cm}void new\+\_\+frame (
+\begin{DoxyParamCaption}
+\item[{{\bf page\+\_\+entry} $\ast$}]{page}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a04bce9da2c1d7c59f6efd8e4d9b54db7}{}\label{paging_8c_a04bce9da2c1d7c59f6efd8e4d9b54db7}
+Marks a frame as in use un the frame bitmap, sets up the page, and saves$\ast$ the frame index in the page.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & The page to create the frame in \\
+\hline
+\end{DoxyParams}
+\index{paging.\+c@{paging.\+c}!set\+\_\+bit@{set\+\_\+bit}}
+\index{set\+\_\+bit@{set\+\_\+bit}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+bit(u32int addr)}{set_bit(u32int addr)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{paging_8c_a70101fc152ff58caafbe36ab391a9a68}{}\label{paging_8c_a70101fc152ff58caafbe36ab391a9a68}
+Marks a page frame bit as in use (1).
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The address of the frame \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{paging.\+c@{paging.\+c}!cdir@{cdir}}
+\index{cdir@{cdir}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{cdir}{cdir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+\_\+dir}$\ast$ cdir = 0}\hypertarget{paging_8c_af7da380833e92d5c7d3c3db41484713b}{}\label{paging_8c_af7da380833e92d5c7d3c3db41484713b}
+\index{paging.\+c@{paging.\+c}!frames@{frames}}
+\index{frames@{frames}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{frames}{frames}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int}$\ast$ frames}\hypertarget{paging_8c_a76492529572a1a20a06076ac40d66b29}{}\label{paging_8c_a76492529572a1a20a06076ac40d66b29}
+\index{paging.\+c@{paging.\+c}!kdir@{kdir}}
+\index{kdir@{kdir}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{kdir}{kdir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+\_\+dir}$\ast$ kdir = 0}\hypertarget{paging_8c_a61ce943ba80d9dfab89a826cae9ddc4a}{}\label{paging_8c_a61ce943ba80d9dfab89a826cae9ddc4a}
+\index{paging.\+c@{paging.\+c}!kheap@{kheap}}
+\index{kheap@{kheap}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{kheap}{kheap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf heap}$\ast$ kheap}\hypertarget{paging_8c_a61825456a33b09780a5493c95adcae8a}{}\label{paging_8c_a61825456a33b09780a5493c95adcae8a}
+\index{paging.\+c@{paging.\+c}!mem\+\_\+size@{mem\+\_\+size}}
+\index{mem\+\_\+size@{mem\+\_\+size}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{mem\+\_\+size}{mem_size}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} mem\+\_\+size = 0x4000000}\hypertarget{paging_8c_abf8475f59bfb67fac4b6b5a254dfe56d}{}\label{paging_8c_abf8475f59bfb67fac4b6b5a254dfe56d}
+\index{paging.\+c@{paging.\+c}!nframes@{nframes}}
+\index{nframes@{nframes}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{nframes}{nframes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} nframes}\hypertarget{paging_8c_abf36580d5618820f15388083c9313e60}{}\label{paging_8c_abf36580d5618820f15388083c9313e60}
+\index{paging.\+c@{paging.\+c}!page\+\_\+size@{page\+\_\+size}}
+\index{page\+\_\+size@{page\+\_\+size}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{page\+\_\+size}{page_size}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} page\+\_\+size = 0x1000}\hypertarget{paging_8c_a1cc472551ec40b65eef931fde01054e7}{}\label{paging_8c_a1cc472551ec40b65eef931fde01054e7}
+\index{paging.\+c@{paging.\+c}!phys\+\_\+alloc\+\_\+addr@{phys\+\_\+alloc\+\_\+addr}}
+\index{phys\+\_\+alloc\+\_\+addr@{phys\+\_\+alloc\+\_\+addr}!paging.\+c@{paging.\+c}}
+\subsubsection[{\texorpdfstring{phys\+\_\+alloc\+\_\+addr}{phys_alloc_addr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} phys\+\_\+alloc\+\_\+addr}\hypertarget{paging_8c_a6dfa4ef84e115e891b3679e4932b5c49}{}\label{paging_8c_a6dfa4ef84e115e891b3679e4932b5c49}

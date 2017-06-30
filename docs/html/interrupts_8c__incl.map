@@ -1,0 +1,7 @@
+<map id="kernel/core/interrupts.c" name="kernel/core/interrupts.c">
+<area shape="rect" id="node2" href="$system_8h.html" title="system.h" alt="" coords="97,155,173,181"/>
+<area shape="rect" id="node3" href="$io_8h.html" title="core/io.h" alt="" coords="23,80,95,107"/>
+<area shape="rect" id="node4" href="$serial_8h.html" title="core/serial.h" alt="" coords="119,80,213,107"/>
+<area shape="rect" id="node5" href="$tables_8h.html" title="core/tables.h" alt="" coords="237,80,335,107"/>
+<area shape="rect" id="node6" href="$interrupts_8h.html" title="core/interrupts.h" alt="" coords="359,80,475,107"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="include/mem/memoryControl.h" name="include/mem/memoryControl.h">
+<area shape="rect" id="node2" href="$mem_commands_8h.html" title="include/modules/R5\l/memCommands.h" alt="" coords="126,80,263,121"/>
+<area shape="rect" id="node4" href="$mem_commands_8c.html" title="modules/R5/memCommands.c" alt="" coords="200,169,403,196"/>
+<area shape="rect" id="node5" href="$kmain_8c.html" title="kernel/core/kmain.c" alt="" coords="339,87,475,114"/>
+<area shape="rect" id="node6" href="$memory_control_8c.html" title="kernel/mem/memoryControl.c" alt="" coords="499,87,693,114"/>
+<area shape="rect" id="node7" href="$r5commands_8c.html" title="modules/R5/commands\l/r5commands.c" alt="" coords="717,80,877,121"/>
+<area shape="rect" id="node3" href="$com_handler_8c.html" title="kernel/core/comHandler.c" alt="" coords="5,169,176,196"/>
+</map>

@@ -1,0 +1,140 @@
+\hypertarget{temp_8c}{}\section{modules/\+R2/commands/temp.c File Reference}
+\label{temp_8c}\index{modules/\+R2/commands/temp.\+c@{modules/\+R2/commands/temp.\+c}}
+{\ttfamily \#include $<$core/com\+Handler.\+h$>$}\\*
+{\ttfamily \#include $<$core/help.\+h$>$}\\*
+{\ttfamily \#include $<$core/queue.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R2/commands/temp.\+h$>$}\\*
+Include dependency graph for temp.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{temp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{temp_8c_a81189cb37f2afeab192231685edecd88}{register\+R2\+Temp\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{temp_8c_a5e63afd4ae8abb41356eb748bef35d35}{create\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{temp_8c_ab9749ddce5f9526746d36289fc41df80}{delete\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{temp_8c_a679c0f302ee2c34f32fa616bc5e8353d}{block\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{temp_8c_a9d9f1d27d45b617d33b361480b80e91f}{unblock\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{temp.\+c@{temp.\+c}!block\+Pcb@{block\+Pcb}}
+\index{block\+Pcb@{block\+Pcb}!temp.\+c@{temp.\+c}}
+\subsubsection[{\texorpdfstring{block\+Pcb(char $\ast$$\ast$args, int num\+Args)}{blockPcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ block\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{temp_8c_a679c0f302ee2c34f32fa616bc5e8353d}{}\label{temp_8c_a679c0f302ee2c34f32fa616bc5e8353d}
+Places a P\+CB into the blocked state and reinserts it into the appropriate queue.
+
+Note\+: This command will be removed in module R3/\+R4
+
+Usage\+: bpcb name
+
+Args\+: name -\/ The Process Name to place into the blocked state (must exist)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{temp.\+c@{temp.\+c}!create\+Pcb@{create\+Pcb}}
+\index{create\+Pcb@{create\+Pcb}!temp.\+c@{temp.\+c}}
+\subsubsection[{\texorpdfstring{create\+Pcb(char $\ast$$\ast$args, int num\+Args)}{createPcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ create\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{temp_8c_a5e63afd4ae8abb41356eb748bef35d35}{}\label{temp_8c_a5e63afd4ae8abb41356eb748bef35d35}
+Creates a P\+CB and inserts it into the appropriate queue.
+
+Note\+: This command will be removed in module R3/\+R4
+
+Usage\+: cpcb name class priority
+
+Args\+: name -\/ The Process Name (must be unique) class -\/ The Process Class (either 0 (system) or 1 (application)) priority -\/ The Process Priority (number between 0 and 9)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{temp.\+c@{temp.\+c}!delete\+Pcb@{delete\+Pcb}}
+\index{delete\+Pcb@{delete\+Pcb}!temp.\+c@{temp.\+c}}
+\subsubsection[{\texorpdfstring{delete\+Pcb(char $\ast$$\ast$args, int num\+Args)}{deletePcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ delete\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{temp_8c_ab9749ddce5f9526746d36289fc41df80}{}\label{temp_8c_ab9749ddce5f9526746d36289fc41df80}
+Removes a P\+CB from the appropriate queue and then frees all associated memory.
+
+Note\+: This command will be removed in module R3/\+R4
+
+Usage\+: dpcb name
+
+Args\+: name -\/ The Process Name to remove (must exist)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{temp.\+c@{temp.\+c}!register\+R2\+Temp\+Commands@{register\+R2\+Temp\+Commands}}
+\index{register\+R2\+Temp\+Commands@{register\+R2\+Temp\+Commands}!temp.\+c@{temp.\+c}}
+\subsubsection[{\texorpdfstring{register\+R2\+Temp\+Commands()}{registerR2TempCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R2\+Temp\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{temp_8c_a81189cb37f2afeab192231685edecd88}{}\label{temp_8c_a81189cb37f2afeab192231685edecd88}
+Registers the temporary commands in the command handler \index{temp.\+c@{temp.\+c}!unblock\+Pcb@{unblock\+Pcb}}
+\index{unblock\+Pcb@{unblock\+Pcb}!temp.\+c@{temp.\+c}}
+\subsubsection[{\texorpdfstring{unblock\+Pcb(char $\ast$$\ast$args, int num\+Args)}{unblockPcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ unblock\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{temp_8c_a9d9f1d27d45b617d33b361480b80e91f}{}\label{temp_8c_a9d9f1d27d45b617d33b361480b80e91f}
+Places a P\+CB into the unblocked state and reinserts it into the appropriate queue.
+
+Note\+: This command will be removed in module R3/\+R4
+
+Usage\+: upcb name
+
+Args\+: name -\/ The Process Name to place into the unblocked state (must exist)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}

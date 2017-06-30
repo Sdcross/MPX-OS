@@ -1,0 +1,9 @@
+<map id="kernel/mem/memoryControl.c" name="kernel/mem/memoryControl.c">
+<area shape="rect" id="node2" href="$system_8h.html" title="system.h" alt="" coords="183,379,259,405"/>
+<area shape="rect" id="node3" href="$heap_8h.html" title="mem/heap.h" alt="" coords="5,155,100,181"/>
+<area shape="rect" id="node4" href="$memory_control_8h.html" title="mem/memoryControl.h" alt="" coords="166,80,321,107"/>
+<area shape="rect" id="node5" href="$mpx__supt_8h.html" title="modules/mpx_supt.h" alt="" coords="229,155,372,181"/>
+<area shape="rect" id="node8" href="$boolean_8h.html" title="boolean.h" alt="" coords="399,304,477,331"/>
+<area shape="rect" id="node6" href="$queue_8h.html" title="core/queue.h" alt="" coords="277,229,375,256"/>
+<area shape="rect" id="node7" href="$pcb_8h.html" title="pcb.h" alt="" coords="227,304,281,331"/>
+</map>

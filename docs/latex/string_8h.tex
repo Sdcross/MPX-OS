@@ -1,0 +1,290 @@
+\hypertarget{string_8h}{}\section{include/string.h File Reference}
+\label{string_8h}\index{include/string.\+h@{include/string.\+h}}
+{\ttfamily \#include $<$system.\+h$>$}\\*
+Include dependency graph for string.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{string_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{string_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{string_8h_a0f3d37d605e9e6d4fc1853ff9d4b91bf}{isspace} (const char $\ast$c)
+\item 
+int \hyperlink{string_8h_a6a2b9960cc4b26c5e76ef56a1c233a95}{isdigit} (const char c)
+\item 
+int \hyperlink{string_8h_a1fabc9e88c2332828090cb7d716c7db9}{is\+Char} (const char c)
+\item 
+int \hyperlink{string_8h_ab1fd9310dd20b229c2701f3fb7608830}{is\+Upper\+Char} (const char c)
+\item 
+int \hyperlink{string_8h_a37c3a81183e47d54cdbfa1cf74cb45f7}{is\+Lower\+Char} (const char c)
+\item 
+char $\ast$ \hyperlink{string_8h_a1eb9cae61e6a6282c28dbc298ef7297e}{strcpy} (char $\ast$s1, const char $\ast$s2)
+\item 
+char $\ast$ \hyperlink{string_8h_a8908188ae9fc2f05d993257ef001d553}{strcat} (char $\ast$s1, const char $\ast$s2)
+\item 
+int \hyperlink{string_8h_a2dee044e4e667b5b789b493abd21cfa4}{strlen} (const char $\ast$s)
+\item 
+int \hyperlink{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{strcmp} (const char $\ast$s1, const char $\ast$s2)
+\item 
+char $\ast$ \hyperlink{string_8h_af1a867dcea42fc1215d0eddf19283ef3}{strtok} (char $\ast$s1, const char $\ast$s2)
+\item 
+int \hyperlink{string_8h_a30670a60464f77af17dfb353353d6df8}{atoi} (const char $\ast$s)
+\item 
+void \hyperlink{string_8h_ad54d5e6d2a62cac148aa89737ed96236}{itoa} (int num, char $\ast$str, int \hyperlink{tables_8h_ab5763c2b18c825c8b8fba44b2e60ddc1}{base})
+\item 
+void \hyperlink{string_8h_aad7fea725cb4b198ace1aa3df5051244}{reverse} (char $\ast$str, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{string.\+h@{string.\+h}!atoi@{atoi}}
+\index{atoi@{atoi}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{atoi(const char $\ast$s)}{atoi(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int atoi (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a30670a60464f77af17dfb353353d6df8}{}\label{string_8h_a30670a60464f77af17dfb353353d6df8}
+Convert an A\+S\+C\+II string to an integer
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer value of the string, or the M\+A\+X/\+M\+IN value of an integer if the value is out of range. 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!is\+Char@{is\+Char}}
+\index{is\+Char@{is\+Char}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{is\+Char(const char c)}{isChar(const char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Char (
+\begin{DoxyParamCaption}
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a1fabc9e88c2332828090cb7d716c7db9}{}\label{string_8h_a1fabc9e88c2332828090cb7d716c7db9}
+Checks if the given char is a-\/z or A-\/Z 
+\begin{DoxyParams}{Parameters}
+{\em const} & char c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is a char, 0 otherwies
+\end{DoxyReturn}
+Checks if the given char is a-\/z or A-\/Z 
+\begin{DoxyParams}{Parameters}
+{\em const} & char c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is a char, 0 otherwise 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!isdigit@{isdigit}}
+\index{isdigit@{isdigit}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{isdigit(const char c)}{isdigit(const char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int isdigit (
+\begin{DoxyParamCaption}
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a6a2b9960cc4b26c5e76ef56a1c233a95}{}\label{string_8h_a6a2b9960cc4b26c5e76ef56a1c233a95}
+Determine if a character is a digit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the character is a digit 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!is\+Lower\+Char@{is\+Lower\+Char}}
+\index{is\+Lower\+Char@{is\+Lower\+Char}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{is\+Lower\+Char(const char c)}{isLowerChar(const char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Lower\+Char (
+\begin{DoxyParamCaption}
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a37c3a81183e47d54cdbfa1cf74cb45f7}{}\label{string_8h_a37c3a81183e47d54cdbfa1cf74cb45f7}
+Checks if the given char is a-\/z 
+\begin{DoxyParams}{Parameters}
+{\em const} & char c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is a lower char, 0 otherwise 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!isspace@{isspace}}
+\index{isspace@{isspace}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{isspace(const char $\ast$c)}{isspace(const char *c)}}]{\setlength{\rightskip}{0pt plus 5cm}int isspace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a0f3d37d605e9e6d4fc1853ff9d4b91bf}{}\label{string_8h_a0f3d37d605e9e6d4fc1853ff9d4b91bf}
+Determine if a character is whitespace.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the character is a whitespace character 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!is\+Upper\+Char@{is\+Upper\+Char}}
+\index{is\+Upper\+Char@{is\+Upper\+Char}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{is\+Upper\+Char(const char c)}{isUpperChar(const char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Upper\+Char (
+\begin{DoxyParamCaption}
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_ab1fd9310dd20b229c2701f3fb7608830}{}\label{string_8h_ab1fd9310dd20b229c2701f3fb7608830}
+Checks if the given char is A-\/Z 
+\begin{DoxyParams}{Parameters}
+{\em const} & char c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is a upper char, 0 otherwise 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!itoa@{itoa}}
+\index{itoa@{itoa}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{itoa(int num, char $\ast$str, int base)}{itoa(int num, char *str, int base)}}]{\setlength{\rightskip}{0pt plus 5cm}void itoa (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_ad54d5e6d2a62cac148aa89737ed96236}{}\label{string_8h_ad54d5e6d2a62cac148aa89737ed96236}
+Converts an integer to an A\+S\+C\+II string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & The number to convert \\
+\hline
+{\em str} & The destination string \\
+\hline
+{\em base} & The radix \\
+\hline
+\end{DoxyParams}
+\index{string.\+h@{string.\+h}!reverse@{reverse}}
+\index{reverse@{reverse}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{reverse(char $\ast$str, int len)}{reverse(char *str, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}void reverse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_aad7fea725cb4b198ace1aa3df5051244}{}\label{string_8h_aad7fea725cb4b198ace1aa3df5051244}
+Reverses a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to reverse \\
+\hline
+{\em len} & The length of the string \\
+\hline
+\end{DoxyParams}
+\index{string.\+h@{string.\+h}!strcat@{strcat}}
+\index{strcat@{strcat}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{strcat(char $\ast$s1, const char $\ast$s2)}{strcat(char *s1, const char *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strcat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a8908188ae9fc2f05d993257ef001d553}{}\label{string_8h_a8908188ae9fc2f05d993257ef001d553}
+Concatenate the contents of one string onto another.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The destination string \\
+\hline
+{\em s2} & The source string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the destination string 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!strcmp@{strcmp}}
+\index{strcmp@{strcmp}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{strcmp(const char $\ast$s1, const char $\ast$s2)}{strcmp(const char *s1, const char *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}int strcmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a11bd144d7d44914099a3aeddf1c8567d}{}\label{string_8h_a11bd144d7d44914099a3aeddf1c8567d}
+Compares two strings to each other
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first string \\
+\hline
+{\em s2} & The second string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The difference between the characters at the first index of indifference 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!strcpy@{strcpy}}
+\index{strcpy@{strcpy}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{strcpy(char $\ast$s1, const char $\ast$s2)}{strcpy(char *s1, const char *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{cpy, }
+\item[{const char $\ast$}]{ori}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a1eb9cae61e6a6282c28dbc298ef7297e}{}\label{string_8h_a1eb9cae61e6a6282c28dbc298ef7297e}
+Copy on string to another.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpy} & The destination string \\
+\hline
+{\em ori} & The source string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the destination string 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!strlen@{strlen}}
+\index{strlen@{strlen}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{strlen(const char $\ast$s)}{strlen(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int strlen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_a2dee044e4e667b5b789b493abd21cfa4}{}\label{string_8h_a2dee044e4e667b5b789b493abd21cfa4}
+Returns the length of a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!strtok@{strtok}}
+\index{strtok@{strtok}!string.\+h@{string.\+h}}
+\subsubsection[{\texorpdfstring{strtok(char $\ast$s1, const char $\ast$s2)}{strtok(char *s1, const char *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strtok (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{string_8h_af1a867dcea42fc1215d0eddf19283ef3}{}\label{string_8h_af1a867dcea42fc1215d0eddf19283ef3}
+Split string into tokens
+
+Call this function multiple times (substituting N\+U\+LL for s1) until N\+U\+LL is returned to get all tokens.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The string to split \\
+\hline
+{\em s2} & The delimiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A single token 
+\end{DoxyReturn}

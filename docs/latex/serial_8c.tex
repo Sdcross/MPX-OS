@@ -1,0 +1,141 @@
+\hypertarget{serial_8c}{}\section{kernel/core/serial.c File Reference}
+\label{serial_8c}\index{kernel/core/serial.\+c@{kernel/core/serial.\+c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$core/io.\+h$>$}\\*
+{\ttfamily \#include $<$core/serial.\+h$>$}\\*
+Include dependency graph for serial.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{serial_8c_a258bb72419ef143530a2f8f55e7d57af}{N\+O\+\_\+\+E\+R\+R\+OR}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serial_8c_a7078c07ff8b2c48780558549a8f7cf90}{init\+\_\+serial} (int device)
+\item 
+int \hyperlink{serial_8c_a3514f7abff236a4e00a6c46021ce5e22}{serial\+\_\+println} (const char $\ast$msg)
+\item 
+int \hyperlink{serial_8c_a995827efcd4dcfb780c9fbb9645410a4}{serial\+\_\+print} (const char $\ast$msg)
+\item 
+int \hyperlink{serial_8c_ae97b87ee1f57c687e7fca6f9958e03ef}{set\+\_\+serial\+\_\+out} (int device)
+\item 
+int \hyperlink{serial_8c_a3f4008da5feabfb7e086f6673a81104b}{set\+\_\+serial\+\_\+in} (int device)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serial_8c_adbb2c18b0aaab5c1927a6f674768a710}{serial\+\_\+port\+\_\+out} = 0
+\item 
+int \hyperlink{serial_8c_a1a756238531fc5bf1096f89dc18e835e}{serial\+\_\+port\+\_\+in} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{serial.\+c@{serial.\+c}!N\+O\+\_\+\+E\+R\+R\+OR@{N\+O\+\_\+\+E\+R\+R\+OR}}
+\index{N\+O\+\_\+\+E\+R\+R\+OR@{N\+O\+\_\+\+E\+R\+R\+OR}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+E\+R\+R\+OR}{NO_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+E\+R\+R\+OR~0}\hypertarget{serial_8c_a258bb72419ef143530a2f8f55e7d57af}{}\label{serial_8c_a258bb72419ef143530a2f8f55e7d57af}
+
+
+\subsection{Function Documentation}
+\index{serial.\+c@{serial.\+c}!init\+\_\+serial@{init\+\_\+serial}}
+\index{init\+\_\+serial@{init\+\_\+serial}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+serial(int device)}{init_serial(int device)}}]{\setlength{\rightskip}{0pt plus 5cm}int init\+\_\+serial (
+\begin{DoxyParamCaption}
+\item[{int}]{device}
+\end{DoxyParamCaption}
+)}\hypertarget{serial_8c_a7078c07ff8b2c48780558549a8f7cf90}{}\label{serial_8c_a7078c07ff8b2c48780558549a8f7cf90}
+Initializes devices for user interaction, logging, ...
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & The device to initialize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code 
+\end{DoxyReturn}
+\index{serial.\+c@{serial.\+c}!serial\+\_\+print@{serial\+\_\+print}}
+\index{serial\+\_\+print@{serial\+\_\+print}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{serial\+\_\+print(const char $\ast$msg)}{serial_print(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}int serial\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{serial_8c_a995827efcd4dcfb780c9fbb9645410a4}{}\label{serial_8c_a995827efcd4dcfb780c9fbb9645410a4}
+Writes a message to the active serial output device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code 
+\end{DoxyReturn}
+\index{serial.\+c@{serial.\+c}!serial\+\_\+println@{serial\+\_\+println}}
+\index{serial\+\_\+println@{serial\+\_\+println}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{serial\+\_\+println(const char $\ast$msg)}{serial_println(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}int serial\+\_\+println (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{serial_8c_a3514f7abff236a4e00a6c46021ce5e22}{}\label{serial_8c_a3514f7abff236a4e00a6c46021ce5e22}
+Writes a message to the active serial output device. Appends a newline character.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code 
+\end{DoxyReturn}
+\index{serial.\+c@{serial.\+c}!set\+\_\+serial\+\_\+in@{set\+\_\+serial\+\_\+in}}
+\index{set\+\_\+serial\+\_\+in@{set\+\_\+serial\+\_\+in}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+serial\+\_\+in(int device)}{set_serial_in(int device)}}]{\setlength{\rightskip}{0pt plus 5cm}int set\+\_\+serial\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{int}]{device}
+\end{DoxyParamCaption}
+)}\hypertarget{serial_8c_a3f4008da5feabfb7e086f6673a81104b}{}\label{serial_8c_a3f4008da5feabfb7e086f6673a81104b}
+Sets serial\+\_\+port\+\_\+in to the given device address. All serial input, such as console input via a virutal machine, Q\+E\+M\+U/\+Bochc/etc, will be directed to the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & The divce to set as input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code 
+\end{DoxyReturn}
+\index{serial.\+c@{serial.\+c}!set\+\_\+serial\+\_\+out@{set\+\_\+serial\+\_\+out}}
+\index{set\+\_\+serial\+\_\+out@{set\+\_\+serial\+\_\+out}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+serial\+\_\+out(int device)}{set_serial_out(int device)}}]{\setlength{\rightskip}{0pt plus 5cm}int set\+\_\+serial\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{int}]{device}
+\end{DoxyParamCaption}
+)}\hypertarget{serial_8c_ae97b87ee1f57c687e7fca6f9958e03ef}{}\label{serial_8c_ae97b87ee1f57c687e7fca6f9958e03ef}
+Sets serial\+\_\+port\+\_\+out to the given device address. All serial output, such as that from serial\+\_\+println, will be directed to this device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & The device to set as output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{serial.\+c@{serial.\+c}!serial\+\_\+port\+\_\+in@{serial\+\_\+port\+\_\+in}}
+\index{serial\+\_\+port\+\_\+in@{serial\+\_\+port\+\_\+in}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{serial\+\_\+port\+\_\+in}{serial_port_in}}]{\setlength{\rightskip}{0pt plus 5cm}int serial\+\_\+port\+\_\+in = 0}\hypertarget{serial_8c_a1a756238531fc5bf1096f89dc18e835e}{}\label{serial_8c_a1a756238531fc5bf1096f89dc18e835e}
+\index{serial.\+c@{serial.\+c}!serial\+\_\+port\+\_\+out@{serial\+\_\+port\+\_\+out}}
+\index{serial\+\_\+port\+\_\+out@{serial\+\_\+port\+\_\+out}!serial.\+c@{serial.\+c}}
+\subsubsection[{\texorpdfstring{serial\+\_\+port\+\_\+out}{serial_port_out}}]{\setlength{\rightskip}{0pt plus 5cm}int serial\+\_\+port\+\_\+out = 0}\hypertarget{serial_8c_adbb2c18b0aaab5c1927a6f674768a710}{}\label{serial_8c_adbb2c18b0aaab5c1927a6f674768a710}

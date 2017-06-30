@@ -1,0 +1,12 @@
+<map id="include/mem/heap.h" name="include/mem/heap.h">
+<area shape="rect" id="node2" href="$memory_control_8h.html" title="include/mem/memoryControl.h" alt="" coords="336,80,536,107"/>
+<area shape="rect" id="node6" href="$kmain_8c.html" title="kernel/core/kmain.c" alt="" coords="523,162,659,189"/>
+<area shape="rect" id="node7" href="$memory_control_8c.html" title="kernel/mem/memoryControl.c" alt="" coords="683,162,877,189"/>
+<area shape="rect" id="node9" href="$heap_8c.html" title="kernel/mem/heap.c" alt="" coords="679,80,812,107"/>
+<area shape="rect" id="node10" href="$paging_8c.html" title="kernel/mem/paging.c" alt="" coords="837,80,979,107"/>
+<area shape="rect" id="node11" href="$mpx__supt_8c.html" title="modules/mpx_supt.c" alt="" coords="1003,80,1146,107"/>
+<area shape="rect" id="node3" href="$mem_commands_8h.html" title="include/modules/R5\l/memCommands.h" alt="" coords="126,155,263,196"/>
+<area shape="rect" id="node5" href="$mem_commands_8c.html" title="modules/R5/memCommands.c" alt="" coords="200,244,403,271"/>
+<area shape="rect" id="node8" href="$r5commands_8c.html" title="modules/R5/commands\l/r5commands.c" alt="" coords="339,155,499,196"/>
+<area shape="rect" id="node4" href="$com_handler_8c.html" title="kernel/core/comHandler.c" alt="" coords="5,244,176,271"/>
+</map>

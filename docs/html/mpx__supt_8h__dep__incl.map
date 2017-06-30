@@ -1,0 +1,17 @@
+<map id="include/modules/mpx_supt.h" name="include/modules/mpx_supt.h">
+<area shape="rect" id="node2" href="$memory_control_8h.html" title="include/mem/memoryControl.h" alt="" coords="361,102,561,129"/>
+<area shape="rect" id="node3" href="$mem_commands_8h.html" title="include/modules/R5\l/memCommands.h" alt="" coords="75,184,213,225"/>
+<area shape="rect" id="node4" href="$com_handler_8c.html" title="kernel/core/comHandler.c" alt="" coords="5,273,176,300"/>
+<area shape="rect" id="node5" href="$mem_commands_8c.html" title="modules/R5/memCommands.c" alt="" coords="333,273,536,300"/>
+<area shape="rect" id="node6" href="$kmain_8c.html" title="kernel/core/kmain.c" alt="" coords="472,191,608,218"/>
+<area shape="rect" id="node7" href="$memory_control_8c.html" title="kernel/mem/memoryControl.c" alt="" coords="632,191,827,218"/>
+<area shape="rect" id="node9" href="$commands_8c.html" title="kernel/core/commands.c" alt="" coords="817,102,983,129"/>
+<area shape="rect" id="node10" href="$pcb_8c.html" title="kernel/core/pcb.c" alt="" coords="1007,102,1129,129"/>
+<area shape="rect" id="node11" href="$queue_8c.html" title="kernel/core/queue.c" alt="" coords="1153,102,1289,129"/>
+<area shape="rect" id="node12" href="$tables_8c.html" title="kernel/core/tables.c" alt="" coords="1313,102,1449,129"/>
+<area shape="rect" id="node13" href="$paging_8c.html" title="kernel/mem/paging.c" alt="" coords="1473,102,1615,129"/>
+<area shape="rect" id="node14" href="$mpx__supt_8c.html" title="modules/mpx_supt.c" alt="" coords="1639,102,1782,129"/>
+<area shape="rect" id="node15" href="$r3commands_8c.html" title="modules/R3/commands\l/r3commands.c" alt="" coords="1807,95,1967,136"/>
+<area shape="rect" id="node16" href="$procsr3_8c.html" title="modules/R3/procsr3.c" alt="" coords="1991,102,2142,129"/>
+<area shape="rect" id="node8" href="$r5commands_8c.html" title="modules/R5/commands\l/r5commands.c" alt="" coords="237,184,397,225"/>
+</map>

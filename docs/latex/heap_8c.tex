@@ -1,0 +1,155 @@
+\hypertarget{heap_8c}{}\section{kernel/mem/heap.c File Reference}
+\label{heap_8c}\index{kernel/mem/heap.\+c@{kernel/mem/heap.\+c}}
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$core/serial.\+h$>$}\\*
+{\ttfamily \#include $<$mem/heap.\+h$>$}\\*
+{\ttfamily \#include $<$mem/paging.\+h$>$}\\*
+Include dependency graph for heap.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{heap_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{heap_8c_a014b54e36b61f133f53dd509c461f35e}{\+\_\+kmalloc} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} size, int page\+\_\+align, \hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} $\ast$phys\+\_\+addr)
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{heap_8c_a15d6a52c5c080c8c7ffc73e336d8e574}{kmalloc} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} size)
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{heap_8c_a06dae34c7e7c73d518de00212a7c92da}{alloc} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} size, \hyperlink{structheap}{heap} $\ast$h, int align)
+\item 
+\hyperlink{structheap}{heap} $\ast$ \hyperlink{heap_8c_a686135c02695aef4208f93d4549a15d0}{make\+\_\+heap} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{tables_8h_ab5763c2b18c825c8b8fba44b2e60ddc1}{base}, \hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} max, \hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} min)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structheap}{heap} $\ast$ \hyperlink{heap_8c_a61825456a33b09780a5493c95adcae8a}{kheap} = 0
+\item 
+\hyperlink{structheap}{heap} $\ast$ \hyperlink{heap_8c_afaac4d3fb801ecbd3c6fe3c995d5cf82}{curr\+\_\+heap} = 0
+\item 
+\hyperlink{structpage__dir}{page\+\_\+dir} $\ast$ \hyperlink{heap_8c_a61ce943ba80d9dfab89a826cae9ddc4a}{kdir}
+\item 
+void $\ast$ \hyperlink{heap_8c_a57dfa4d169c6b9c0b4e7352bc0c34366}{end}
+\item 
+void \hyperlink{heap_8c_a850b19392dca6170001ce200467ab610}{\+\_\+end}
+\item 
+void \hyperlink{heap_8c_a51f2442fadb8ffd3019f4aeb1b04c4d6}{\+\_\+\+\_\+end}
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} \hyperlink{heap_8c_a6dfa4ef84e115e891b3679e4932b5c49}{phys\+\_\+alloc\+\_\+addr} = (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int}) \& \hyperlink{heap_8c_a57dfa4d169c6b9c0b4e7352bc0c34366}{end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{heap.\+c@{heap.\+c}!\+\_\+kmalloc@{\+\_\+kmalloc}}
+\index{\+\_\+kmalloc@{\+\_\+kmalloc}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+kmalloc(u32int size, int page\+\_\+align, u32int $\ast$phys\+\_\+addr)}{_kmalloc(u32int size, int page_align, u32int *phys_addr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} \+\_\+kmalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{size, }
+\item[{int}]{page\+\_\+align, }
+\item[{{\bf u32int} $\ast$}]{phys\+\_\+addr}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a014b54e36b61f133f53dd509c461f35e}{}\label{heap_8c_a014b54e36b61f133f53dd509c461f35e}
+Base-\/level kernel memory allocation routine. Used to provide page alignment and access physical addresses of allocations. Called by kmalloc with align=0, physical\+\_\+address=0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The amount of memory to allocate \\
+\hline
+{\em align} & The page alignment \\
+\hline
+{\em phys\+\_\+addr} & The physical address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The memory address 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!alloc@{alloc}}
+\index{alloc@{alloc}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{alloc(u32int size, heap $\ast$h, int align)}{alloc(u32int size, heap *h, int align)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{size, }
+\item[{{\bf heap} $\ast$}]{h, }
+\item[{int}]{align}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a06dae34c7e7c73d518de00212a7c92da}{}\label{heap_8c_a06dae34c7e7c73d518de00212a7c92da}
+Allocates some memory using the given heap. Can specify page-\/alignment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The amount of memory to allocate \\
+\hline
+{\em hp} & The heap to allocate on \\
+\hline
+{\em align} & The page alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The memory address 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!kmalloc@{kmalloc}}
+\index{kmalloc@{kmalloc}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{kmalloc(u32int size)}{kmalloc(u32int size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} kmalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a15d6a52c5c080c8c7ffc73e336d8e574}{}\label{heap_8c_a15d6a52c5c080c8c7ffc73e336d8e574}
+Standard memory allocation routine. Use this unless you need to specify alignment or obtain a physical address. Calls \+\_\+kmalloc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The amount of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The memory address 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!make\+\_\+heap@{make\+\_\+heap}}
+\index{make\+\_\+heap@{make\+\_\+heap}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+heap(u32int base, u32int max, u32int min)}{make_heap(u32int base, u32int max, u32int min)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf heap}$\ast$ make\+\_\+heap (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{base, }
+\item[{{\bf u32int}}]{max, }
+\item[{{\bf u32int}}]{min}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a686135c02695aef4208f93d4549a15d0}{}\label{heap_8c_a686135c02695aef4208f93d4549a15d0}
+Create a new heap.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Physical start address of the heap \\
+\hline
+{\em max} & Maximum size the heap may grow to \\
+\hline
+{\em min} & Minium/\+Initial size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The address of the heap 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{heap.\+c@{heap.\+c}!\+\_\+\+\_\+end@{\+\_\+\+\_\+end}}
+\index{\+\_\+\+\_\+end@{\+\_\+\+\_\+end}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+end}{__end}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+end}\hypertarget{heap_8c_a51f2442fadb8ffd3019f4aeb1b04c4d6}{}\label{heap_8c_a51f2442fadb8ffd3019f4aeb1b04c4d6}
+\index{heap.\+c@{heap.\+c}!\+\_\+end@{\+\_\+end}}
+\index{\+\_\+end@{\+\_\+end}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+end}{_end}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+end}\hypertarget{heap_8c_a850b19392dca6170001ce200467ab610}{}\label{heap_8c_a850b19392dca6170001ce200467ab610}
+\index{heap.\+c@{heap.\+c}!curr\+\_\+heap@{curr\+\_\+heap}}
+\index{curr\+\_\+heap@{curr\+\_\+heap}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{curr\+\_\+heap}{curr_heap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf heap}$\ast$ curr\+\_\+heap = 0}\hypertarget{heap_8c_afaac4d3fb801ecbd3c6fe3c995d5cf82}{}\label{heap_8c_afaac4d3fb801ecbd3c6fe3c995d5cf82}
+\index{heap.\+c@{heap.\+c}!end@{end}}
+\index{end@{end}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{end}{end}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ end}\hypertarget{heap_8c_a57dfa4d169c6b9c0b4e7352bc0c34366}{}\label{heap_8c_a57dfa4d169c6b9c0b4e7352bc0c34366}
+\index{heap.\+c@{heap.\+c}!kdir@{kdir}}
+\index{kdir@{kdir}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{kdir}{kdir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+\_\+dir}$\ast$ kdir}\hypertarget{heap_8c_a61ce943ba80d9dfab89a826cae9ddc4a}{}\label{heap_8c_a61ce943ba80d9dfab89a826cae9ddc4a}
+\index{heap.\+c@{heap.\+c}!kheap@{kheap}}
+\index{kheap@{kheap}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{kheap}{kheap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf heap}$\ast$ kheap = 0}\hypertarget{heap_8c_a61825456a33b09780a5493c95adcae8a}{}\label{heap_8c_a61825456a33b09780a5493c95adcae8a}
+\index{heap.\+c@{heap.\+c}!phys\+\_\+alloc\+\_\+addr@{phys\+\_\+alloc\+\_\+addr}}
+\index{phys\+\_\+alloc\+\_\+addr@{phys\+\_\+alloc\+\_\+addr}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{phys\+\_\+alloc\+\_\+addr}{phys_alloc_addr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int} phys\+\_\+alloc\+\_\+addr = ({\bf u32int}) \& {\bf end}}\hypertarget{heap_8c_a6dfa4ef84e115e891b3679e4932b5c49}{}\label{heap_8c_a6dfa4ef84e115e891b3679e4932b5c49}

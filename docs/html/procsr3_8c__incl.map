@@ -1,0 +1,9 @@
+<map id="modules/R3/procsr3.c" name="modules/R3/procsr3.c">
+<area shape="rect" id="node2" href="$system_8h.html" title="system.h" alt="" coords="218,304,294,331"/>
+<area shape="rect" id="node3" href="$serial_8h.html" title="core/serial.h" alt="" coords="21,80,114,107"/>
+<area shape="rect" id="node4" href="$processes_8h.html" title="modules/R3/processes.h" alt="" coords="139,80,306,107"/>
+<area shape="rect" id="node5" href="$mpx__supt_8h.html" title="modules/mpx_supt.h" alt="" coords="330,80,472,107"/>
+<area shape="rect" id="node6" href="$queue_8h.html" title="core/queue.h" alt="" coords="352,155,450,181"/>
+<area shape="rect" id="node7" href="$pcb_8h.html" title="pcb.h" alt="" coords="294,229,348,256"/>
+<area shape="rect" id="node8" href="$boolean_8h.html" title="boolean.h" alt="" coords="414,229,492,256"/>
+</map>

@@ -1,0 +1,505 @@
+\hypertarget{time_8h}{}\section{include/time.h File Reference}
+\label{time_8h}\index{include/time.\+h@{include/time.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{time_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdate__time}{date\+\_\+time}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{time_8h_a98972216f45b70d97b59b4196306021a}{M\+ON}~((const char$\ast$) \char`\"{}Monday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_ae4b8e06919fadd6dc68db97ecff6dd20}{T\+UE}~((const char$\ast$) \char`\"{}Tuesday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_aab76148e4b24e1303763fbd215f6f728}{W\+ED}~((const char$\ast$) \char`\"{}Wednesday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a2859c772410fbb7546c39f8dabb857c8}{T\+HU}~((const char$\ast$) \char`\"{}Thursday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a7bf6b0f2e741ff1e61246f7cf903449a}{F\+RI}~((const char$\ast$) \char`\"{}Friday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a39e99fc584742378db7375c290cfa0ed}{S\+AT}~((const char$\ast$) \char`\"{}Saturday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a332587bf4287f2a9eb97ccee6ad00504}{S\+UN}~((const char$\ast$) \char`\"{}Sunday\char`\"{})
+\item 
+\#define \hyperlink{time_8h_aab3c8ecfef25f81b9df422660690ef73}{J\+AN}~((const char$\ast$) \char`\"{}January\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a9aa2615c9b994022bdba836351eccc7f}{F\+EB}~((const char$\ast$) \char`\"{}February\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a8cf6c431bb390cdff475e7f849b1d62f}{M\+AR}~((const char$\ast$) \char`\"{}March\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a14e6757ba0150df2248d1550fb8d13d0}{A\+PR}~((const char$\ast$) \char`\"{}April\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a51a4d4fd49a2f55c046f9206c4566d15}{M\+AY}~((const char$\ast$) \char`\"{}May\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a8062c0d173c42b80e7d8f5875ca993da}{J\+UN}~((const char$\ast$) \char`\"{}June\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a942146833b52ff5250c10e912ee8bc20}{J\+UL}~((const char$\ast$) \char`\"{}July\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a4ea48e5a35ec64cdaaa559ca9a08b260}{A\+UG}~((const char$\ast$) \char`\"{}August\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a95cf1ca63ff303311d342d1a53d51f38}{S\+EP}~((const char$\ast$) \char`\"{}September\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a904777e8f3d21de0a6679d2c9f0f1eec}{O\+CT}~((const char$\ast$) \char`\"{}October\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a25a0e4e0ecc3b022473827f8d25ce2b7}{N\+OV}~((const char$\ast$) \char`\"{}November\char`\"{})
+\item 
+\#define \hyperlink{time_8h_afe38ec6126e35e40049e27fdf4586ba5}{D\+EC}~((const char$\ast$) \char`\"{}December\char`\"{})
+\item 
+\#define \hyperlink{time_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}{S\+E\+C\+O\+N\+DS}~0x00
+\item 
+\#define \hyperlink{time_8h_a84be9dcfa5a172ee83121620d15c8e29}{M\+I\+N\+U\+T\+ES}~0x02
+\item 
+\#define \hyperlink{time_8h_a212d0f839f6f7ca43ccde311f93d5892}{H\+O\+U\+RS}~0x04
+\item 
+\#define \hyperlink{time_8h_acd522b0e92d01c9bb65527206fc17508}{D\+A\+Y\+\_\+\+W\+E\+EK}~0x06
+\item 
+\#define \hyperlink{time_8h_aa652d6d52e8e86bfd3659f873c87a340}{D\+A\+Y\+\_\+\+M\+O\+N\+TH}~0x07
+\item 
+\#define \hyperlink{time_8h_a3729d06495d9713592f79f3122c9e677}{M\+O\+N\+TH}~0x08
+\item 
+\#define \hyperlink{time_8h_a5871356500f559add06ea81d60331b1b}{Y\+E\+AR}~0x09
+\item 
+\#define \hyperlink{time_8h_a1ef7b9796fcb1fed4d40173fba9f52fc}{C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}~0x70
+\item 
+\#define \hyperlink{time_8h_ab0c169c959c5be67954c866776329563}{D\+A\+T\+A\+\_\+\+P\+O\+RT}~0x71
+\item 
+\#define \hyperlink{time_8h_af8090254be0d984779ce18638041ae36}{T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}~\textquotesingle{}\+:\textquotesingle{}
+\item 
+\#define \hyperlink{time_8h_a834cd69b1dbee54944f96f87b8bc2fc7}{N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}~0x80
+\item 
+\#define \hyperlink{time_8h_a8b46551b768ea3b676fc739cc1edaf3c}{N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}~0x7F
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdate__time}{date\+\_\+time} \hyperlink{time_8h_a66710b20174f45f5b8f81d9f0768d2c5}{get\+Date\+Time} ()
+\item 
+void \hyperlink{time_8h_ac784e7da42bb11564c76d3fccbf9b978}{set\+Date\+Time} (\hyperlink{structdate__time}{date\+\_\+time})
+\item 
+unsigned char \hyperlink{time_8h_a321d8f10d5182229677266a91cb88c92}{get\+Seconds} ()
+\item 
+unsigned char \hyperlink{time_8h_a58df480e36f2204cfdd975972d373634}{get\+Minutes} ()
+\item 
+unsigned char \hyperlink{time_8h_a2524929d6220ffddb6f194b01e8c2122}{get\+Hours} ()
+\item 
+unsigned char \hyperlink{time_8h_a18d1f62d1444ad57fbe434d54b878a19}{get\+Day\+Of\+Week} ()
+\item 
+unsigned char \hyperlink{time_8h_a579db00a3140cf410a8c3c2d5abf01c3}{get\+Day\+Of\+Month} ()
+\item 
+unsigned char \hyperlink{time_8h_a05788a27dd70216657566ab4db5af1bc}{get\+Month} ()
+\item 
+unsigned char \hyperlink{time_8h_a50c7376114a1136dac3a33aa2f833451}{get\+Year} ()
+\item 
+void \hyperlink{time_8h_af7acc3599a4bd7b5ddf8a11fa594b4d2}{set\+Seconds} (unsigned char seconds)
+\item 
+void \hyperlink{time_8h_a2517ff4cc495671bb857aaa3179fad6a}{set\+Minutes} (unsigned char minutes)
+\item 
+void \hyperlink{time_8h_a4bc1d7b5ebcc0d812d9a7a0b473c0161}{set\+Hours} (unsigned char hours)
+\item 
+void \hyperlink{time_8h_aa7d7c9619a99d4155defa04633357869}{set\+Day\+Of\+Week} (unsigned char day\+Of\+Week)
+\item 
+void \hyperlink{time_8h_ae9886fdf51fa3e234b0f4821dabeae6b}{set\+Day\+Of\+Month} (unsigned char day\+Of\+Month)
+\item 
+void \hyperlink{time_8h_a0db96532823768ee281e17fecad3fbee}{set\+Month} (unsigned char month)
+\item 
+void \hyperlink{time_8h_a3668649ec3f1ecc1f370e7418ada94ae}{set\+Year} (unsigned char year)
+\item 
+void \hyperlink{time_8h_a6bd75e238bb0477212793a8333b43b26}{update\+Day\+Of\+Week} (\hyperlink{structdate__time}{date\+\_\+time} $\ast$date\+Time)
+\item 
+void \hyperlink{time_8h_af04f67feda281f69984016324fada573}{update\+Day\+Of\+Year} (\hyperlink{structdate__time}{date\+\_\+time} $\ast$date\+Time)
+\item 
+int \hyperlink{time_8h_ae2f7c9a7e17225bac3e3f9a506b8a829}{is\+Leap\+Year} (int year)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{time_8h_a73dde863137d5fb84a69d84319a8245c}{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH} \mbox{[}13\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{time.\+h@{time.\+h}!A\+PR@{A\+PR}}
+\index{A\+PR@{A\+PR}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{A\+PR}{APR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+PR~((const char$\ast$) \char`\"{}April\char`\"{})}\hypertarget{time_8h_a14e6757ba0150df2248d1550fb8d13d0}{}\label{time_8h_a14e6757ba0150df2248d1550fb8d13d0}
+\index{time.\+h@{time.\+h}!A\+UG@{A\+UG}}
+\index{A\+UG@{A\+UG}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{A\+UG}{AUG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+UG~((const char$\ast$) \char`\"{}August\char`\"{})}\hypertarget{time_8h_a4ea48e5a35ec64cdaaa559ca9a08b260}{}\label{time_8h_a4ea48e5a35ec64cdaaa559ca9a08b260}
+\index{time.\+h@{time.\+h}!C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT@{C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}}
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT@{C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}{CONTROL_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT~0x70}\hypertarget{time_8h_a1ef7b9796fcb1fed4d40173fba9f52fc}{}\label{time_8h_a1ef7b9796fcb1fed4d40173fba9f52fc}
+Registers for reading/writing data \index{time.\+h@{time.\+h}!D\+A\+T\+A\+\_\+\+P\+O\+RT@{D\+A\+T\+A\+\_\+\+P\+O\+RT}}
+\index{D\+A\+T\+A\+\_\+\+P\+O\+RT@{D\+A\+T\+A\+\_\+\+P\+O\+RT}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+P\+O\+RT}{DATA_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+P\+O\+RT~0x71}\hypertarget{time_8h_ab0c169c959c5be67954c866776329563}{}\label{time_8h_ab0c169c959c5be67954c866776329563}
+\index{time.\+h@{time.\+h}!D\+A\+Y\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+\_\+\+M\+O\+N\+TH}}
+\index{D\+A\+Y\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+\_\+\+M\+O\+N\+TH}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+Y\+\_\+\+M\+O\+N\+TH}{DAY_MONTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+Y\+\_\+\+M\+O\+N\+TH~0x07}\hypertarget{time_8h_aa652d6d52e8e86bfd3659f873c87a340}{}\label{time_8h_aa652d6d52e8e86bfd3659f873c87a340}
+\index{time.\+h@{time.\+h}!D\+A\+Y\+\_\+\+W\+E\+EK@{D\+A\+Y\+\_\+\+W\+E\+EK}}
+\index{D\+A\+Y\+\_\+\+W\+E\+EK@{D\+A\+Y\+\_\+\+W\+E\+EK}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+Y\+\_\+\+W\+E\+EK}{DAY_WEEK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+Y\+\_\+\+W\+E\+EK~0x06}\hypertarget{time_8h_acd522b0e92d01c9bb65527206fc17508}{}\label{time_8h_acd522b0e92d01c9bb65527206fc17508}
+\index{time.\+h@{time.\+h}!D\+EC@{D\+EC}}
+\index{D\+EC@{D\+EC}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{D\+EC}{DEC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+EC~((const char$\ast$) \char`\"{}December\char`\"{})}\hypertarget{time_8h_afe38ec6126e35e40049e27fdf4586ba5}{}\label{time_8h_afe38ec6126e35e40049e27fdf4586ba5}
+\index{time.\+h@{time.\+h}!F\+EB@{F\+EB}}
+\index{F\+EB@{F\+EB}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{F\+EB}{FEB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+EB~((const char$\ast$) \char`\"{}February\char`\"{})}\hypertarget{time_8h_a9aa2615c9b994022bdba836351eccc7f}{}\label{time_8h_a9aa2615c9b994022bdba836351eccc7f}
+\index{time.\+h@{time.\+h}!F\+RI@{F\+RI}}
+\index{F\+RI@{F\+RI}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{F\+RI}{FRI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+RI~((const char$\ast$) \char`\"{}Friday\char`\"{})}\hypertarget{time_8h_a7bf6b0f2e741ff1e61246f7cf903449a}{}\label{time_8h_a7bf6b0f2e741ff1e61246f7cf903449a}
+\index{time.\+h@{time.\+h}!H\+O\+U\+RS@{H\+O\+U\+RS}}
+\index{H\+O\+U\+RS@{H\+O\+U\+RS}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{H\+O\+U\+RS}{HOURS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+O\+U\+RS~0x04}\hypertarget{time_8h_a212d0f839f6f7ca43ccde311f93d5892}{}\label{time_8h_a212d0f839f6f7ca43ccde311f93d5892}
+\index{time.\+h@{time.\+h}!J\+AN@{J\+AN}}
+\index{J\+AN@{J\+AN}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{J\+AN}{JAN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+AN~((const char$\ast$) \char`\"{}January\char`\"{})}\hypertarget{time_8h_aab3c8ecfef25f81b9df422660690ef73}{}\label{time_8h_aab3c8ecfef25f81b9df422660690ef73}
+Month Names \index{time.\+h@{time.\+h}!J\+UL@{J\+UL}}
+\index{J\+UL@{J\+UL}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{J\+UL}{JUL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+UL~((const char$\ast$) \char`\"{}July\char`\"{})}\hypertarget{time_8h_a942146833b52ff5250c10e912ee8bc20}{}\label{time_8h_a942146833b52ff5250c10e912ee8bc20}
+\index{time.\+h@{time.\+h}!J\+UN@{J\+UN}}
+\index{J\+UN@{J\+UN}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{J\+UN}{JUN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+UN~((const char$\ast$) \char`\"{}June\char`\"{})}\hypertarget{time_8h_a8062c0d173c42b80e7d8f5875ca993da}{}\label{time_8h_a8062c0d173c42b80e7d8f5875ca993da}
+\index{time.\+h@{time.\+h}!M\+AR@{M\+AR}}
+\index{M\+AR@{M\+AR}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{M\+AR}{MAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+AR~((const char$\ast$) \char`\"{}March\char`\"{})}\hypertarget{time_8h_a8cf6c431bb390cdff475e7f849b1d62f}{}\label{time_8h_a8cf6c431bb390cdff475e7f849b1d62f}
+\index{time.\+h@{time.\+h}!M\+AY@{M\+AY}}
+\index{M\+AY@{M\+AY}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{M\+AY}{MAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+AY~((const char$\ast$) \char`\"{}May\char`\"{})}\hypertarget{time_8h_a51a4d4fd49a2f55c046f9206c4566d15}{}\label{time_8h_a51a4d4fd49a2f55c046f9206c4566d15}
+\index{time.\+h@{time.\+h}!M\+I\+N\+U\+T\+ES@{M\+I\+N\+U\+T\+ES}}
+\index{M\+I\+N\+U\+T\+ES@{M\+I\+N\+U\+T\+ES}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+U\+T\+ES}{MINUTES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+U\+T\+ES~0x02}\hypertarget{time_8h_a84be9dcfa5a172ee83121620d15c8e29}{}\label{time_8h_a84be9dcfa5a172ee83121620d15c8e29}
+\index{time.\+h@{time.\+h}!M\+ON@{M\+ON}}
+\index{M\+ON@{M\+ON}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{M\+ON}{MON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+ON~((const char$\ast$) \char`\"{}Monday\char`\"{})}\hypertarget{time_8h_a98972216f45b70d97b59b4196306021a}{}\label{time_8h_a98972216f45b70d97b59b4196306021a}
+Day Names \index{time.\+h@{time.\+h}!M\+O\+N\+TH@{M\+O\+N\+TH}}
+\index{M\+O\+N\+TH@{M\+O\+N\+TH}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+N\+TH}{MONTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+N\+TH~0x08}\hypertarget{time_8h_a3729d06495d9713592f79f3122c9e677}{}\label{time_8h_a3729d06495d9713592f79f3122c9e677}
+\index{time.\+h@{time.\+h}!N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE@{N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE@{N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}{NMI_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE~0x80}\hypertarget{time_8h_a834cd69b1dbee54944f96f87b8bc2fc7}{}\label{time_8h_a834cd69b1dbee54944f96f87b8bc2fc7}
+N\+MI Flags Disable -\/ OR, Enable -\/ A\+ND \index{time.\+h@{time.\+h}!N\+M\+I\+\_\+\+E\+N\+A\+B\+LE@{N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}}
+\index{N\+M\+I\+\_\+\+E\+N\+A\+B\+LE@{N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}{NMI_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+M\+I\+\_\+\+E\+N\+A\+B\+LE~0x7F}\hypertarget{time_8h_a8b46551b768ea3b676fc739cc1edaf3c}{}\label{time_8h_a8b46551b768ea3b676fc739cc1edaf3c}
+\index{time.\+h@{time.\+h}!N\+OV@{N\+OV}}
+\index{N\+OV@{N\+OV}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{N\+OV}{NOV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+OV~((const char$\ast$) \char`\"{}November\char`\"{})}\hypertarget{time_8h_a25a0e4e0ecc3b022473827f8d25ce2b7}{}\label{time_8h_a25a0e4e0ecc3b022473827f8d25ce2b7}
+\index{time.\+h@{time.\+h}!O\+CT@{O\+CT}}
+\index{O\+CT@{O\+CT}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{O\+CT}{OCT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+CT~((const char$\ast$) \char`\"{}October\char`\"{})}\hypertarget{time_8h_a904777e8f3d21de0a6679d2c9f0f1eec}{}\label{time_8h_a904777e8f3d21de0a6679d2c9f0f1eec}
+\index{time.\+h@{time.\+h}!S\+AT@{S\+AT}}
+\index{S\+AT@{S\+AT}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{S\+AT}{SAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+AT~((const char$\ast$) \char`\"{}Saturday\char`\"{})}\hypertarget{time_8h_a39e99fc584742378db7375c290cfa0ed}{}\label{time_8h_a39e99fc584742378db7375c290cfa0ed}
+\index{time.\+h@{time.\+h}!S\+E\+C\+O\+N\+DS@{S\+E\+C\+O\+N\+DS}}
+\index{S\+E\+C\+O\+N\+DS@{S\+E\+C\+O\+N\+DS}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+C\+O\+N\+DS}{SECONDS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+C\+O\+N\+DS~0x00}\hypertarget{time_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}{}\label{time_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}
+Aliases for accessing time/date \index{time.\+h@{time.\+h}!S\+EP@{S\+EP}}
+\index{S\+EP@{S\+EP}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{S\+EP}{SEP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+EP~((const char$\ast$) \char`\"{}September\char`\"{})}\hypertarget{time_8h_a95cf1ca63ff303311d342d1a53d51f38}{}\label{time_8h_a95cf1ca63ff303311d342d1a53d51f38}
+\index{time.\+h@{time.\+h}!S\+UN@{S\+UN}}
+\index{S\+UN@{S\+UN}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{S\+UN}{SUN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+UN~((const char$\ast$) \char`\"{}Sunday\char`\"{})}\hypertarget{time_8h_a332587bf4287f2a9eb97ccee6ad00504}{}\label{time_8h_a332587bf4287f2a9eb97ccee6ad00504}
+\index{time.\+h@{time.\+h}!T\+HU@{T\+HU}}
+\index{T\+HU@{T\+HU}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{T\+HU}{THU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+HU~((const char$\ast$) \char`\"{}Thursday\char`\"{})}\hypertarget{time_8h_a2859c772410fbb7546c39f8dabb857c8}{}\label{time_8h_a2859c772410fbb7546c39f8dabb857c8}
+\index{time.\+h@{time.\+h}!T\+I\+M\+E\+\_\+\+D\+E\+L\+IM@{T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}}
+\index{T\+I\+M\+E\+\_\+\+D\+E\+L\+IM@{T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}{TIME_DELIM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+\_\+\+D\+E\+L\+IM~\textquotesingle{}\+:\textquotesingle{}}\hypertarget{time_8h_af8090254be0d984779ce18638041ae36}{}\label{time_8h_af8090254be0d984779ce18638041ae36}
+The delimiter for the time \index{time.\+h@{time.\+h}!T\+UE@{T\+UE}}
+\index{T\+UE@{T\+UE}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{T\+UE}{TUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+UE~((const char$\ast$) \char`\"{}Tuesday\char`\"{})}\hypertarget{time_8h_ae4b8e06919fadd6dc68db97ecff6dd20}{}\label{time_8h_ae4b8e06919fadd6dc68db97ecff6dd20}
+\index{time.\+h@{time.\+h}!W\+ED@{W\+ED}}
+\index{W\+ED@{W\+ED}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{W\+ED}{WED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+ED~((const char$\ast$) \char`\"{}Wednesday\char`\"{})}\hypertarget{time_8h_aab76148e4b24e1303763fbd215f6f728}{}\label{time_8h_aab76148e4b24e1303763fbd215f6f728}
+\index{time.\+h@{time.\+h}!Y\+E\+AR@{Y\+E\+AR}}
+\index{Y\+E\+AR@{Y\+E\+AR}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{Y\+E\+AR}{YEAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+E\+AR~0x09}\hypertarget{time_8h_a5871356500f559add06ea81d60331b1b}{}\label{time_8h_a5871356500f559add06ea81d60331b1b}
+
+
+\subsection{Function Documentation}
+\index{time.\+h@{time.\+h}!get\+Date\+Time@{get\+Date\+Time}}
+\index{get\+Date\+Time@{get\+Date\+Time}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Date\+Time()}{getDateTime()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf date\+\_\+time} get\+Date\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a66710b20174f45f5b8f81d9f0768d2c5}{}\label{time_8h_a66710b20174f45f5b8f81d9f0768d2c5}
+Gets the date and time from the R\+TC registers.
+
+\begin{DoxyReturn}{Returns}
+The date and time stored in the R\+TC. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Day\+Of\+Month@{get\+Day\+Of\+Month}}
+\index{get\+Day\+Of\+Month@{get\+Day\+Of\+Month}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Day\+Of\+Month()}{getDayOfMonth()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Day\+Of\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a579db00a3140cf410a8c3c2d5abf01c3}{}\label{time_8h_a579db00a3140cf410a8c3c2d5abf01c3}
+Gets the day of the month (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded day of the month. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Day\+Of\+Week@{get\+Day\+Of\+Week}}
+\index{get\+Day\+Of\+Week@{get\+Day\+Of\+Week}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Day\+Of\+Week()}{getDayOfWeek()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a18d1f62d1444ad57fbe434d54b878a19}{}\label{time_8h_a18d1f62d1444ad57fbe434d54b878a19}
+Gets the day of the week (decimal-\/encoded) from the R\+TC.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded day of the week. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Hours@{get\+Hours}}
+\index{get\+Hours@{get\+Hours}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Hours()}{getHours()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Hours (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a2524929d6220ffddb6f194b01e8c2122}{}\label{time_8h_a2524929d6220ffddb6f194b01e8c2122}
+Gets the hours value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of hours. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Minutes@{get\+Minutes}}
+\index{get\+Minutes@{get\+Minutes}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Minutes()}{getMinutes()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Minutes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a58df480e36f2204cfdd975972d373634}{}\label{time_8h_a58df480e36f2204cfdd975972d373634}
+Gets the minutes value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of minutes. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Month@{get\+Month}}
+\index{get\+Month@{get\+Month}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Month()}{getMonth()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a05788a27dd70216657566ab4db5af1bc}{}\label{time_8h_a05788a27dd70216657566ab4db5af1bc}
+Gets the month (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded month. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Seconds@{get\+Seconds}}
+\index{get\+Seconds@{get\+Seconds}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Seconds()}{getSeconds()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a321d8f10d5182229677266a91cb88c92}{}\label{time_8h_a321d8f10d5182229677266a91cb88c92}
+Gets the seconds value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of seconds. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!get\+Year@{get\+Year}}
+\index{get\+Year@{get\+Year}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{get\+Year()}{getYear()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a50c7376114a1136dac3a33aa2f833451}{}\label{time_8h_a50c7376114a1136dac3a33aa2f833451}
+Gets the year (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded year. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!is\+Leap\+Year@{is\+Leap\+Year}}
+\index{is\+Leap\+Year@{is\+Leap\+Year}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{is\+Leap\+Year(int year)}{isLeapYear(int year)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Leap\+Year (
+\begin{DoxyParamCaption}
+\item[{int}]{year}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_ae2f7c9a7e17225bac3e3f9a506b8a829}{}\label{time_8h_ae2f7c9a7e17225bac3e3f9a506b8a829}
+Determines if the given year is a leap year.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The year to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the year is a leap year. 
+\end{DoxyReturn}
+\index{time.\+h@{time.\+h}!set\+Date\+Time@{set\+Date\+Time}}
+\index{set\+Date\+Time@{set\+Date\+Time}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Date\+Time(date\+\_\+time)}{setDateTime(date_time)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Date\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time}}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_ac784e7da42bb11564c76d3fccbf9b978}{}\label{time_8h_ac784e7da42bb11564c76d3fccbf9b978}
+Sets the date and time to the specified values.
+
+Day of month must be specified but day of week/year will be automatically calculated. 
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The values to set. \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Day\+Of\+Month@{set\+Day\+Of\+Month}}
+\index{set\+Day\+Of\+Month@{set\+Day\+Of\+Month}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Day\+Of\+Month(unsigned char day\+Of\+Month)}{setDayOfMonth(unsigned char dayOfMonth)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Day\+Of\+Month (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{day}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_ae9886fdf51fa3e234b0f4821dabeae6b}{}\label{time_8h_ae9886fdf51fa3e234b0f4821dabeae6b}
+Sets the day of the month register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em day\+Of\+Month} & The day of the month value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Day\+Of\+Week@{set\+Day\+Of\+Week}}
+\index{set\+Day\+Of\+Week@{set\+Day\+Of\+Week}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Day\+Of\+Week(unsigned char day\+Of\+Week)}{setDayOfWeek(unsigned char dayOfWeek)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{day}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_aa7d7c9619a99d4155defa04633357869}{}\label{time_8h_aa7d7c9619a99d4155defa04633357869}
+Sets the day of the week register in the R\+TC. This number should be decimal-\/encoded.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+
+\begin{DoxyParams}{Parameters}
+{\em day\+Of\+Week} & The day of the week value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Hours@{set\+Hours}}
+\index{set\+Hours@{set\+Hours}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Hours(unsigned char hours)}{setHours(unsigned char hours)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Hours (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{hour}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a4bc1d7b5ebcc0d812d9a7a0b473c0161}{}\label{time_8h_a4bc1d7b5ebcc0d812d9a7a0b473c0161}
+Sets the hours register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hours} & The hours value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Minutes@{set\+Minutes}}
+\index{set\+Minutes@{set\+Minutes}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Minutes(unsigned char minutes)}{setMinutes(unsigned char minutes)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Minutes (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{min}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a2517ff4cc495671bb857aaa3179fad6a}{}\label{time_8h_a2517ff4cc495671bb857aaa3179fad6a}
+Sets the minutes register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em minutes} & The minutes value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Month@{set\+Month}}
+\index{set\+Month@{set\+Month}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Month(unsigned char month)}{setMonth(unsigned char month)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Month (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{mon}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a0db96532823768ee281e17fecad3fbee}{}\label{time_8h_a0db96532823768ee281e17fecad3fbee}
+Sets the month register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em month} & The month value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Seconds@{set\+Seconds}}
+\index{set\+Seconds@{set\+Seconds}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Seconds(unsigned char seconds)}{setSeconds(unsigned char seconds)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Seconds (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{sec}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_af7acc3599a4bd7b5ddf8a11fa594b4d2}{}\label{time_8h_af7acc3599a4bd7b5ddf8a11fa594b4d2}
+Sets the seconds register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & The seconds value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!set\+Year@{set\+Year}}
+\index{set\+Year@{set\+Year}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{set\+Year(unsigned char year)}{setYear(unsigned char year)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Year (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{year}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a3668649ec3f1ecc1f370e7418ada94ae}{}\label{time_8h_a3668649ec3f1ecc1f370e7418ada94ae}
+Sets the year register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The year value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!update\+Day\+Of\+Week@{update\+Day\+Of\+Week}}
+\index{update\+Day\+Of\+Week@{update\+Day\+Of\+Week}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{update\+Day\+Of\+Week(date\+\_\+time $\ast$date\+Time)}{updateDayOfWeek(date_time *dateTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time} $\ast$}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_a6bd75e238bb0477212793a8333b43b26}{}\label{time_8h_a6bd75e238bb0477212793a8333b43b26}
+Sets the day of week property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update\\
+\hline
+\end{DoxyParams}
+Sets the day of week property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update. \\
+\hline
+\end{DoxyParams}
+\index{time.\+h@{time.\+h}!update\+Day\+Of\+Year@{update\+Day\+Of\+Year}}
+\index{update\+Day\+Of\+Year@{update\+Day\+Of\+Year}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{update\+Day\+Of\+Year(date\+\_\+time $\ast$date\+Time)}{updateDayOfYear(date_time *dateTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Day\+Of\+Year (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time} $\ast$}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8h_af04f67feda281f69984016324fada573}{}\label{time_8h_af04f67feda281f69984016324fada573}
+Sets the day of year property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update\\
+\hline
+\end{DoxyParams}
+Sets the day of year property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{time.\+h@{time.\+h}!D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}}
+\index{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}!time.\+h@{time.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}{DAYS_IN_MONTH}}]{\setlength{\rightskip}{0pt plus 5cm}const int D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH\mbox{[}13\mbox{]}}\hypertarget{time_8h_a73dde863137d5fb84a69d84319a8245c}{}\label{time_8h_a73dde863137d5fb84a69d84319a8245c}

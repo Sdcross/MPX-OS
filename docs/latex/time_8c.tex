@@ -1,0 +1,327 @@
+\hypertarget{time_8c}{}\section{lib/time.c File Reference}
+\label{time_8c}\index{lib/time.\+c@{lib/time.\+c}}
+{\ttfamily \#include $<$core/io.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for time.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{time_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdate__time}{date\+\_\+time} \hyperlink{time_8c_a66710b20174f45f5b8f81d9f0768d2c5}{get\+Date\+Time} ()
+\item 
+void \hyperlink{time_8c_a39a439b39d927d8ce183a6f6b7f6be13}{set\+Date\+Time} (\hyperlink{structdate__time}{date\+\_\+time} date\+Time)
+\item 
+unsigned char \hyperlink{time_8c_a321d8f10d5182229677266a91cb88c92}{get\+Seconds} ()
+\item 
+unsigned char \hyperlink{time_8c_a58df480e36f2204cfdd975972d373634}{get\+Minutes} ()
+\item 
+unsigned char \hyperlink{time_8c_a2524929d6220ffddb6f194b01e8c2122}{get\+Hours} ()
+\item 
+unsigned char \hyperlink{time_8c_a18d1f62d1444ad57fbe434d54b878a19}{get\+Day\+Of\+Week} ()
+\item 
+unsigned char \hyperlink{time_8c_a579db00a3140cf410a8c3c2d5abf01c3}{get\+Day\+Of\+Month} ()
+\item 
+unsigned char \hyperlink{time_8c_a05788a27dd70216657566ab4db5af1bc}{get\+Month} ()
+\item 
+unsigned char \hyperlink{time_8c_a50c7376114a1136dac3a33aa2f833451}{get\+Year} ()
+\item 
+void \hyperlink{time_8c_ab6dcc4ef90c99f554b637ee2a5eb2452}{set\+Seconds} (unsigned char sec)
+\item 
+void \hyperlink{time_8c_a04ede1be85ddda2de9b7ed1b56231a03}{set\+Minutes} (unsigned char min)
+\item 
+void \hyperlink{time_8c_abeee8287cc6c0779c95396e89607f9c5}{set\+Hours} (unsigned char hour)
+\item 
+void \hyperlink{time_8c_a5e2b8733bf0be113457c0d8ee6cea672}{set\+Day\+Of\+Week} (unsigned char day)
+\item 
+void \hyperlink{time_8c_a5501427443cb2cfe550133766a687b38}{set\+Day\+Of\+Month} (unsigned char day)
+\item 
+void \hyperlink{time_8c_a44245b69750d3b4a98a16b045ff1236d}{set\+Month} (unsigned char mon)
+\item 
+void \hyperlink{time_8c_a3668649ec3f1ecc1f370e7418ada94ae}{set\+Year} (unsigned char year)
+\item 
+void \hyperlink{time_8c_a6bd75e238bb0477212793a8333b43b26}{update\+Day\+Of\+Week} (\hyperlink{structdate__time}{date\+\_\+time} $\ast$date\+Time)
+\item 
+void \hyperlink{time_8c_af04f67feda281f69984016324fada573}{update\+Day\+Of\+Year} (\hyperlink{structdate__time}{date\+\_\+time} $\ast$date\+Time)
+\item 
+int \hyperlink{time_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}{is\+Leap\+Year} (int year)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{time_8c_a73dde863137d5fb84a69d84319a8245c}{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH} \mbox{[}13\mbox{]} = \{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{time.\+c@{time.\+c}!get\+Date\+Time@{get\+Date\+Time}}
+\index{get\+Date\+Time@{get\+Date\+Time}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Date\+Time()}{getDateTime()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf date\+\_\+time} get\+Date\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a66710b20174f45f5b8f81d9f0768d2c5}{}\label{time_8c_a66710b20174f45f5b8f81d9f0768d2c5}
+Gets the date and time from the R\+TC registers.
+
+\begin{DoxyReturn}{Returns}
+The date and time stored in the R\+TC. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Day\+Of\+Month@{get\+Day\+Of\+Month}}
+\index{get\+Day\+Of\+Month@{get\+Day\+Of\+Month}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Day\+Of\+Month()}{getDayOfMonth()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Day\+Of\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a579db00a3140cf410a8c3c2d5abf01c3}{}\label{time_8c_a579db00a3140cf410a8c3c2d5abf01c3}
+Gets the day of the month (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded day of the month. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Day\+Of\+Week@{get\+Day\+Of\+Week}}
+\index{get\+Day\+Of\+Week@{get\+Day\+Of\+Week}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Day\+Of\+Week()}{getDayOfWeek()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a18d1f62d1444ad57fbe434d54b878a19}{}\label{time_8c_a18d1f62d1444ad57fbe434d54b878a19}
+Gets the day of the week (decimal-\/encoded) from the R\+TC.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded day of the week. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Hours@{get\+Hours}}
+\index{get\+Hours@{get\+Hours}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Hours()}{getHours()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Hours (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a2524929d6220ffddb6f194b01e8c2122}{}\label{time_8c_a2524929d6220ffddb6f194b01e8c2122}
+Gets the hours value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of hours. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Minutes@{get\+Minutes}}
+\index{get\+Minutes@{get\+Minutes}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Minutes()}{getMinutes()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Minutes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a58df480e36f2204cfdd975972d373634}{}\label{time_8c_a58df480e36f2204cfdd975972d373634}
+Gets the minutes value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of minutes. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Month@{get\+Month}}
+\index{get\+Month@{get\+Month}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Month()}{getMonth()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a05788a27dd70216657566ab4db5af1bc}{}\label{time_8c_a05788a27dd70216657566ab4db5af1bc}
+Gets the month (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded month. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Seconds@{get\+Seconds}}
+\index{get\+Seconds@{get\+Seconds}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Seconds()}{getSeconds()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a321d8f10d5182229677266a91cb88c92}{}\label{time_8c_a321d8f10d5182229677266a91cb88c92}
+Gets the seconds value (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded number of seconds. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!get\+Year@{get\+Year}}
+\index{get\+Year@{get\+Year}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{get\+Year()}{getYear()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char get\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a50c7376114a1136dac3a33aa2f833451}{}\label{time_8c_a50c7376114a1136dac3a33aa2f833451}
+Gets the year (decimal-\/encoded) from the R\+TC.
+
+\begin{DoxyReturn}{Returns}
+The decimal-\/encoded year. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!is\+Leap\+Year@{is\+Leap\+Year}}
+\index{is\+Leap\+Year@{is\+Leap\+Year}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{is\+Leap\+Year(int year)}{isLeapYear(int year)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Leap\+Year (
+\begin{DoxyParamCaption}
+\item[{int}]{year}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}{}\label{time_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}
+Determines if the given year is a leap year.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The year to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the year is a leap year. 
+\end{DoxyReturn}
+\index{time.\+c@{time.\+c}!set\+Date\+Time@{set\+Date\+Time}}
+\index{set\+Date\+Time@{set\+Date\+Time}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Date\+Time(date\+\_\+time date\+Time)}{setDateTime(date_time dateTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Date\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time}}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a39a439b39d927d8ce183a6f6b7f6be13}{}\label{time_8c_a39a439b39d927d8ce183a6f6b7f6be13}
+Sets the date and time to the specified values.
+
+Day of month must be specified but day of week/year will be automatically calculated. 
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The values to set. \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Day\+Of\+Month@{set\+Day\+Of\+Month}}
+\index{set\+Day\+Of\+Month@{set\+Day\+Of\+Month}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Day\+Of\+Month(unsigned char day)}{setDayOfMonth(unsigned char day)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Day\+Of\+Month (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{day}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a5501427443cb2cfe550133766a687b38}{}\label{time_8c_a5501427443cb2cfe550133766a687b38}
+Sets the day of the month register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em day\+Of\+Month} & The day of the month value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Day\+Of\+Week@{set\+Day\+Of\+Week}}
+\index{set\+Day\+Of\+Week@{set\+Day\+Of\+Week}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Day\+Of\+Week(unsigned char day)}{setDayOfWeek(unsigned char day)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{day}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a5e2b8733bf0be113457c0d8ee6cea672}{}\label{time_8c_a5e2b8733bf0be113457c0d8ee6cea672}
+Sets the day of the week register in the R\+TC. This number should be decimal-\/encoded.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+
+\begin{DoxyParams}{Parameters}
+{\em day\+Of\+Week} & The day of the week value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Hours@{set\+Hours}}
+\index{set\+Hours@{set\+Hours}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Hours(unsigned char hour)}{setHours(unsigned char hour)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Hours (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{hour}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_abeee8287cc6c0779c95396e89607f9c5}{}\label{time_8c_abeee8287cc6c0779c95396e89607f9c5}
+Sets the hours register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hours} & The hours value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Minutes@{set\+Minutes}}
+\index{set\+Minutes@{set\+Minutes}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Minutes(unsigned char min)}{setMinutes(unsigned char min)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Minutes (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{min}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a04ede1be85ddda2de9b7ed1b56231a03}{}\label{time_8c_a04ede1be85ddda2de9b7ed1b56231a03}
+Sets the minutes register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em minutes} & The minutes value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Month@{set\+Month}}
+\index{set\+Month@{set\+Month}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Month(unsigned char mon)}{setMonth(unsigned char mon)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Month (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{mon}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a44245b69750d3b4a98a16b045ff1236d}{}\label{time_8c_a44245b69750d3b4a98a16b045ff1236d}
+Sets the month register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em month} & The month value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Seconds@{set\+Seconds}}
+\index{set\+Seconds@{set\+Seconds}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Seconds(unsigned char sec)}{setSeconds(unsigned char sec)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Seconds (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{sec}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_ab6dcc4ef90c99f554b637ee2a5eb2452}{}\label{time_8c_ab6dcc4ef90c99f554b637ee2a5eb2452}
+Sets the seconds register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & The seconds value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!set\+Year@{set\+Year}}
+\index{set\+Year@{set\+Year}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{set\+Year(unsigned char year)}{setYear(unsigned char year)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Year (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{year}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a3668649ec3f1ecc1f370e7418ada94ae}{}\label{time_8c_a3668649ec3f1ecc1f370e7418ada94ae}
+Sets the year register in the R\+TC. This number should be decimal-\/encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The year value to set \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!update\+Day\+Of\+Week@{update\+Day\+Of\+Week}}
+\index{update\+Day\+Of\+Week@{update\+Day\+Of\+Week}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{update\+Day\+Of\+Week(date\+\_\+time $\ast$date\+Time)}{updateDayOfWeek(date_time *dateTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time} $\ast$}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_a6bd75e238bb0477212793a8333b43b26}{}\label{time_8c_a6bd75e238bb0477212793a8333b43b26}
+Sets the day of week property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+Sunday -\/ 1 Monday -\/ 2 Tuesday -\/ 3 Wednesday -\/ 4 Thursday -\/ 5 Friday -\/ 6 Saturday -\/ 7
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update. \\
+\hline
+\end{DoxyParams}
+\index{time.\+c@{time.\+c}!update\+Day\+Of\+Year@{update\+Day\+Of\+Year}}
+\index{update\+Day\+Of\+Year@{update\+Day\+Of\+Year}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{update\+Day\+Of\+Year(date\+\_\+time $\ast$date\+Time)}{updateDayOfYear(date_time *dateTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Day\+Of\+Year (
+\begin{DoxyParamCaption}
+\item[{{\bf date\+\_\+time} $\ast$}]{date\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{time_8c_af04f67feda281f69984016324fada573}{}\label{time_8c_af04f67feda281f69984016324fada573}
+Sets the day of year property of the \hyperlink{structdate__time}{date\+\_\+time} struct based on the year, month, and day of month values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The \hyperlink{structdate__time}{date\+\_\+time} to update. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{time.\+c@{time.\+c}!D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}}
+\index{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}!time.\+c@{time.\+c}}
+\subsubsection[{\texorpdfstring{D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}{DAYS_IN_MONTH}}]{\setlength{\rightskip}{0pt plus 5cm}const int D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH\mbox{[}13\mbox{]} = \{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\}}\hypertarget{time_8c_a73dde863137d5fb84a69d84319a8245c}{}\label{time_8c_a73dde863137d5fb84a69d84319a8245c}

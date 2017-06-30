@@ -1,0 +1,2232 @@
+\begin{theindex}
+
+  \item {\+\_\+\+Boot\+Sector}
+    \subitem {fat.\+c}, \hyperpage{162}
+  \item {\+\_\+\+Curr\+Dir\+Size}
+    \subitem {fat.\+c}, \hyperpage{162}
+  \item {\+\_\+\+Current\+Directory}
+    \subitem {fat.\+c}, \hyperpage{162}
+  \item {\+\_\+\+Disk\+Image}
+    \subitem {fat.\+c}, \hyperpage{163}
+  \item {\+\_\+\+F\+A\+T\+Tables}
+    \subitem {fat.\+c}, \hyperpage{163}
+  \item {\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+    \subitem {heap.\+h}, \hyperpage{54}
+    \subitem {tables.\+h}, \hyperpage{49}
+  \item {\+\_\+\+\_\+end}
+    \subitem {heap.\+c}, \hyperpage{124}
+  \item {\+\_\+call\+Command}
+    \subitem {main.\+c}, \hyperpage{169}
+  \item {\+\_\+end}
+    \subitem {heap.\+c}, \hyperpage{124}
+  \item {\+\_\+extcmp}
+    \subitem {main.\+c}, \hyperpage{169}
+  \item {\+\_\+find\+Node}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {\+\_\+find\+Node\+In\+Queue}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {\+\_\+fncmp}
+    \subitem {main.\+c}, \hyperpage{169}
+  \item {\+\_\+get\+Cluster\+Of\+File\+With\+Name}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry}
+    \subitem {fat.\+c}, \hyperpage{158}
+  \item {\+\_\+get\+First\+Free\+Index\+In\+Dirs}
+    \subitem {fat.\+c}, \hyperpage{158}
+  \item {\+\_\+get\+First\+Free\+Index\+In\+Sector}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+get\+First\+Open\+Sector}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+get\+Index\+Of\+File\+With\+Name}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+get\+Size\+Of\+File\+With\+Name}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+insert\+F\+I\+FO}
+    \subitem {queue.\+c}, \hyperpage{113}
+  \item {\+\_\+insert\+Priority}
+    \subitem {queue.\+c}, \hyperpage{113}
+  \item {\+\_\+is\+Current\+Root}
+    \subitem {fat.\+c}, \hyperpage{163}
+  \item {\+\_\+kmalloc}
+    \subitem {heap.\+c}, \hyperpage{122}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {\+\_\+launch\+Command\+Interface}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+load\+Boot\+Sector\+Info}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+load\+F\+A\+T\+Tables}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+load\+Root\+Directroy}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+load\+Sector\+As\+Directory\+Entries}
+    \subitem {fat.\+c}, \hyperpage{159}
+  \item {\+\_\+merge\+Adjacent\+Free}
+    \subitem {memory\+Control.\+c}, \hyperpage{125}
+  \item {\+\_\+name\+Cmp\+Helper}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+new\+Node}
+    \subitem {queue.\+c}, \hyperpage{113}
+  \item {\+\_\+place\+Structs}
+    \subitem {memory\+Control.\+c}, \hyperpage{125}
+  \item {\+\_\+prep\+New\+Dir\+Sector}
+    \subitem {fat.\+c}, \hyperpage{160}
+  \item {\+\_\+print\+Boot\+Sector\+Info}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+print\+Directory\+Entries}
+    \subitem {main.\+c}, \hyperpage{170}
+  \item {\+\_\+print\+Directory\+Entries\+By\+File\+Name}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {\+\_\+print\+Directory\+Entries\+By\+Type}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {\+\_\+print\+F\+A\+T\+Table\+Info}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {\+\_\+print\+File}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {\+\_\+read\+Directory\+Entry}
+    \subitem {fat.\+c}, \hyperpage{160}
+  \item {\+\_\+refresh\+Directory}
+    \subitem {fat.\+c}, \hyperpage{160}
+  \item {\+\_\+save\+Dir\+Entry}
+    \subitem {fat.\+c}, \hyperpage{160}
+  \item {\+\_\+save\+F\+A\+T\+Tables}
+    \subitem {fat.\+c}, \hyperpage{160}
+
+  \indexspace
+
+  \item {A\+L\+L\+O\+C\+A\+T\+ED}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+  \item {A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {A\+PR}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {A\+R\+C\+H\+I\+VE}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {A\+UG}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {access}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {accessed}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+  \item {add\+Com\+History}
+    \subitem {com\+Handler.\+c}, \hyperpage{99}
+    \subitem {com\+Handler.\+h}, \hyperpage{25}
+  \item {add\+Function\+Def}
+    \subitem {com\+Handler.\+c}, \hyperpage{99}
+    \subitem {com\+Handler.\+h}, \hyperpage{25}
+  \item {alloc}
+    \subitem {heap.\+c}, \hyperpage{123}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {allocate\+Mem}
+    \subitem {mem\+Commands.\+c}, \hyperpage{156}
+    \subitem {mem\+Commands.\+h}, \hyperpage{82}
+  \item {allocate\+Memory}
+    \subitem {memory\+Control.\+c}, \hyperpage{125}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+  \item {allocate\+P\+CB}
+    \subitem {pcb.\+c}, \hyperpage{109}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {allocated\+Head}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {asm}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {atoi}
+    \subitem {string.\+c}, \hyperpage{134}
+    \subitem {string.\+h}, \hyperpage{84}
+  \item {attributes}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+
+  \indexspace
+
+  \item {B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {B\+L\+O\+C\+K\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status\+\_\+temp.\+h}, \hyperpage{73}
+  \item {B\+L\+O\+C\+K\+ED}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {base}
+    \subitem {gdt\+\_\+descriptor\+\_\+struct}, \hyperpage{13}
+    \subitem {heap}, \hyperpage{15}
+    \subitem {idt\+\_\+struct}, \hyperpage{16}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {base\+\_\+high}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {base\+\_\+low}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {base\+\_\+mid}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {bcd\+To\+Dec}
+    \subitem {math.\+c}, \hyperpage{131}
+    \subitem {math.\+h}, \hyperpage{51}
+  \item {beginning\+Addr}
+    \subitem {cmcb}, \hyperpage{7}
+  \item {block}
+    \subitem {index\+\_\+entry}, \hyperpage{16}
+  \item {block\+Pcb}
+    \subitem {temp.\+c}, \hyperpage{149}
+    \subitem {temp.\+h}, \hyperpage{75}
+  \item {boolean}
+    \subitem {boolean.\+h}, \hyperpage{23}
+  \item {boolean.\+h}
+    \subitem {boolean}, \hyperpage{23}
+    \subitem {false}, \hyperpage{23}
+    \subitem {true}, \hyperpage{23}
+  \item {boot\+\_\+sector}, \hyperpage{5}
+    \subitem {boot\+Sig}, \hyperpage{6}
+    \subitem {bytes\+Per\+Sector}, \hyperpage{6}
+    \subitem {file\+System\+Type}, \hyperpage{6}
+    \subitem {ignore\+\_\+1}, \hyperpage{6}
+    \subitem {ignore\+\_\+2}, \hyperpage{6}
+    \subitem {ignore\+\_\+3}, \hyperpage{6}
+    \subitem {ignore\+\_\+4}, \hyperpage{6}
+    \subitem {ignore\+\_\+5}, \hyperpage{6}
+    \subitem {max\+Root\+Dir\+Entries}, \hyperpage{6}
+    \subitem {num\+F\+A\+T\+Copies}, \hyperpage{6}
+    \subitem {num\+Heads}, \hyperpage{6}
+    \subitem {num\+Reserved\+Sectors}, \hyperpage{6}
+    \subitem {num\+Sectors}, \hyperpage{6}
+    \subitem {sector\+Count\+F\+A\+T32}, \hyperpage{6}
+    \subitem {sectors\+Per\+Cluster}, \hyperpage{6}
+    \subitem {sectors\+Per\+F\+AT}, \hyperpage{6}
+    \subitem {sectors\+Per\+Track}, \hyperpage{6}
+    \subitem {vol\+Id}, \hyperpage{6}
+    \subitem {vol\+Name}, \hyperpage{6}
+  \item {boot\+Sig}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {bounds}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {breakpoint}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {buffer}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+  \item {bytes\+Per\+Sector}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+
+  \indexspace
+
+  \item {C\+O\+M1}
+    \subitem {serial.\+h}, \hyperpage{46}
+  \item {C\+O\+M2}
+    \subitem {serial.\+h}, \hyperpage{46}
+  \item {C\+O\+M3}
+    \subitem {serial.\+h}, \hyperpage{46}
+  \item {C\+O\+M4}
+    \subitem {serial.\+h}, \hyperpage{46}
+  \item {C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {C\+R\+E\+A\+T\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status\+\_\+temp.\+h}, \hyperpage{73}
+  \item {caller\+Context}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+  \item {cdir}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {change\+To\+Directory}
+    \subitem {fat.\+c}, \hyperpage{160}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {change\+To\+Parent\+Directory}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{166}
+  \item {check\+Param\+Class}
+    \subitem {pcb.\+c}, \hyperpage{109}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {check\+Param\+Name}
+    \subitem {pcb.\+c}, \hyperpage{110}
+    \subitem {pcb.\+h}, \hyperpage{41}
+  \item {check\+Param\+Priority}
+    \subitem {pcb.\+c}, \hyperpage{110}
+    \subitem {pcb.\+h}, \hyperpage{41}
+  \item {clear\+\_\+bit}
+    \subitem {paging.\+c}, \hyperpage{128}
+    \subitem {paging.\+h}, \hyperpage{59}
+  \item {cli}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {cmcb}, \hyperpage{7}
+    \subitem {beginning\+Addr}, \hyperpage{7}
+    \subitem {mem\+Size}, \hyperpage{7}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+    \subitem {name}, \hyperpage{7}
+    \subitem {next}, \hyperpage{7}
+    \subitem {prev}, \hyperpage{7}
+    \subitem {size}, \hyperpage{7}
+    \subitem {type}, \hyperpage{7}
+  \item {com\+Handler.\+c}
+    \subitem {add\+Com\+History}, \hyperpage{99}
+    \subitem {add\+Function\+Def}, \hyperpage{99}
+    \subitem {buffer}, \hyperpage{102}
+    \subitem {com\+History}, \hyperpage{102}
+    \subitem {com\+History\+Pos}, \hyperpage{102}
+    \subitem {continue\+Handle}, \hyperpage{102}
+    \subitem {erase\+Current\+Row}, \hyperpage{99}
+    \subitem {execute\+Command}, \hyperpage{100}
+    \subitem {function\+Defs}, \hyperpage{102}
+    \subitem {function\+Insert\+Point}, \hyperpage{102}
+    \subitem {get\+Com\+History}, \hyperpage{100}
+    \subitem {get\+Function\+Def}, \hyperpage{100}
+    \subitem {get\+Help\+String}, \hyperpage{100}
+    \subitem {get\+Input}, \hyperpage{101}
+    \subitem {help}, \hyperpage{101}
+    \subitem {init\+Command\+Handler}, \hyperpage{101}
+    \subitem {print\+Start}, \hyperpage{101}
+    \subitem {return\+To\+Insertion\+Point}, \hyperpage{101}
+    \subitem {setup\+Commands}, \hyperpage{102}
+    \subitem {shutdown}, \hyperpage{102}
+  \item {com\+Handler.\+h}
+    \subitem {add\+Com\+History}, \hyperpage{25}
+    \subitem {add\+Function\+Def}, \hyperpage{25}
+    \subitem {erase\+Current\+Row}, \hyperpage{26}
+    \subitem {execute\+Command}, \hyperpage{26}
+    \subitem {get\+Com\+History}, \hyperpage{26}
+    \subitem {get\+Function\+Def}, \hyperpage{26}
+    \subitem {get\+Help\+String}, \hyperpage{27}
+    \subitem {get\+Input}, \hyperpage{27}
+    \subitem {init\+Command\+Handler}, \hyperpage{27}
+    \subitem {print\+Start}, \hyperpage{27}
+    \subitem {return\+To\+Insertion\+Point}, \hyperpage{27}
+    \subitem {setup\+Commands}, \hyperpage{27}
+  \item {com\+History}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+  \item {com\+History\+Pos}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+  \item {commands.\+c}
+    \subitem {date}, \hyperpage{103}
+    \subitem {version}, \hyperpage{103}
+  \item {commands.\+h}
+    \subitem {date}, \hyperpage{28}
+    \subitem {help}, \hyperpage{29}
+    \subitem {shutdown}, \hyperpage{29}
+    \subitem {version}, \hyperpage{30}
+  \item {context}, \hyperpage{8}
+    \subitem {cs}, \hyperpage{8}
+    \subitem {ds}, \hyperpage{8}
+    \subitem {eax}, \hyperpage{8}
+    \subitem {ebp}, \hyperpage{8}
+    \subitem {ebx}, \hyperpage{8}
+    \subitem {ecx}, \hyperpage{8}
+    \subitem {edi}, \hyperpage{8}
+    \subitem {edx}, \hyperpage{8}
+    \subitem {eflags}, \hyperpage{8}
+    \subitem {eip}, \hyperpage{8}
+    \subitem {es}, \hyperpage{8}
+    \subitem {esi}, \hyperpage{8}
+    \subitem {esp}, \hyperpage{8}
+    \subitem {fs}, \hyperpage{8}
+    \subitem {gs}, \hyperpage{8}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {continue\+Handle}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+  \item {cop}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+  \item {coprocessor}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {coprocessor\+\_\+segment}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {core/help.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+A\+TE}, 
+		\hyperpage{31}
+    \subitem {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+H\+E\+LP}, 
+		\hyperpage{31}
+    \subitem {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+U\+T\+D\+O\+WN}, 
+		\hyperpage{31}
+    \subitem {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+V\+E\+R\+S\+I\+ON}, 
+		\hyperpage{31}
+    \subitem {H\+E\+L\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}, 
+		\hyperpage{32}
+    \subitem {H\+E\+L\+P\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+ND}, 
+		\hyperpage{32}
+  \item {create\+Pcb}
+    \subitem {temp.\+c}, \hyperpage{150}
+    \subitem {temp.\+h}, \hyperpage{75}
+  \item {creation\+Date}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {creation\+Time}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {cs}
+    \subitem {context}, \hyperpage{8}
+  \item {curr\+\_\+heap}
+    \subitem {heap.\+c}, \hyperpage{124}
+  \item {current\+\_\+module}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+
+  \indexspace
+
+  \item {D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {D\+A\+T\+A\+\_\+\+P\+O\+RT}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {D\+A\+Y\+\_\+\+M\+O\+N\+TH}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {D\+A\+Y\+\_\+\+W\+E\+EK}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}
+    \subitem {time.\+c}, \hyperpage{142}
+    \subitem {time.\+h}, \hyperpage{98}
+  \item {D\+E\+L\+E\+T\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status\+\_\+temp.\+h}, \hyperpage{73}
+  \item {D\+E\+L\+E\+T\+ED}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {D\+EC}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}
+    \subitem {fat.\+h}, \hyperpage{164}
+  \item {data}
+    \subitem {node}, \hyperpage{19}
+  \item {date}
+    \subitem {commands.\+c}, \hyperpage{103}
+    \subitem {commands.\+h}, \hyperpage{28}
+  \item {date\+\_\+time}, \hyperpage{9}
+    \subitem {day\+\_\+m}, \hyperpage{9}
+    \subitem {day\+\_\+w}, \hyperpage{9}
+    \subitem {day\+\_\+y}, \hyperpage{9}
+    \subitem {hour}, \hyperpage{9}
+    \subitem {min}, \hyperpage{9}
+    \subitem {mon}, \hyperpage{9}
+    \subitem {sec}, \hyperpage{9}
+    \subitem {year}, \hyperpage{9}
+  \item {day\+\_\+m}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {day\+\_\+w}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {day\+\_\+y}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {deallocate\+Memory}
+    \subitem {memory\+Control.\+c}, \hyperpage{126}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+  \item {debug}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {dec\+To\+Bcd}
+    \subitem {math.\+c}, \hyperpage{131}
+    \subitem {math.\+h}, \hyperpage{51}
+  \item {delete\+Pcb}
+    \subitem {temp.\+c}, \hyperpage{150}
+    \subitem {temp.\+h}, \hyperpage{75}
+  \item {depth}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {destroy}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{166}
+  \item {device\+\_\+id}
+    \subitem {param}, \hyperpage{22}
+  \item {device\+\_\+not\+\_\+available}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {dir\+\_\+entry}, \hyperpage{9}
+    \subitem {attributes}, \hyperpage{10}
+    \subitem {creation\+Date}, \hyperpage{10}
+    \subitem {creation\+Time}, \hyperpage{10}
+    \subitem {extension}, \hyperpage{10}
+    \subitem {file\+Size}, \hyperpage{10}
+    \subitem {filename}, \hyperpage{10}
+    \subitem {first\+Logical\+Cluster}, \hyperpage{10}
+    \subitem {ignore}, \hyperpage{10}
+    \subitem {last\+Access}, \hyperpage{10}
+    \subitem {last\+Write\+Date}, \hyperpage{10}
+    \subitem {last\+Write\+Time}, \hyperpage{10}
+    \subitem {reserved}, \hyperpage{10}
+  \item {dirty}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+  \item {disk\+Image}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {divide\+\_\+error}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+bounds}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+breakpoint}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+coprocessor}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+coprocessor\+\_\+segment}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+debug}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+device\+\_\+not\+\_\+available}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+divide\+\_\+error}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+double\+\_\+fault}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+general\+\_\+protection}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+invalid\+\_\+op}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+invalid\+\_\+tss}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+isr}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+nmi}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+overflow}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {do\+\_\+page\+\_\+fault}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {do\+\_\+reserved}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {do\+\_\+segment\+\_\+not\+\_\+present}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {do\+\_\+stack\+\_\+segment}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {double\+\_\+fault}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {ds}
+    \subitem {context}, \hyperpage{8}
+
+  \indexspace
+
+  \item {E\+X\+IT}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {eax}
+    \subitem {context}, \hyperpage{8}
+  \item {ebp}
+    \subitem {context}, \hyperpage{8}
+  \item {ebx}
+    \subitem {context}, \hyperpage{8}
+  \item {ecx}
+    \subitem {context}, \hyperpage{8}
+  \item {edi}
+    \subitem {context}, \hyperpage{8}
+  \item {edx}
+    \subitem {context}, \hyperpage{8}
+  \item {eflags}
+    \subitem {context}, \hyperpage{8}
+  \item {eip}
+    \subitem {context}, \hyperpage{8}
+  \item {empty}
+    \subitem {index\+\_\+entry}, \hyperpage{16}
+  \item {end}
+    \subitem {heap.\+c}, \hyperpage{124}
+  \item {erase\+Current\+Row}
+    \subitem {com\+Handler.\+c}, \hyperpage{99}
+    \subitem {com\+Handler.\+h}, \hyperpage{26}
+  \item {es}
+    \subitem {context}, \hyperpage{8}
+  \item {esi}
+    \subitem {context}, \hyperpage{8}
+  \item {esp}
+    \subitem {context}, \hyperpage{8}
+  \item {execute\+Command}
+    \subitem {com\+Handler.\+c}, \hyperpage{100}
+    \subitem {com\+Handler.\+h}, \hyperpage{26}
+  \item {extension}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+
+  \indexspace
+
+  \item {F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {F\+EB}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {F\+R\+EE}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+  \item {F\+RI}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {false}
+    \subitem {boolean.\+h}, \hyperpage{23}
+  \item {fat.\+c}
+    \subitem {\+\_\+\+Boot\+Sector}, \hyperpage{162}
+    \subitem {\+\_\+\+Curr\+Dir\+Size}, \hyperpage{162}
+    \subitem {\+\_\+\+Current\+Directory}, \hyperpage{162}
+    \subitem {\+\_\+\+Disk\+Image}, \hyperpage{163}
+    \subitem {\+\_\+\+F\+A\+T\+Tables}, \hyperpage{163}
+    \subitem {\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry}, 
+		\hyperpage{158}
+    \subitem {\+\_\+get\+First\+Free\+Index\+In\+Dirs}, \hyperpage{158}
+    \subitem {\+\_\+get\+First\+Free\+Index\+In\+Sector}, 
+		\hyperpage{159}
+    \subitem {\+\_\+get\+First\+Open\+Sector}, \hyperpage{159}
+    \subitem {\+\_\+is\+Current\+Root}, \hyperpage{163}
+    \subitem {\+\_\+load\+Boot\+Sector\+Info}, \hyperpage{159}
+    \subitem {\+\_\+load\+F\+A\+T\+Tables}, \hyperpage{159}
+    \subitem {\+\_\+load\+Root\+Directroy}, \hyperpage{159}
+    \subitem {\+\_\+load\+Sector\+As\+Directory\+Entries}, 
+		\hyperpage{159}
+    \subitem {\+\_\+prep\+New\+Dir\+Sector}, \hyperpage{160}
+    \subitem {\+\_\+read\+Directory\+Entry}, \hyperpage{160}
+    \subitem {\+\_\+refresh\+Directory}, \hyperpage{160}
+    \subitem {\+\_\+save\+Dir\+Entry}, \hyperpage{160}
+    \subitem {\+\_\+save\+F\+A\+T\+Tables}, \hyperpage{160}
+    \subitem {change\+To\+Directory}, \hyperpage{160}
+    \subitem {change\+To\+Parent\+Directory}, \hyperpage{161}
+    \subitem {destroy}, \hyperpage{161}
+    \subitem {get\+Boot\+Sector}, \hyperpage{161}
+    \subitem {get\+Current\+Directory}, \hyperpage{161}
+    \subitem {get\+Current\+Directory\+Max\+Size}, \hyperpage{161}
+    \subitem {get\+F\+A\+T\+Tables}, \hyperpage{161}
+    \subitem {get\+File\+From\+Sector}, \hyperpage{161}
+    \subitem {initialize}, \hyperpage{162}
+    \subitem {move\+File}, \hyperpage{162}
+    \subitem {set\+Filename}, \hyperpage{162}
+  \item {fat.\+h}
+    \subitem {A\+R\+C\+H\+I\+VE}, \hyperpage{164}
+    \subitem {B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}, \hyperpage{164}
+    \subitem {B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}, 
+		\hyperpage{164}
+    \subitem {change\+To\+Directory}, \hyperpage{165}
+    \subitem {change\+To\+Parent\+Directory}, \hyperpage{166}
+    \subitem {D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}, 
+		\hyperpage{164}
+    \subitem {D\+E\+L\+E\+T\+ED}, \hyperpage{164}
+    \subitem {D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}, 
+		\hyperpage{164}
+    \subitem {destroy}, \hyperpage{166}
+    \subitem {F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}, \hyperpage{165}
+    \subitem {F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}, \hyperpage{165}
+    \subitem {get\+Boot\+Sector}, \hyperpage{166}
+    \subitem {get\+Current\+Directory}, \hyperpage{166}
+    \subitem {get\+Current\+Directory\+Max\+Size}, \hyperpage{166}
+    \subitem {get\+F\+A\+T\+Tables}, \hyperpage{167}
+    \subitem {get\+File\+From\+Sector}, \hyperpage{167}
+    \subitem {H\+I\+D\+D\+EN}, \hyperpage{165}
+    \subitem {initialize}, \hyperpage{167}
+    \subitem {L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}, 
+		\hyperpage{165}
+    \subitem {L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}, 
+		\hyperpage{165}
+    \subitem {M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}, 
+		\hyperpage{165}
+    \subitem {M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}, 
+		\hyperpage{165}
+    \subitem {move\+File}, \hyperpage{168}
+    \subitem {R\+E\+A\+D\+\_\+\+O\+N\+LY}, \hyperpage{165}
+    \subitem {R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}, 
+		\hyperpage{165}
+    \subitem {R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}, 
+		\hyperpage{165}
+    \subitem {R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}, 
+		\hyperpage{165}
+    \subitem {R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}, 
+		\hyperpage{165}
+    \subitem {S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}, \hyperpage{165}
+    \subitem {S\+Y\+S\+T\+EM}, \hyperpage{165}
+    \subitem {set\+Filename}, \hyperpage{168}
+    \subitem {U\+N\+U\+S\+ED}, \hyperpage{165}
+    \subitem {V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}, \hyperpage{165}
+  \item {fat1}
+    \subitem {fat\+\_\+tables}, \hyperpage{11}
+  \item {fat2}
+    \subitem {fat\+\_\+tables}, \hyperpage{11}
+  \item {fat\+\_\+tables}, \hyperpage{11}
+    \subitem {fat1}, \hyperpage{11}
+    \subitem {fat2}, \hyperpage{11}
+    \subitem {num\+Entries}, \hyperpage{11}
+  \item {file\+Size}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {file\+System\+Type}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {filename}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {find\+P\+CB}
+    \subitem {queue.\+c}, \hyperpage{114}
+    \subitem {queue.\+h}, \hyperpage{43}
+  \item {first\+\_\+free}
+    \subitem {paging.\+c}, \hyperpage{129}
+    \subitem {paging.\+h}, \hyperpage{59}
+  \item {first\+Logical\+Cluster}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {flags}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {footer}, \hyperpage{11}
+    \subitem {head}, \hyperpage{12}
+  \item {frameaddr}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+  \item {frames}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {free\+Head}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {free\+Memory}
+    \subitem {mem\+Commands.\+c}, \hyperpage{156}
+    \subitem {mem\+Commands.\+h}, \hyperpage{82}
+  \item {free\+P\+CB}
+    \subitem {pcb.\+c}, \hyperpage{110}
+    \subitem {pcb.\+h}, \hyperpage{41}
+  \item {fs}
+    \subitem {context}, \hyperpage{8}
+  \item {func\+Pointer}
+    \subitem {function\+Def}, \hyperpage{12}
+  \item {function\+Def}, \hyperpage{12}
+    \subitem {func\+Pointer}, \hyperpage{12}
+    \subitem {help\+String}, \hyperpage{12}
+    \subitem {name}, \hyperpage{12}
+  \item {function\+Defs}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+  \item {function\+Insert\+Point}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+
+  \indexspace
+
+  \item {G\+D\+T\+\_\+\+C\+S\+\_\+\+ID}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {G\+D\+T\+\_\+\+D\+S\+\_\+\+ID}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {gdt\+\_\+descriptor\+\_\+struct}, \hyperpage{12}
+    \subitem {base}, \hyperpage{13}
+    \subitem {limit}, \hyperpage{13}
+  \item {gdt\+\_\+entries}
+    \subitem {tables.\+c}, \hyperpage{121}
+  \item {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {access}, \hyperpage{13}
+    \subitem {base\+\_\+high}, \hyperpage{13}
+    \subitem {base\+\_\+low}, \hyperpage{13}
+    \subitem {base\+\_\+mid}, \hyperpage{13}
+    \subitem {flags}, \hyperpage{13}
+    \subitem {limit\+\_\+low}, \hyperpage{13}
+  \item {gdt\+\_\+init\+\_\+entry}
+    \subitem {tables.\+c}, \hyperpage{121}
+    \subitem {tables.\+h}, \hyperpage{49}
+  \item {gdt\+\_\+ptr}
+    \subitem {tables.\+c}, \hyperpage{121}
+  \item {general\+\_\+protection}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {get\+\_\+bit}
+    \subitem {paging.\+c}, \hyperpage{129}
+    \subitem {paging.\+h}, \hyperpage{59}
+  \item {get\+\_\+page}
+    \subitem {paging.\+c}, \hyperpage{129}
+    \subitem {paging.\+h}, \hyperpage{60}
+  \item {get\+Allocated\+Head}
+    \subitem {memory\+Control.\+c}, \hyperpage{126}
+    \subitem {memory\+Control.\+h}, \hyperpage{57}
+  \item {get\+Blocked\+Queue}
+    \subitem {queue.\+c}, \hyperpage{114}
+    \subitem {queue.\+h}, \hyperpage{44}
+  \item {get\+Boot\+Sector}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{166}
+  \item {get\+C\+O\+P\+Name}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{143}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {get\+Com\+History}
+    \subitem {com\+Handler.\+c}, \hyperpage{100}
+    \subitem {com\+Handler.\+h}, \hyperpage{26}
+  \item {get\+Current\+Directory}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{166}
+  \item {get\+Current\+Directory\+Max\+Size}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{166}
+  \item {get\+Date\+Time}
+    \subitem {time.\+c}, \hyperpage{138}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {get\+Day\+Of\+Month}
+    \subitem {time.\+c}, \hyperpage{138}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {get\+Day\+Of\+Week}
+    \subitem {time.\+c}, \hyperpage{138}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {get\+F\+A\+T\+Tables}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{167}
+  \item {get\+File\+From\+Sector}
+    \subitem {fat.\+c}, \hyperpage{161}
+    \subitem {fat.\+h}, \hyperpage{167}
+  \item {get\+Free\+Head}
+    \subitem {memory\+Control.\+c}, \hyperpage{126}
+    \subitem {memory\+Control.\+h}, \hyperpage{57}
+  \item {get\+Function\+Def}
+    \subitem {com\+Handler.\+c}, \hyperpage{100}
+    \subitem {com\+Handler.\+h}, \hyperpage{26}
+  \item {get\+Help\+String}
+    \subitem {com\+Handler.\+c}, \hyperpage{100}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {get\+Hours}
+    \subitem {time.\+c}, \hyperpage{138}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {get\+Input}
+    \subitem {com\+Handler.\+c}, \hyperpage{101}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {get\+Minutes}
+    \subitem {time.\+c}, \hyperpage{139}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {get\+Month}
+    \subitem {time.\+c}, \hyperpage{139}
+    \subitem {time.\+h}, \hyperpage{95}
+  \item {get\+Ready\+Queue}
+    \subitem {queue.\+c}, \hyperpage{114}
+    \subitem {queue.\+h}, \hyperpage{44}
+  \item {get\+Seconds}
+    \subitem {time.\+c}, \hyperpage{139}
+    \subitem {time.\+h}, \hyperpage{95}
+  \item {get\+Suspended\+Blocked\+Queue}
+    \subitem {queue.\+c}, \hyperpage{114}
+    \subitem {queue.\+h}, \hyperpage{44}
+  \item {get\+Suspended\+Ready\+Queue}
+    \subitem {queue.\+c}, \hyperpage{114}
+    \subitem {queue.\+h}, \hyperpage{44}
+  \item {get\+Year}
+    \subitem {time.\+c}, \hyperpage{139}
+    \subitem {time.\+h}, \hyperpage{95}
+  \item {gs}
+    \subitem {context}, \hyperpage{8}
+
+  \indexspace
+
+  \item {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+A\+TE}
+    \subitem {core/help.\+h}, \hyperpage{31}
+  \item {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+H\+E\+LP}
+    \subitem {core/help.\+h}, \hyperpage{31}
+  \item {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+U\+T\+D\+O\+WN}
+    \subitem {core/help.\+h}, \hyperpage{31}
+  \item {H\+E\+L\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+V\+E\+R\+S\+I\+ON}
+    \subitem {core/help.\+h}, \hyperpage{31}
+  \item {H\+E\+L\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}
+    \subitem {core/help.\+h}, \hyperpage{32}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+P\+CB}
+    \subitem {help\+\_\+temp.\+h}, \hyperpage{67}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+P\+CB}
+    \subitem {help\+\_\+temp.\+h}, \hyperpage{67}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+P\+CB}
+    \subitem {help\+\_\+temp.\+h}, \hyperpage{68}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+P\+CB}
+    \subitem {modules/\+R2/commands/help.\+h}, \hyperpage{33}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+P\+CB}
+    \subitem {modules/\+R2/commands/help.\+h}, \hyperpage{33}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+O\+W\+P\+CB}
+    \subitem {modules/\+R2/commands/help.\+h}, \hyperpage{33}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+P\+CB}
+    \subitem {modules/\+R2/commands/help.\+h}, \hyperpage{33}
+  \item {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+U\+P\+CB}
+    \subitem {help\+\_\+temp.\+h}, \hyperpage{68}
+  \item {H\+E\+L\+P\+\_\+\+R3\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+O\+AD}
+    \subitem {modules/\+R3/commands/help.\+h}, \hyperpage{34}
+  \item {H\+E\+L\+P\+\_\+\+R3\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+Y\+I\+E\+LD}
+    \subitem {modules/\+R3/commands/help.\+h}, \hyperpage{34}
+  \item {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+A\+L\+L\+OC}
+    \subitem {modules/\+R5/help.\+h}, \hyperpage{36}
+  \item {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+M\+P\+TY}
+    \subitem {modules/\+R5/help.\+h}, \hyperpage{36}
+  \item {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+F\+R\+EE}
+    \subitem {modules/\+R5/help.\+h}, \hyperpage{36}
+  \item {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+H\+E\+AP}
+    \subitem {modules/\+R5/help.\+h}, \hyperpage{37}
+  \item {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+O\+W\+M\+E\+M\+O\+RY}
+    \subitem {modules/\+R5/commands/help.\+h}, \hyperpage{35}
+  \item {H\+E\+L\+P\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+ND}
+    \subitem {core/help.\+h}, \hyperpage{32}
+  \item {H\+I\+D\+D\+EN}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {H\+O\+U\+RS}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {head}
+    \subitem {footer}, \hyperpage{12}
+  \item {header}, \hyperpage{14}
+    \subitem {index\+\_\+id}, \hyperpage{14}
+    \subitem {size}, \hyperpage{14}
+  \item {heap}, \hyperpage{14}
+    \subitem {base}, \hyperpage{15}
+    \subitem {index}, \hyperpage{15}
+    \subitem {max\+\_\+size}, \hyperpage{15}
+    \subitem {min\+\_\+size}, \hyperpage{15}
+  \item {heap.\+c}
+    \subitem {\+\_\+\+\_\+end}, \hyperpage{124}
+    \subitem {\+\_\+end}, \hyperpage{124}
+    \subitem {\+\_\+kmalloc}, \hyperpage{122}
+    \subitem {alloc}, \hyperpage{123}
+    \subitem {curr\+\_\+heap}, \hyperpage{124}
+    \subitem {end}, \hyperpage{124}
+    \subitem {kdir}, \hyperpage{124}
+    \subitem {kheap}, \hyperpage{124}
+    \subitem {kmalloc}, \hyperpage{123}
+    \subitem {make\+\_\+heap}, \hyperpage{123}
+    \subitem {phys\+\_\+alloc\+\_\+addr}, \hyperpage{124}
+  \item {heap.\+h}
+    \subitem {\+\_\+\+\_\+attribute\+\_\+\+\_\+}, \hyperpage{54}
+    \subitem {\+\_\+kmalloc}, \hyperpage{53}
+    \subitem {alloc}, \hyperpage{53}
+    \subitem {init\+\_\+kheap}, \hyperpage{54}
+    \subitem {K\+H\+E\+A\+P\+\_\+\+B\+A\+SE}, \hyperpage{53}
+    \subitem {K\+H\+E\+A\+P\+\_\+\+M\+IN}, \hyperpage{53}
+    \subitem {K\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}, \hyperpage{53}
+    \subitem {kfree}, \hyperpage{54}
+    \subitem {kmalloc}, \hyperpage{54}
+    \subitem {make\+\_\+heap}, \hyperpage{54}
+    \subitem {T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}, \hyperpage{53}
+  \item {help}
+    \subitem {com\+Handler.\+c}, \hyperpage{101}
+    \subitem {commands.\+h}, \hyperpage{29}
+  \item {help\+\_\+temp.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+P\+CB}, 
+		\hyperpage{67}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+P\+CB}, 
+		\hyperpage{67}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+D\+P\+CB}, 
+		\hyperpage{68}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+U\+P\+CB}, 
+		\hyperpage{68}
+  \item {help\+String}
+    \subitem {function\+Def}, \hyperpage{12}
+  \item {hlt}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {hour}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+
+  \indexspace
+
+  \item {I\+C\+W1}
+    \subitem {interrupts.\+c}, \hyperpage{105}
+  \item {I\+C\+W4}
+    \subitem {interrupts.\+c}, \hyperpage{105}
+  \item {I\+D\+LE}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {id}
+    \subitem {index\+\_\+table}, \hyperpage{17}
+  \item {idle}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{143}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {idt\+\_\+entries}
+    \subitem {interrupts.\+c}, \hyperpage{108}
+    \subitem {tables.\+c}, \hyperpage{121}
+  \item {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {base\+\_\+high}, \hyperpage{15}
+    \subitem {base\+\_\+low}, \hyperpage{15}
+    \subitem {flags}, \hyperpage{15}
+    \subitem {sselect}, \hyperpage{15}
+    \subitem {zero}, \hyperpage{15}
+  \item {idt\+\_\+ptr}
+    \subitem {tables.\+c}, \hyperpage{122}
+  \item {idt\+\_\+set\+\_\+gate}
+    \subitem {tables.\+c}, \hyperpage{121}
+    \subitem {tables.\+h}, \hyperpage{49}
+  \item {idt\+\_\+struct}, \hyperpage{16}
+    \subitem {base}, \hyperpage{16}
+    \subitem {limit}, \hyperpage{16}
+  \item {ignore}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {ignore\+\_\+1}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {ignore\+\_\+2}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {ignore\+\_\+3}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {ignore\+\_\+4}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {ignore\+\_\+5}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {image\+Name}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {inb}
+    \subitem {io.\+h}, \hyperpage{38}
+  \item {include/boolean.\+h}, \hyperpage{23}
+  \item {include/core/asm.\+h}, \hyperpage{24}
+  \item {include/core/com\+Handler.\+h}, \hyperpage{24}
+  \item {include/core/commands.\+h}, \hyperpage{28}
+  \item {include/core/help.\+h}, \hyperpage{30}
+  \item {include/core/interrupts.\+h}, \hyperpage{37}
+  \item {include/core/io.\+h}, \hyperpage{38}
+  \item {include/core/pcb.\+h}, \hyperpage{39}
+  \item {include/core/queue.\+h}, \hyperpage{42}
+  \item {include/core/serial.\+h}, \hyperpage{46}
+  \item {include/core/tables.\+h}, \hyperpage{48}
+  \item {include/core/version.\+h}, \hyperpage{50}
+  \item {include/math.\+h}, \hyperpage{51}
+  \item {include/mem/heap.\+h}, \hyperpage{52}
+  \item {include/mem/memory\+Control.\+h}, \hyperpage{55}
+  \item {include/mem/paging.\+h}, \hyperpage{58}
+  \item {include/modules/\+R2/commands/help.\+h}, \hyperpage{32}
+  \item {include/modules/\+R2/commands/help\+\_\+temp.\+h}, 
+		\hyperpage{67}
+  \item {include/modules/\+R2/commands/perm.\+h}, \hyperpage{68}
+  \item {include/modules/\+R2/commands/status.\+h}, \hyperpage{72}
+  \item {include/modules/\+R2/commands/status\+\_\+temp.\+h}, 
+		\hyperpage{73}
+  \item {include/modules/\+R2/commands/temp.\+h}, \hyperpage{74}
+  \item {include/modules/\+R3/commands/help.\+h}, \hyperpage{34}
+  \item {include/modules/\+R3/commands/r3commands.\+h}, \hyperpage{76}
+  \item {include/modules/\+R3/processes.\+h}, \hyperpage{78}
+  \item {include/modules/\+R5/commands/help.\+h}, \hyperpage{35}
+  \item {include/modules/\+R5/commands/r5commands.\+h}, \hyperpage{79}
+  \item {include/modules/\+R5/help.\+h}, \hyperpage{36}
+  \item {include/modules/\+R5/mem\+Commands.\+h}, \hyperpage{81}
+  \item {include/modules/mpx\+\_\+supt.\+h}, \hyperpage{61}
+  \item {include/regex.\+h}, \hyperpage{83}
+  \item {include/string.\+h}, \hyperpage{84}
+  \item {include/system.\+h}, \hyperpage{88}
+  \item {include/time.\+h}, \hyperpage{91}
+  \item {index}
+    \subitem {heap}, \hyperpage{15}
+  \item {index\+\_\+entry}, \hyperpage{16}
+    \subitem {block}, \hyperpage{16}
+    \subitem {empty}, \hyperpage{16}
+    \subitem {size}, \hyperpage{16}
+  \item {index\+\_\+id}
+    \subitem {header}, \hyperpage{14}
+  \item {index\+\_\+table}, \hyperpage{17}
+    \subitem {id}, \hyperpage{17}
+    \subitem {table}, \hyperpage{17}
+  \item {init\+\_\+gdt}
+    \subitem {tables.\+c}, \hyperpage{121}
+    \subitem {tables.\+h}, \hyperpage{49}
+  \item {init\+\_\+idt}
+    \subitem {tables.\+c}, \hyperpage{121}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {init\+\_\+irq}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+    \subitem {interrupts.\+h}, \hyperpage{37}
+  \item {init\+\_\+kheap}
+    \subitem {heap.\+h}, \hyperpage{54}
+  \item {init\+\_\+paging}
+    \subitem {paging.\+c}, \hyperpage{129}
+    \subitem {paging.\+h}, \hyperpage{60}
+  \item {init\+\_\+pic}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+    \subitem {interrupts.\+h}, \hyperpage{37}
+  \item {init\+\_\+serial}
+    \subitem {serial.\+c}, \hyperpage{117}
+    \subitem {serial.\+h}, \hyperpage{46}
+  \item {init\+Command\+Handler}
+    \subitem {com\+Handler.\+c}, \hyperpage{101}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {init\+Heap}
+    \subitem {mem\+Commands.\+c}, \hyperpage{157}
+    \subitem {mem\+Commands.\+h}, \hyperpage{82}
+  \item {initialize}
+    \subitem {fat.\+c}, \hyperpage{162}
+    \subitem {fat.\+h}, \hyperpage{167}
+  \item {initialize\+Heap}
+    \subitem {memory\+Control.\+c}, \hyperpage{126}
+    \subitem {memory\+Control.\+h}, \hyperpage{57}
+  \item {insert\+P\+CB}
+    \subitem {queue.\+c}, \hyperpage{115}
+    \subitem {queue.\+h}, \hyperpage{44}
+  \item {interrupts.\+c}
+    \subitem {bounds}, \hyperpage{106}
+    \subitem {breakpoint}, \hyperpage{106}
+    \subitem {coprocessor}, \hyperpage{106}
+    \subitem {coprocessor\+\_\+segment}, \hyperpage{106}
+    \subitem {debug}, \hyperpage{106}
+    \subitem {device\+\_\+not\+\_\+available}, \hyperpage{106}
+    \subitem {divide\+\_\+error}, \hyperpage{106}
+    \subitem {do\+\_\+bounds}, \hyperpage{106}
+    \subitem {do\+\_\+breakpoint}, \hyperpage{106}
+    \subitem {do\+\_\+coprocessor}, \hyperpage{106}
+    \subitem {do\+\_\+coprocessor\+\_\+segment}, \hyperpage{106}
+    \subitem {do\+\_\+debug}, \hyperpage{106}
+    \subitem {do\+\_\+device\+\_\+not\+\_\+available}, \hyperpage{106}
+    \subitem {do\+\_\+divide\+\_\+error}, \hyperpage{106}
+    \subitem {do\+\_\+double\+\_\+fault}, \hyperpage{106}
+    \subitem {do\+\_\+general\+\_\+protection}, \hyperpage{106}
+    \subitem {do\+\_\+invalid\+\_\+op}, \hyperpage{106}
+    \subitem {do\+\_\+invalid\+\_\+tss}, \hyperpage{106}
+    \subitem {do\+\_\+isr}, \hyperpage{106}
+    \subitem {do\+\_\+nmi}, \hyperpage{106}
+    \subitem {do\+\_\+overflow}, \hyperpage{106}
+    \subitem {do\+\_\+page\+\_\+fault}, \hyperpage{107}
+    \subitem {do\+\_\+reserved}, \hyperpage{107}
+    \subitem {do\+\_\+segment\+\_\+not\+\_\+present}, \hyperpage{107}
+    \subitem {do\+\_\+stack\+\_\+segment}, \hyperpage{107}
+    \subitem {double\+\_\+fault}, \hyperpage{107}
+    \subitem {general\+\_\+protection}, \hyperpage{107}
+    \subitem {I\+C\+W1}, \hyperpage{105}
+    \subitem {I\+C\+W4}, \hyperpage{105}
+    \subitem {idt\+\_\+entries}, \hyperpage{108}
+    \subitem {init\+\_\+irq}, \hyperpage{107}
+    \subitem {init\+\_\+pic}, \hyperpage{107}
+    \subitem {invalid\+\_\+op}, \hyperpage{107}
+    \subitem {invalid\+\_\+tss}, \hyperpage{107}
+    \subitem {io\+\_\+wait}, \hyperpage{105}
+    \subitem {isr0}, \hyperpage{107}
+    \subitem {nmi}, \hyperpage{107}
+    \subitem {overflow}, \hyperpage{107}
+    \subitem {P\+I\+C1}, \hyperpage{105}
+    \subitem {P\+I\+C2}, \hyperpage{106}
+    \subitem {page\+\_\+fault}, \hyperpage{107}
+    \subitem {reserved}, \hyperpage{107}
+    \subitem {rtc\+\_\+isr}, \hyperpage{107}
+    \subitem {segment\+\_\+not\+\_\+present}, \hyperpage{107}
+    \subitem {stack\+\_\+segment}, \hyperpage{107}
+    \subitem {sys\+\_\+call\+\_\+isr}, \hyperpage{107}
+  \item {interrupts.\+h}
+    \subitem {init\+\_\+irq}, \hyperpage{37}
+    \subitem {init\+\_\+pic}, \hyperpage{37}
+  \item {invalid\+\_\+op}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {invalid\+\_\+tss}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {io.\+h}
+    \subitem {inb}, \hyperpage{38}
+    \subitem {outb}, \hyperpage{38}
+  \item {io\+\_\+wait}
+    \subitem {interrupts.\+c}, \hyperpage{105}
+  \item {iret}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {is\+Char}
+    \subitem {string.\+c}, \hyperpage{134}
+    \subitem {string.\+h}, \hyperpage{85}
+  \item {is\+Empty}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+    \subitem {memory\+Control.\+h}, \hyperpage{58}
+  \item {is\+Empty\+Com}
+    \subitem {mem\+Commands.\+c}, \hyperpage{157}
+    \subitem {mem\+Commands.\+h}, \hyperpage{82}
+  \item {is\+Initialized}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {is\+Leap\+Year}
+    \subitem {time.\+c}, \hyperpage{139}
+    \subitem {time.\+h}, \hyperpage{95}
+  \item {is\+Lower\+Char}
+    \subitem {string.\+c}, \hyperpage{134}
+    \subitem {string.\+h}, \hyperpage{85}
+  \item {is\+Suspended}
+    \subitem {pcb}, \hyperpage{22}
+  \item {is\+Upper\+Char}
+    \subitem {string.\+c}, \hyperpage{135}
+    \subitem {string.\+h}, \hyperpage{86}
+  \item {isdigit}
+    \subitem {string.\+c}, \hyperpage{134}
+    \subitem {string.\+h}, \hyperpage{85}
+  \item {isr0}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {isspace}
+    \subitem {string.\+c}, \hyperpage{135}
+    \subitem {string.\+h}, \hyperpage{86}
+  \item {itoa}
+    \subitem {string.\+c}, \hyperpage{135}
+    \subitem {string.\+h}, \hyperpage{86}
+
+  \indexspace
+
+  \item {J\+AN}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {J\+UL}
+    \subitem {time.\+h}, \hyperpage{92}
+  \item {J\+UN}
+    \subitem {time.\+h}, \hyperpage{93}
+
+  \indexspace
+
+  \item {K\+H\+E\+A\+P\+\_\+\+B\+A\+SE}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {K\+H\+E\+A\+P\+\_\+\+M\+IN}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {K\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {kdir}
+    \subitem {heap.\+c}, \hyperpage{124}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {kernel/core/com\+Handler.\+c}, \hyperpage{98}
+  \item {kernel/core/commands.\+c}, \hyperpage{103}
+  \item {kernel/core/interrupts.\+c}, \hyperpage{104}
+  \item {kernel/core/kmain.\+c}, \hyperpage{108}
+  \item {kernel/core/pcb.\+c}, \hyperpage{108}
+  \item {kernel/core/queue.\+c}, \hyperpage{111}
+  \item {kernel/core/serial.\+c}, \hyperpage{116}
+  \item {kernel/core/system.\+c}, \hyperpage{119}
+  \item {kernel/core/tables.\+c}, \hyperpage{120}
+  \item {kernel/mem/heap.\+c}, \hyperpage{122}
+  \item {kernel/mem/memory\+Control.\+c}, \hyperpage{124}
+  \item {kernel/mem/paging.\+c}, \hyperpage{127}
+  \item {kfree}
+    \subitem {heap.\+h}, \hyperpage{54}
+  \item {kheap}
+    \subitem {heap.\+c}, \hyperpage{124}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {klogv}
+    \subitem {system.\+c}, \hyperpage{119}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {kmain}
+    \subitem {kmain.\+c}, \hyperpage{108}
+  \item {kmain.\+c}
+    \subitem {kmain}, \hyperpage{108}
+  \item {kmalloc}
+    \subitem {heap.\+c}, \hyperpage{123}
+    \subitem {heap.\+h}, \hyperpage{54}
+  \item {kpanic}
+    \subitem {system.\+c}, \hyperpage{119}
+    \subitem {system.\+h}, \hyperpage{90}
+
+  \indexspace
+
+  \item {L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {last\+Access}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {last\+Write\+Date}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {last\+Write\+Time}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+  \item {lib/math.\+c}, \hyperpage{131}
+  \item {lib/regex.\+c}, \hyperpage{132}
+  \item {lib/string.\+c}, \hyperpage{133}
+  \item {lib/time.\+c}, \hyperpage{137}
+  \item {limit}
+    \subitem {gdt\+\_\+descriptor\+\_\+struct}, \hyperpage{13}
+    \subitem {idt\+\_\+struct}, \hyperpage{16}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {limit\+\_\+low}
+    \subitem {gdt\+\_\+entry\+\_\+struct}, \hyperpage{13}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {lmcb}, \hyperpage{17}
+    \subitem {mem\+Size}, \hyperpage{18}
+    \subitem {memory\+Control.\+h}, \hyperpage{56}
+    \subitem {size}, \hyperpage{18}
+    \subitem {type}, \hyperpage{18}
+  \item {load\+\_\+page\+\_\+dir}
+    \subitem {paging.\+c}, \hyperpage{129}
+    \subitem {paging.\+h}, \hyperpage{60}
+  \item {loadr3}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+    \subitem {r3commands.\+h}, \hyperpage{77}
+
+  \indexspace
+
+  \item {M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {M\+AR}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {M\+AY}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {M\+I\+N\+U\+T\+ES}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+R1}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+R2}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+R3}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+R4}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+R5}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {M\+O\+N\+TH}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {M\+ON}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {main}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {main.\+c}
+    \subitem {\+\_\+call\+Command}, \hyperpage{169}
+    \subitem {\+\_\+extcmp}, \hyperpage{169}
+    \subitem {\+\_\+fncmp}, \hyperpage{169}
+    \subitem {\+\_\+get\+Cluster\+Of\+File\+With\+Name}, 
+		\hyperpage{170}
+    \subitem {\+\_\+get\+Index\+Of\+File\+With\+Name}, \hyperpage{170}
+    \subitem {\+\_\+get\+Size\+Of\+File\+With\+Name}, \hyperpage{170}
+    \subitem {\+\_\+launch\+Command\+Interface}, \hyperpage{170}
+    \subitem {\+\_\+name\+Cmp\+Helper}, \hyperpage{170}
+    \subitem {\+\_\+print\+Boot\+Sector\+Info}, \hyperpage{170}
+    \subitem {\+\_\+print\+Directory\+Entries}, \hyperpage{170}
+    \subitem {\+\_\+print\+Directory\+Entries\+By\+File\+Name}, 
+		\hyperpage{171}
+    \subitem {\+\_\+print\+Directory\+Entries\+By\+Type}, 
+		\hyperpage{171}
+    \subitem {\+\_\+print\+F\+A\+T\+Table\+Info}, \hyperpage{171}
+    \subitem {\+\_\+print\+File}, \hyperpage{171}
+    \subitem {depth}, \hyperpage{171}
+    \subitem {disk\+Image}, \hyperpage{171}
+    \subitem {filename}, \hyperpage{171}
+    \subitem {image\+Name}, \hyperpage{171}
+    \subitem {main}, \hyperpage{171}
+    \subitem {paths}, \hyperpage{171}
+    \subitem {print\+File\+Flag}, \hyperpage{171}
+  \item {make\+\_\+heap}
+    \subitem {heap.\+c}, \hyperpage{123}
+    \subitem {heap.\+h}, \hyperpage{54}
+  \item {math.\+c}
+    \subitem {bcd\+To\+Dec}, \hyperpage{131}
+    \subitem {dec\+To\+Bcd}, \hyperpage{131}
+  \item {math.\+h}
+    \subitem {bcd\+To\+Dec}, \hyperpage{51}
+    \subitem {dec\+To\+Bcd}, \hyperpage{51}
+  \item {max\+\_\+size}
+    \subitem {heap}, \hyperpage{15}
+  \item {max\+Root\+Dir\+Entries}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {mem\+\_\+size}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {mem\+Allocated}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {mem\+Commands.\+c}
+    \subitem {allocate\+Mem}, \hyperpage{156}
+    \subitem {free\+Memory}, \hyperpage{156}
+    \subitem {init\+Heap}, \hyperpage{157}
+    \subitem {is\+Empty\+Com}, \hyperpage{157}
+    \subitem {register\+R5\+Temp\+Commands}, \hyperpage{157}
+  \item {mem\+Commands.\+h}
+    \subitem {allocate\+Mem}, \hyperpage{82}
+    \subitem {free\+Memory}, \hyperpage{82}
+    \subitem {init\+Heap}, \hyperpage{82}
+    \subitem {is\+Empty\+Com}, \hyperpage{82}
+    \subitem {register\+R5\+Temp\+Commands}, \hyperpage{82}
+  \item {mem\+Heap}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {mem\+Size}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {lmcb}, \hyperpage{18}
+    \subitem {memory\+Control.\+c}, \hyperpage{127}
+  \item {memory\+Control.\+c}
+    \subitem {\+\_\+merge\+Adjacent\+Free}, \hyperpage{125}
+    \subitem {\+\_\+place\+Structs}, \hyperpage{125}
+    \subitem {allocate\+Memory}, \hyperpage{125}
+    \subitem {allocated\+Head}, \hyperpage{127}
+    \subitem {deallocate\+Memory}, \hyperpage{126}
+    \subitem {free\+Head}, \hyperpage{127}
+    \subitem {get\+Allocated\+Head}, \hyperpage{126}
+    \subitem {get\+Free\+Head}, \hyperpage{126}
+    \subitem {initialize\+Heap}, \hyperpage{126}
+    \subitem {is\+Empty}, \hyperpage{127}
+    \subitem {is\+Initialized}, \hyperpage{127}
+    \subitem {mem\+Allocated}, \hyperpage{127}
+    \subitem {mem\+Heap}, \hyperpage{127}
+    \subitem {mem\+Size}, \hyperpage{127}
+  \item {memory\+Control.\+h}
+    \subitem {A\+L\+L\+O\+C\+A\+T\+ED}, \hyperpage{56}
+    \subitem {allocate\+Memory}, \hyperpage{56}
+    \subitem {cmcb}, \hyperpage{56}
+    \subitem {deallocate\+Memory}, \hyperpage{56}
+    \subitem {F\+R\+EE}, \hyperpage{56}
+    \subitem {get\+Allocated\+Head}, \hyperpage{57}
+    \subitem {get\+Free\+Head}, \hyperpage{57}
+    \subitem {initialize\+Heap}, \hyperpage{57}
+    \subitem {is\+Empty}, \hyperpage{58}
+    \subitem {lmcb}, \hyperpage{56}
+  \item {memset}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{143}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{64}
+  \item {min}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {min\+\_\+size}
+    \subitem {heap}, \hyperpage{15}
+  \item {modules/\+R2/commands/help.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+P\+CB}, 
+		\hyperpage{33}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+P\+CB}, 
+		\hyperpage{33}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+O\+W\+P\+CB}, 
+		\hyperpage{33}
+    \subitem {H\+E\+L\+P\+\_\+\+R2\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+P\+CB}, 
+		\hyperpage{33}
+  \item {modules/\+R2/commands/perm.\+c}, \hyperpage{146}
+  \item {modules/\+R2/commands/temp.\+c}, \hyperpage{148}
+  \item {modules/\+R3/commands/help.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+R3\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+O\+AD}, 
+		\hyperpage{34}
+    \subitem {H\+E\+L\+P\+\_\+\+R3\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+Y\+I\+E\+LD}, 
+		\hyperpage{34}
+  \item {modules/\+R3/commands/r3commands.\+c}, \hyperpage{151}
+  \item {modules/\+R3/procsr3.\+c}, \hyperpage{153}
+  \item {modules/\+R5/commands/help.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+H\+O\+W\+M\+E\+M\+O\+RY}, 
+		\hyperpage{35}
+  \item {modules/\+R5/commands/r5commands.\+c}, \hyperpage{154}
+  \item {modules/\+R5/help.\+h}
+    \subitem {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+A\+L\+L\+OC}, 
+		\hyperpage{36}
+    \subitem {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+M\+P\+TY}, 
+		\hyperpage{36}
+    \subitem {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+F\+R\+EE}, 
+		\hyperpage{36}
+    \subitem {H\+E\+L\+P\+\_\+\+R5\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+H\+E\+AP}, 
+		\hyperpage{37}
+  \item {modules/\+R5/mem\+Commands.\+c}, \hyperpage{155}
+  \item {modules/mpx\+\_\+supt.\+c}, \hyperpage{142}
+  \item {mon}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {move\+File}
+    \subitem {fat.\+c}, \hyperpage{162}
+    \subitem {fat.\+h}, \hyperpage{168}
+  \item {mpx\+\_\+init}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{144}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{65}
+  \item {mpx\+\_\+supt.\+c}
+    \subitem {caller\+Context}, \hyperpage{145}
+    \subitem {cop}, \hyperpage{145}
+    \subitem {current\+\_\+module}, \hyperpage{145}
+    \subitem {get\+C\+O\+P\+Name}, \hyperpage{143}
+    \subitem {idle}, \hyperpage{143}
+    \subitem {memset}, \hyperpage{143}
+    \subitem {mpx\+\_\+init}, \hyperpage{144}
+    \subitem {params}, \hyperpage{145}
+    \subitem {student\+\_\+free}, \hyperpage{145}
+    \subitem {student\+\_\+malloc}, \hyperpage{145}
+    \subitem {sys\+\_\+alloc\+\_\+mem}, \hyperpage{144}
+    \subitem {sys\+\_\+call}, \hyperpage{144}
+    \subitem {sys\+\_\+free\+\_\+mem}, \hyperpage{144}
+    \subitem {sys\+\_\+req}, \hyperpage{145}
+    \subitem {sys\+\_\+set\+\_\+free}, \hyperpage{145}
+    \subitem {sys\+\_\+set\+\_\+malloc}, \hyperpage{145}
+  \item {mpx\+\_\+supt.\+h}
+    \subitem {context}, \hyperpage{63}
+    \subitem {E\+X\+IT}, \hyperpage{63}
+    \subitem {get\+C\+O\+P\+Name}, \hyperpage{63}
+    \subitem {I\+D\+LE}, \hyperpage{63}
+    \subitem {idle}, \hyperpage{63}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+R1}, \hyperpage{63}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+R2}, \hyperpage{63}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+R3}, \hyperpage{63}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+R4}, \hyperpage{63}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+R5}, \hyperpage{63}
+    \subitem {memset}, \hyperpage{64}
+    \subitem {mpx\+\_\+init}, \hyperpage{65}
+    \subitem {R\+E\+AD}, \hyperpage{63}
+    \subitem {sys\+\_\+alloc\+\_\+mem}, \hyperpage{65}
+    \subitem {sys\+\_\+call}, \hyperpage{65}
+    \subitem {sys\+\_\+free\+\_\+mem}, \hyperpage{65}
+    \subitem {sys\+\_\+req}, \hyperpage{66}
+    \subitem {sys\+\_\+set\+\_\+free}, \hyperpage{66}
+    \subitem {sys\+\_\+set\+\_\+malloc}, \hyperpage{66}
+    \subitem {W\+R\+I\+TE}, \hyperpage{63}
+
+  \indexspace
+
+  \item {N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {N\+O\+\_\+\+E\+R\+R\+OR}
+    \subitem {serial.\+c}, \hyperpage{117}
+  \item {N\+OV}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {N\+U\+LL}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {name}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {function\+Def}, \hyperpage{12}
+  \item {new\+\_\+frame}
+    \subitem {paging.\+c}, \hyperpage{130}
+    \subitem {paging.\+h}, \hyperpage{60}
+  \item {next}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {node}, \hyperpage{19}
+  \item {nframes}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {nmi}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {no\+\_\+warn}
+    \subitem {system.\+h}, \hyperpage{89}
+  \item {node}, \hyperpage{18}
+    \subitem {data}, \hyperpage{19}
+    \subitem {next}, \hyperpage{19}
+    \subitem {prev}, \hyperpage{19}
+    \subitem {queue.\+h}, \hyperpage{43}
+  \item {nop}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {num\+Entries}
+    \subitem {fat\+\_\+tables}, \hyperpage{11}
+  \item {num\+F\+A\+T\+Copies}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {num\+Heads}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {num\+Reserved\+Sectors}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {num\+Sectors}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+
+  \indexspace
+
+  \item {O\+CT}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {O\+S\+\_\+\+V\+E\+R\+S\+I\+ON}
+    \subitem {version.\+h}, \hyperpage{51}
+  \item {op\+\_\+code}
+    \subitem {param}, \hyperpage{22}
+  \item {outb}
+    \subitem {io.\+h}, \hyperpage{38}
+  \item {overflow}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+
+  \indexspace
+
+  \item {P1\+\_\+\+N\+A\+ME}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+  \item {P2\+\_\+\+N\+A\+ME}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+  \item {P3\+\_\+\+N\+A\+ME}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+  \item {P4\+\_\+\+N\+A\+ME}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+  \item {P5\+\_\+\+N\+A\+ME}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+  \item {P\+A\+G\+E\+\_\+\+S\+I\+ZE}
+    \subitem {paging.\+h}, \hyperpage{59}
+  \item {P\+I\+C1}
+    \subitem {interrupts.\+c}, \hyperpage{105}
+  \item {P\+I\+C2}
+    \subitem {interrupts.\+c}, \hyperpage{106}
+  \item {P\+R\+O\+C\+E\+S\+S\+\_\+\+N\+A\+M\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+E\+X\+I\+S\+TS}
+    \subitem {status\+\_\+temp.\+h}, \hyperpage{73}
+  \item {page\+\_\+dir}, \hyperpage{19}
+    \subitem {tables}, \hyperpage{20}
+    \subitem {tables\+\_\+phys}, \hyperpage{20}
+  \item {page\+\_\+entry}, \hyperpage{20}
+    \subitem {accessed}, \hyperpage{20}
+    \subitem {dirty}, \hyperpage{20}
+    \subitem {frameaddr}, \hyperpage{20}
+    \subitem {present}, \hyperpage{20}
+    \subitem {reserved}, \hyperpage{20}
+    \subitem {usermode}, \hyperpage{20}
+    \subitem {writeable}, \hyperpage{20}
+  \item {page\+\_\+fault}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {page\+\_\+size}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {page\+\_\+table}, \hyperpage{21}
+    \subitem {pages}, \hyperpage{21}
+  \item {pages}
+    \subitem {page\+\_\+table}, \hyperpage{21}
+  \item {paging.\+c}
+    \subitem {cdir}, \hyperpage{130}
+    \subitem {clear\+\_\+bit}, \hyperpage{128}
+    \subitem {first\+\_\+free}, \hyperpage{129}
+    \subitem {frames}, \hyperpage{130}
+    \subitem {get\+\_\+bit}, \hyperpage{129}
+    \subitem {get\+\_\+page}, \hyperpage{129}
+    \subitem {init\+\_\+paging}, \hyperpage{129}
+    \subitem {kdir}, \hyperpage{130}
+    \subitem {kheap}, \hyperpage{130}
+    \subitem {load\+\_\+page\+\_\+dir}, \hyperpage{129}
+    \subitem {mem\+\_\+size}, \hyperpage{130}
+    \subitem {new\+\_\+frame}, \hyperpage{130}
+    \subitem {nframes}, \hyperpage{130}
+    \subitem {page\+\_\+size}, \hyperpage{130}
+    \subitem {phys\+\_\+alloc\+\_\+addr}, \hyperpage{130}
+    \subitem {set\+\_\+bit}, \hyperpage{130}
+  \item {paging.\+h}
+    \subitem {clear\+\_\+bit}, \hyperpage{59}
+    \subitem {first\+\_\+free}, \hyperpage{59}
+    \subitem {get\+\_\+bit}, \hyperpage{59}
+    \subitem {get\+\_\+page}, \hyperpage{60}
+    \subitem {init\+\_\+paging}, \hyperpage{60}
+    \subitem {load\+\_\+page\+\_\+dir}, \hyperpage{60}
+    \subitem {new\+\_\+frame}, \hyperpage{60}
+    \subitem {P\+A\+G\+E\+\_\+\+S\+I\+ZE}, \hyperpage{59}
+    \subitem {set\+\_\+bit}, \hyperpage{61}
+  \item {param}, \hyperpage{21}
+    \subitem {device\+\_\+id}, \hyperpage{22}
+    \subitem {op\+\_\+code}, \hyperpage{22}
+  \item {params}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+  \item {paths}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {pcb}, \hyperpage{22}
+    \subitem {is\+Suspended}, \hyperpage{22}
+    \subitem {pcb.\+h}, \hyperpage{40}
+    \subitem {priority}, \hyperpage{22}
+    \subitem {process\+Class}, \hyperpage{22}
+    \subitem {process\+Name}, \hyperpage{22}
+    \subitem {stack\+Bottom}, \hyperpage{22}
+    \subitem {stack\+Top}, \hyperpage{22}
+    \subitem {state}, \hyperpage{22}
+  \item {pcb.\+c}
+    \subitem {allocate\+P\+CB}, \hyperpage{109}
+    \subitem {check\+Param\+Class}, \hyperpage{109}
+    \subitem {check\+Param\+Name}, \hyperpage{110}
+    \subitem {check\+Param\+Priority}, \hyperpage{110}
+    \subitem {free\+P\+CB}, \hyperpage{110}
+    \subitem {setup\+P\+CB}, \hyperpage{110}
+  \item {pcb.\+h}
+    \subitem {A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}, \hyperpage{40}
+    \subitem {allocate\+P\+CB}, \hyperpage{40}
+    \subitem {B\+L\+O\+C\+K\+ED}, \hyperpage{40}
+    \subitem {check\+Param\+Class}, \hyperpage{40}
+    \subitem {check\+Param\+Name}, \hyperpage{41}
+    \subitem {check\+Param\+Priority}, \hyperpage{41}
+    \subitem {free\+P\+CB}, \hyperpage{41}
+    \subitem {pcb}, \hyperpage{40}
+    \subitem {R\+E\+A\+DY}, \hyperpage{40}
+    \subitem {R\+U\+N\+N\+I\+NG}, \hyperpage{40}
+    \subitem {S\+Y\+S\+T\+EM}, \hyperpage{40}
+    \subitem {setup\+P\+CB}, \hyperpage{42}
+  \item {perm.\+c}
+    \subitem {print\+Pcb\+Info}, \hyperpage{146}
+    \subitem {print\+Queue\+Info}, \hyperpage{146}
+    \subitem {register\+R2\+Perm\+Commands}, \hyperpage{146}
+    \subitem {resume\+Pcb}, \hyperpage{146}
+    \subitem {set\+Priority\+Pcb}, \hyperpage{147}
+    \subitem {show\+Pcb\+Info}, \hyperpage{147}
+    \subitem {suspend\+Pcb}, \hyperpage{147}
+  \item {perm.\+h}
+    \subitem {register\+R2\+Perm\+Commands}, \hyperpage{69}
+    \subitem {resume\+Pcb}, \hyperpage{69}
+    \subitem {set\+Priority\+Pcb}, \hyperpage{70}
+    \subitem {show\+Pcb\+Info}, \hyperpage{70}
+    \subitem {suspend\+Pcb}, \hyperpage{71}
+  \item {phys\+\_\+alloc\+\_\+addr}
+    \subitem {heap.\+c}, \hyperpage{124}
+    \subitem {paging.\+c}, \hyperpage{130}
+  \item {pop\+Blocked}
+    \subitem {queue.\+c}, \hyperpage{115}
+    \subitem {queue.\+h}, \hyperpage{45}
+  \item {pop\+Ready}
+    \subitem {queue.\+c}, \hyperpage{115}
+    \subitem {queue.\+h}, \hyperpage{45}
+  \item {pop\+Suspended\+Blocked}
+    \subitem {queue.\+c}, \hyperpage{115}
+    \subitem {queue.\+h}, \hyperpage{45}
+  \item {pop\+Suspended\+Ready}
+    \subitem {queue.\+c}, \hyperpage{115}
+    \subitem {queue.\+h}, \hyperpage{45}
+  \item {present}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+  \item {prev}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {node}, \hyperpage{19}
+  \item {print\+Block\+Info}
+    \subitem {r5commands.\+c}, \hyperpage{155}
+  \item {print\+Cmcb\+Info}
+    \subitem {r5commands.\+c}, \hyperpage{155}
+  \item {print\+File\+Flag}
+    \subitem {main.\+c}, \hyperpage{171}
+  \item {print\+Pcb\+Info}
+    \subitem {perm.\+c}, \hyperpage{146}
+  \item {print\+Queue\+Info}
+    \subitem {perm.\+c}, \hyperpage{146}
+  \item {print\+Start}
+    \subitem {com\+Handler.\+c}, \hyperpage{101}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {priority}
+    \subitem {pcb}, \hyperpage{22}
+  \item {proc1}
+    \subitem {processes.\+h}, \hyperpage{79}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {proc2}
+    \subitem {processes.\+h}, \hyperpage{79}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {proc3}
+    \subitem {processes.\+h}, \hyperpage{79}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {proc4}
+    \subitem {processes.\+h}, \hyperpage{79}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {proc5}
+    \subitem {processes.\+h}, \hyperpage{79}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {process\+Class}
+    \subitem {pcb}, \hyperpage{22}
+  \item {process\+Name}
+    \subitem {pcb}, \hyperpage{22}
+  \item {processes.\+h}
+    \subitem {proc1}, \hyperpage{79}
+    \subitem {proc2}, \hyperpage{79}
+    \subitem {proc3}, \hyperpage{79}
+    \subitem {proc4}, \hyperpage{79}
+    \subitem {proc5}, \hyperpage{79}
+  \item {procsr3.\+c}
+    \subitem {proc1}, \hyperpage{154}
+    \subitem {proc2}, \hyperpage{154}
+    \subitem {proc3}, \hyperpage{154}
+    \subitem {proc4}, \hyperpage{154}
+    \subitem {proc5}, \hyperpage{154}
+    \subitem {R\+C\+\_\+1}, \hyperpage{154}
+    \subitem {R\+C\+\_\+2}, \hyperpage{154}
+    \subitem {R\+C\+\_\+3}, \hyperpage{154}
+    \subitem {R\+C\+\_\+4}, \hyperpage{154}
+    \subitem {R\+C\+\_\+5}, \hyperpage{154}
+
+  \indexspace
+
+  \item {Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {queue}
+    \subitem {queue.\+c}, \hyperpage{112}
+  \item {queue.\+c}
+    \subitem {\+\_\+find\+Node}, \hyperpage{112}
+    \subitem {\+\_\+find\+Node\+In\+Queue}, \hyperpage{112}
+    \subitem {\+\_\+insert\+F\+I\+FO}, \hyperpage{113}
+    \subitem {\+\_\+insert\+Priority}, \hyperpage{113}
+    \subitem {\+\_\+new\+Node}, \hyperpage{113}
+    \subitem {find\+P\+CB}, \hyperpage{114}
+    \subitem {get\+Blocked\+Queue}, \hyperpage{114}
+    \subitem {get\+Ready\+Queue}, \hyperpage{114}
+    \subitem {get\+Suspended\+Blocked\+Queue}, \hyperpage{114}
+    \subitem {get\+Suspended\+Ready\+Queue}, \hyperpage{114}
+    \subitem {insert\+P\+CB}, \hyperpage{115}
+    \subitem {pop\+Blocked}, \hyperpage{115}
+    \subitem {pop\+Ready}, \hyperpage{115}
+    \subitem {pop\+Suspended\+Blocked}, \hyperpage{115}
+    \subitem {pop\+Suspended\+Ready}, \hyperpage{115}
+    \subitem {Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED}, \hyperpage{112}
+    \subitem {Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY}, \hyperpage{112}
+    \subitem {Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED}, 
+		\hyperpage{112}
+    \subitem {Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY}, 
+		\hyperpage{112}
+    \subitem {queue}, \hyperpage{112}
+    \subitem {queues}, \hyperpage{116}
+    \subitem {remove\+P\+CB}, \hyperpage{116}
+  \item {queue.\+h}
+    \subitem {find\+P\+CB}, \hyperpage{43}
+    \subitem {get\+Blocked\+Queue}, \hyperpage{44}
+    \subitem {get\+Ready\+Queue}, \hyperpage{44}
+    \subitem {get\+Suspended\+Blocked\+Queue}, \hyperpage{44}
+    \subitem {get\+Suspended\+Ready\+Queue}, \hyperpage{44}
+    \subitem {insert\+P\+CB}, \hyperpage{44}
+    \subitem {node}, \hyperpage{43}
+    \subitem {pop\+Blocked}, \hyperpage{45}
+    \subitem {pop\+Ready}, \hyperpage{45}
+    \subitem {pop\+Suspended\+Blocked}, \hyperpage{45}
+    \subitem {pop\+Suspended\+Ready}, \hyperpage{45}
+    \subitem {remove\+P\+CB}, \hyperpage{45}
+  \item {queues}
+    \subitem {queue.\+c}, \hyperpage{116}
+
+  \indexspace
+
+  \item {r3commands.\+c}
+    \subitem {loadr3}, \hyperpage{152}
+    \subitem {P1\+\_\+\+N\+A\+ME}, \hyperpage{152}
+    \subitem {P2\+\_\+\+N\+A\+ME}, \hyperpage{152}
+    \subitem {P3\+\_\+\+N\+A\+ME}, \hyperpage{152}
+    \subitem {P4\+\_\+\+N\+A\+ME}, \hyperpage{152}
+    \subitem {P5\+\_\+\+N\+A\+ME}, \hyperpage{152}
+    \subitem {register\+R3\+Commands}, \hyperpage{152}
+    \subitem {yield}, \hyperpage{152}
+  \item {r3commands.\+h}
+    \subitem {loadr3}, \hyperpage{77}
+    \subitem {register\+R3\+Commands}, \hyperpage{78}
+    \subitem {yield}, \hyperpage{78}
+  \item {r5commands.\+c}
+    \subitem {print\+Block\+Info}, \hyperpage{155}
+    \subitem {print\+Cmcb\+Info}, \hyperpage{155}
+    \subitem {register\+R5\+Perm\+Commands}, \hyperpage{155}
+    \subitem {show\+Memory}, \hyperpage{155}
+  \item {r5commands.\+h}
+    \subitem {register\+R5\+Perm\+Commands}, \hyperpage{80}
+    \subitem {show\+Memory}, \hyperpage{80}
+  \item {r6/fat.\+c}, \hyperpage{157}
+  \item {r6/fat.\+h}, \hyperpage{163}
+  \item {r6/main.\+c}, \hyperpage{168}
+  \item {R\+C\+\_\+1}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {R\+C\+\_\+2}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {R\+C\+\_\+3}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {R\+C\+\_\+4}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {R\+C\+\_\+5}
+    \subitem {procsr3.\+c}, \hyperpage{154}
+  \item {R\+E\+A\+D\+\_\+\+O\+N\+LY}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {R\+E\+A\+DY}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {R\+E\+AD}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {R\+E\+S\+U\+M\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status.\+h}, \hyperpage{72}
+  \item {R\+E\+S\+U\+M\+E\+\_\+\+P\+C\+B\+S\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status.\+h}, \hyperpage{72}
+  \item {R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {R\+U\+N\+N\+I\+NG}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {regex.\+c}
+    \subitem {test\+Regex}, \hyperpage{132}
+  \item {regex.\+h}
+    \subitem {test\+Regex}, \hyperpage{83}
+  \item {register\+R2\+Perm\+Commands}
+    \subitem {perm.\+c}, \hyperpage{146}
+    \subitem {perm.\+h}, \hyperpage{69}
+  \item {register\+R2\+Temp\+Commands}
+    \subitem {temp.\+c}, \hyperpage{150}
+    \subitem {temp.\+h}, \hyperpage{76}
+  \item {register\+R3\+Commands}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+    \subitem {r3commands.\+h}, \hyperpage{78}
+  \item {register\+R5\+Perm\+Commands}
+    \subitem {r5commands.\+c}, \hyperpage{155}
+    \subitem {r5commands.\+h}, \hyperpage{80}
+  \item {register\+R5\+Temp\+Commands}
+    \subitem {mem\+Commands.\+c}, \hyperpage{157}
+    \subitem {mem\+Commands.\+h}, \hyperpage{82}
+  \item {remove\+P\+CB}
+    \subitem {queue.\+c}, \hyperpage{116}
+    \subitem {queue.\+h}, \hyperpage{45}
+  \item {reserved}
+    \subitem {dir\+\_\+entry}, \hyperpage{10}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+  \item {resume\+Pcb}
+    \subitem {perm.\+c}, \hyperpage{146}
+    \subitem {perm.\+h}, \hyperpage{69}
+  \item {return\+To\+Insertion\+Point}
+    \subitem {com\+Handler.\+c}, \hyperpage{101}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {reverse}
+    \subitem {string.\+c}, \hyperpage{135}
+    \subitem {string.\+h}, \hyperpage{86}
+  \item {rtc\+\_\+isr}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+
+  \indexspace
+
+  \item {S\+AT}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {S\+E\+C\+O\+N\+DS}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {S\+EP}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {S\+U\+S\+P\+E\+N\+D\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status.\+h}, \hyperpage{72}
+  \item {S\+UN}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {S\+Y\+S\+T\+EM}
+    \subitem {fat.\+h}, \hyperpage{165}
+    \subitem {pcb.\+h}, \hyperpage{40}
+  \item {sec}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {sector\+Count\+F\+A\+T32}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {sectors\+Per\+Cluster}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {sectors\+Per\+F\+AT}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {sectors\+Per\+Track}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {segment\+\_\+not\+\_\+present}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {serial.\+c}
+    \subitem {init\+\_\+serial}, \hyperpage{117}
+    \subitem {N\+O\+\_\+\+E\+R\+R\+OR}, \hyperpage{117}
+    \subitem {serial\+\_\+port\+\_\+in}, \hyperpage{118}
+    \subitem {serial\+\_\+port\+\_\+out}, \hyperpage{118}
+    \subitem {serial\+\_\+print}, \hyperpage{117}
+    \subitem {serial\+\_\+println}, \hyperpage{118}
+    \subitem {set\+\_\+serial\+\_\+in}, \hyperpage{118}
+    \subitem {set\+\_\+serial\+\_\+out}, \hyperpage{118}
+  \item {serial.\+h}
+    \subitem {C\+O\+M1}, \hyperpage{46}
+    \subitem {C\+O\+M2}, \hyperpage{46}
+    \subitem {C\+O\+M3}, \hyperpage{46}
+    \subitem {C\+O\+M4}, \hyperpage{46}
+    \subitem {init\+\_\+serial}, \hyperpage{46}
+    \subitem {serial\+\_\+print}, \hyperpage{47}
+    \subitem {serial\+\_\+println}, \hyperpage{47}
+    \subitem {set\+\_\+serial\+\_\+in}, \hyperpage{47}
+    \subitem {set\+\_\+serial\+\_\+out}, \hyperpage{47}
+  \item {serial\+\_\+port\+\_\+in}
+    \subitem {serial.\+c}, \hyperpage{118}
+  \item {serial\+\_\+port\+\_\+out}
+    \subitem {serial.\+c}, \hyperpage{118}
+  \item {serial\+\_\+print}
+    \subitem {serial.\+c}, \hyperpage{117}
+    \subitem {serial.\+h}, \hyperpage{47}
+  \item {serial\+\_\+println}
+    \subitem {serial.\+c}, \hyperpage{118}
+    \subitem {serial.\+h}, \hyperpage{47}
+  \item {set\+\_\+bit}
+    \subitem {paging.\+c}, \hyperpage{130}
+    \subitem {paging.\+h}, \hyperpage{61}
+  \item {set\+\_\+serial\+\_\+in}
+    \subitem {serial.\+c}, \hyperpage{118}
+    \subitem {serial.\+h}, \hyperpage{47}
+  \item {set\+\_\+serial\+\_\+out}
+    \subitem {serial.\+c}, \hyperpage{118}
+    \subitem {serial.\+h}, \hyperpage{47}
+  \item {set\+Date\+Time}
+    \subitem {time.\+c}, \hyperpage{140}
+    \subitem {time.\+h}, \hyperpage{95}
+  \item {set\+Day\+Of\+Month}
+    \subitem {time.\+c}, \hyperpage{140}
+    \subitem {time.\+h}, \hyperpage{96}
+  \item {set\+Day\+Of\+Week}
+    \subitem {time.\+c}, \hyperpage{140}
+    \subitem {time.\+h}, \hyperpage{96}
+  \item {set\+Filename}
+    \subitem {fat.\+c}, \hyperpage{162}
+    \subitem {fat.\+h}, \hyperpage{168}
+  \item {set\+Hours}
+    \subitem {time.\+c}, \hyperpage{140}
+    \subitem {time.\+h}, \hyperpage{96}
+  \item {set\+Minutes}
+    \subitem {time.\+c}, \hyperpage{140}
+    \subitem {time.\+h}, \hyperpage{96}
+  \item {set\+Month}
+    \subitem {time.\+c}, \hyperpage{141}
+    \subitem {time.\+h}, \hyperpage{96}
+  \item {set\+Priority\+Pcb}
+    \subitem {perm.\+c}, \hyperpage{147}
+    \subitem {perm.\+h}, \hyperpage{70}
+  \item {set\+Seconds}
+    \subitem {time.\+c}, \hyperpage{141}
+    \subitem {time.\+h}, \hyperpage{97}
+  \item {set\+Year}
+    \subitem {time.\+c}, \hyperpage{141}
+    \subitem {time.\+h}, \hyperpage{97}
+  \item {setup\+Commands}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+    \subitem {com\+Handler.\+h}, \hyperpage{27}
+  \item {setup\+P\+CB}
+    \subitem {pcb.\+c}, \hyperpage{110}
+    \subitem {pcb.\+h}, \hyperpage{42}
+  \item {show\+Memory}
+    \subitem {r5commands.\+c}, \hyperpage{155}
+    \subitem {r5commands.\+h}, \hyperpage{80}
+  \item {show\+Pcb\+Info}
+    \subitem {perm.\+c}, \hyperpage{147}
+    \subitem {perm.\+h}, \hyperpage{70}
+  \item {shutdown}
+    \subitem {com\+Handler.\+c}, \hyperpage{102}
+    \subitem {commands.\+h}, \hyperpage{29}
+  \item {size}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {header}, \hyperpage{14}
+    \subitem {index\+\_\+entry}, \hyperpage{16}
+    \subitem {lmcb}, \hyperpage{18}
+  \item {size\+\_\+t}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {sselect}
+    \subitem {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {tables.\+h}, \hyperpage{50}
+  \item {stack\+\_\+segment}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {stack\+Bottom}
+    \subitem {pcb}, \hyperpage{22}
+  \item {stack\+Top}
+    \subitem {pcb}, \hyperpage{22}
+  \item {state}
+    \subitem {pcb}, \hyperpage{22}
+  \item {status.\+h}
+    \subitem {R\+E\+S\+U\+M\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{72}
+    \subitem {R\+E\+S\+U\+M\+E\+\_\+\+P\+C\+B\+S\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{72}
+    \subitem {S\+U\+S\+P\+E\+N\+D\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{72}
+    \subitem {U\+N\+K\+N\+O\+W\+N\+\_\+\+P\+C\+B\+\_\+\+N\+A\+ME}, 
+		\hyperpage{72}
+    \subitem {U\+P\+D\+A\+T\+E\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{72}
+  \item {status\+\_\+temp.\+h}
+    \subitem {B\+L\+O\+C\+K\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{73}
+    \subitem {C\+R\+E\+A\+T\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{73}
+    \subitem {D\+E\+L\+E\+T\+E\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{73}
+    \subitem {P\+R\+O\+C\+E\+S\+S\+\_\+\+N\+A\+M\+E\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+E\+X\+I\+S\+TS}, 
+		\hyperpage{73}
+    \subitem {U\+N\+B\+L\+O\+C\+K\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+		\hyperpage{73}
+  \item {sti}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {strcat}
+    \subitem {string.\+c}, \hyperpage{136}
+    \subitem {string.\+h}, \hyperpage{87}
+  \item {strcmp}
+    \subitem {string.\+c}, \hyperpage{136}
+    \subitem {string.\+h}, \hyperpage{87}
+  \item {strcpy}
+    \subitem {string.\+c}, \hyperpage{136}
+    \subitem {string.\+h}, \hyperpage{87}
+  \item {string.\+c}
+    \subitem {atoi}, \hyperpage{134}
+    \subitem {is\+Char}, \hyperpage{134}
+    \subitem {is\+Lower\+Char}, \hyperpage{134}
+    \subitem {is\+Upper\+Char}, \hyperpage{135}
+    \subitem {isdigit}, \hyperpage{134}
+    \subitem {isspace}, \hyperpage{135}
+    \subitem {itoa}, \hyperpage{135}
+    \subitem {reverse}, \hyperpage{135}
+    \subitem {strcat}, \hyperpage{136}
+    \subitem {strcmp}, \hyperpage{136}
+    \subitem {strcpy}, \hyperpage{136}
+    \subitem {strlen}, \hyperpage{136}
+    \subitem {strtok}, \hyperpage{137}
+  \item {string.\+h}
+    \subitem {atoi}, \hyperpage{84}
+    \subitem {is\+Char}, \hyperpage{85}
+    \subitem {is\+Lower\+Char}, \hyperpage{85}
+    \subitem {is\+Upper\+Char}, \hyperpage{86}
+    \subitem {isdigit}, \hyperpage{85}
+    \subitem {isspace}, \hyperpage{86}
+    \subitem {itoa}, \hyperpage{86}
+    \subitem {reverse}, \hyperpage{86}
+    \subitem {strcat}, \hyperpage{87}
+    \subitem {strcmp}, \hyperpage{87}
+    \subitem {strcpy}, \hyperpage{87}
+    \subitem {strlen}, \hyperpage{88}
+    \subitem {strtok}, \hyperpage{88}
+  \item {strlen}
+    \subitem {string.\+c}, \hyperpage{136}
+    \subitem {string.\+h}, \hyperpage{88}
+  \item {strtok}
+    \subitem {string.\+c}, \hyperpage{137}
+    \subitem {string.\+h}, \hyperpage{88}
+  \item {student\+\_\+free}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+  \item {student\+\_\+malloc}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+  \item {suspend\+Pcb}
+    \subitem {perm.\+c}, \hyperpage{147}
+    \subitem {perm.\+h}, \hyperpage{71}
+  \item {sys\+\_\+alloc\+\_\+mem}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{144}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{65}
+  \item {sys\+\_\+call}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{144}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{65}
+  \item {sys\+\_\+call\+\_\+isr}
+    \subitem {interrupts.\+c}, \hyperpage{107}
+  \item {sys\+\_\+free\+\_\+mem}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{144}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{65}
+  \item {sys\+\_\+req}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{66}
+  \item {sys\+\_\+set\+\_\+free}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{66}
+  \item {sys\+\_\+set\+\_\+malloc}
+    \subitem {mpx\+\_\+supt.\+c}, \hyperpage{145}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{66}
+  \item {system.\+c}
+    \subitem {klogv}, \hyperpage{119}
+    \subitem {kpanic}, \hyperpage{119}
+  \item {system.\+h}
+    \subitem {asm}, \hyperpage{89}
+    \subitem {cli}, \hyperpage{89}
+    \subitem {G\+D\+T\+\_\+\+C\+S\+\_\+\+ID}, \hyperpage{89}
+    \subitem {G\+D\+T\+\_\+\+D\+S\+\_\+\+ID}, \hyperpage{89}
+    \subitem {hlt}, \hyperpage{89}
+    \subitem {iret}, \hyperpage{89}
+    \subitem {klogv}, \hyperpage{90}
+    \subitem {kpanic}, \hyperpage{90}
+    \subitem {N\+U\+LL}, \hyperpage{90}
+    \subitem {no\+\_\+warn}, \hyperpage{89}
+    \subitem {nop}, \hyperpage{90}
+    \subitem {size\+\_\+t}, \hyperpage{90}
+    \subitem {sti}, \hyperpage{90}
+    \subitem {u16int}, \hyperpage{90}
+    \subitem {u32int}, \hyperpage{90}
+    \subitem {u8int}, \hyperpage{90}
+    \subitem {volatile}, \hyperpage{90}
+
+  \indexspace
+
+  \item {T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}
+    \subitem {heap.\+h}, \hyperpage{53}
+  \item {T\+HU}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {T\+UE}
+    \subitem {time.\+h}, \hyperpage{93}
+  \item {table}
+    \subitem {index\+\_\+table}, \hyperpage{17}
+  \item {tables}
+    \subitem {page\+\_\+dir}, \hyperpage{20}
+  \item {tables.\+c}
+    \subitem {gdt\+\_\+entries}, \hyperpage{121}
+    \subitem {gdt\+\_\+init\+\_\+entry}, \hyperpage{121}
+    \subitem {gdt\+\_\+ptr}, \hyperpage{121}
+    \subitem {idt\+\_\+entries}, \hyperpage{121}
+    \subitem {idt\+\_\+ptr}, \hyperpage{122}
+    \subitem {idt\+\_\+set\+\_\+gate}, \hyperpage{121}
+    \subitem {init\+\_\+gdt}, \hyperpage{121}
+    \subitem {init\+\_\+idt}, \hyperpage{121}
+    \subitem {write\+\_\+gdt\+\_\+ptr}, \hyperpage{121}
+    \subitem {write\+\_\+idt\+\_\+ptr}, \hyperpage{121}
+  \item {tables.\+h}
+    \subitem {\+\_\+\+\_\+attribute\+\_\+\+\_\+}, \hyperpage{49}
+    \subitem {access}, \hyperpage{50}
+    \subitem {base}, \hyperpage{50}
+    \subitem {base\+\_\+high}, \hyperpage{50}
+    \subitem {base\+\_\+low}, \hyperpage{50}
+    \subitem {base\+\_\+mid}, \hyperpage{50}
+    \subitem {flags}, \hyperpage{50}
+    \subitem {gdt\+\_\+init\+\_\+entry}, \hyperpage{49}
+    \subitem {idt\+\_\+set\+\_\+gate}, \hyperpage{49}
+    \subitem {init\+\_\+gdt}, \hyperpage{49}
+    \subitem {init\+\_\+idt}, \hyperpage{50}
+    \subitem {limit}, \hyperpage{50}
+    \subitem {limit\+\_\+low}, \hyperpage{50}
+    \subitem {sselect}, \hyperpage{50}
+    \subitem {zero}, \hyperpage{50}
+  \item {tables\+\_\+phys}
+    \subitem {page\+\_\+dir}, \hyperpage{20}
+  \item {temp.\+c}
+    \subitem {block\+Pcb}, \hyperpage{149}
+    \subitem {create\+Pcb}, \hyperpage{150}
+    \subitem {delete\+Pcb}, \hyperpage{150}
+    \subitem {register\+R2\+Temp\+Commands}, \hyperpage{150}
+    \subitem {unblock\+Pcb}, \hyperpage{151}
+  \item {temp.\+h}
+    \subitem {block\+Pcb}, \hyperpage{75}
+    \subitem {create\+Pcb}, \hyperpage{75}
+    \subitem {delete\+Pcb}, \hyperpage{75}
+    \subitem {register\+R2\+Temp\+Commands}, \hyperpage{76}
+    \subitem {unblock\+Pcb}, \hyperpage{76}
+  \item {test\+Regex}
+    \subitem {regex.\+c}, \hyperpage{132}
+    \subitem {regex.\+h}, \hyperpage{83}
+  \item {time.\+c}
+    \subitem {D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}, 
+		\hyperpage{142}
+    \subitem {get\+Date\+Time}, \hyperpage{138}
+    \subitem {get\+Day\+Of\+Month}, \hyperpage{138}
+    \subitem {get\+Day\+Of\+Week}, \hyperpage{138}
+    \subitem {get\+Hours}, \hyperpage{138}
+    \subitem {get\+Minutes}, \hyperpage{139}
+    \subitem {get\+Month}, \hyperpage{139}
+    \subitem {get\+Seconds}, \hyperpage{139}
+    \subitem {get\+Year}, \hyperpage{139}
+    \subitem {is\+Leap\+Year}, \hyperpage{139}
+    \subitem {set\+Date\+Time}, \hyperpage{140}
+    \subitem {set\+Day\+Of\+Month}, \hyperpage{140}
+    \subitem {set\+Day\+Of\+Week}, \hyperpage{140}
+    \subitem {set\+Hours}, \hyperpage{140}
+    \subitem {set\+Minutes}, \hyperpage{140}
+    \subitem {set\+Month}, \hyperpage{141}
+    \subitem {set\+Seconds}, \hyperpage{141}
+    \subitem {set\+Year}, \hyperpage{141}
+    \subitem {update\+Day\+Of\+Week}, \hyperpage{141}
+    \subitem {update\+Day\+Of\+Year}, \hyperpage{141}
+  \item {time.\+h}
+    \subitem {A\+PR}, \hyperpage{92}
+    \subitem {A\+UG}, \hyperpage{92}
+    \subitem {C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+O\+RT}, \hyperpage{92}
+    \subitem {D\+A\+T\+A\+\_\+\+P\+O\+RT}, \hyperpage{92}
+    \subitem {D\+A\+Y\+\_\+\+M\+O\+N\+TH}, \hyperpage{92}
+    \subitem {D\+A\+Y\+\_\+\+W\+E\+EK}, \hyperpage{92}
+    \subitem {D\+A\+Y\+S\+\_\+\+I\+N\+\_\+\+M\+O\+N\+TH}, 
+		\hyperpage{98}
+    \subitem {D\+EC}, \hyperpage{92}
+    \subitem {F\+EB}, \hyperpage{92}
+    \subitem {F\+RI}, \hyperpage{92}
+    \subitem {get\+Date\+Time}, \hyperpage{94}
+    \subitem {get\+Day\+Of\+Month}, \hyperpage{94}
+    \subitem {get\+Day\+Of\+Week}, \hyperpage{94}
+    \subitem {get\+Hours}, \hyperpage{94}
+    \subitem {get\+Minutes}, \hyperpage{94}
+    \subitem {get\+Month}, \hyperpage{95}
+    \subitem {get\+Seconds}, \hyperpage{95}
+    \subitem {get\+Year}, \hyperpage{95}
+    \subitem {H\+O\+U\+RS}, \hyperpage{92}
+    \subitem {is\+Leap\+Year}, \hyperpage{95}
+    \subitem {J\+AN}, \hyperpage{92}
+    \subitem {J\+UL}, \hyperpage{92}
+    \subitem {J\+UN}, \hyperpage{93}
+    \subitem {M\+AR}, \hyperpage{93}
+    \subitem {M\+AY}, \hyperpage{93}
+    \subitem {M\+I\+N\+U\+T\+ES}, \hyperpage{93}
+    \subitem {M\+O\+N\+TH}, \hyperpage{93}
+    \subitem {M\+ON}, \hyperpage{93}
+    \subitem {N\+M\+I\+\_\+\+D\+I\+S\+A\+B\+LE}, \hyperpage{93}
+    \subitem {N\+M\+I\+\_\+\+E\+N\+A\+B\+LE}, \hyperpage{93}
+    \subitem {N\+OV}, \hyperpage{93}
+    \subitem {O\+CT}, \hyperpage{93}
+    \subitem {S\+AT}, \hyperpage{93}
+    \subitem {S\+E\+C\+O\+N\+DS}, \hyperpage{93}
+    \subitem {S\+EP}, \hyperpage{93}
+    \subitem {S\+UN}, \hyperpage{93}
+    \subitem {set\+Date\+Time}, \hyperpage{95}
+    \subitem {set\+Day\+Of\+Month}, \hyperpage{96}
+    \subitem {set\+Day\+Of\+Week}, \hyperpage{96}
+    \subitem {set\+Hours}, \hyperpage{96}
+    \subitem {set\+Minutes}, \hyperpage{96}
+    \subitem {set\+Month}, \hyperpage{96}
+    \subitem {set\+Seconds}, \hyperpage{97}
+    \subitem {set\+Year}, \hyperpage{97}
+    \subitem {T\+HU}, \hyperpage{93}
+    \subitem {T\+I\+M\+E\+\_\+\+D\+E\+L\+IM}, \hyperpage{93}
+    \subitem {T\+UE}, \hyperpage{93}
+    \subitem {update\+Day\+Of\+Week}, \hyperpage{97}
+    \subitem {update\+Day\+Of\+Year}, \hyperpage{97}
+    \subitem {W\+ED}, \hyperpage{94}
+    \subitem {Y\+E\+AR}, \hyperpage{94}
+  \item {true}
+    \subitem {boolean.\+h}, \hyperpage{23}
+  \item {type}
+    \subitem {cmcb}, \hyperpage{7}
+    \subitem {lmcb}, \hyperpage{18}
+
+  \indexspace
+
+  \item {u16int}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {u32int}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {u8int}
+    \subitem {system.\+h}, \hyperpage{90}
+  \item {U\+N\+B\+L\+O\+C\+K\+\_\+\+P\+C\+B\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status\+\_\+temp.\+h}, \hyperpage{73}
+  \item {U\+N\+K\+N\+O\+W\+N\+\_\+\+P\+C\+B\+\_\+\+N\+A\+ME}
+    \subitem {status.\+h}, \hyperpage{72}
+  \item {U\+N\+U\+S\+ED}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {U\+P\+D\+A\+T\+E\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+S\+U\+C\+C\+E\+SS}
+    \subitem {status.\+h}, \hyperpage{72}
+  \item {unblock\+Pcb}
+    \subitem {temp.\+c}, \hyperpage{151}
+    \subitem {temp.\+h}, \hyperpage{76}
+  \item {update\+Day\+Of\+Week}
+    \subitem {time.\+c}, \hyperpage{141}
+    \subitem {time.\+h}, \hyperpage{97}
+  \item {update\+Day\+Of\+Year}
+    \subitem {time.\+c}, \hyperpage{141}
+    \subitem {time.\+h}, \hyperpage{97}
+  \item {usermode}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+
+  \indexspace
+
+  \item {V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}
+    \subitem {fat.\+h}, \hyperpage{165}
+  \item {version}
+    \subitem {commands.\+c}, \hyperpage{103}
+    \subitem {commands.\+h}, \hyperpage{30}
+  \item {version.\+h}
+    \subitem {O\+S\+\_\+\+V\+E\+R\+S\+I\+ON}, \hyperpage{51}
+  \item {vol\+Id}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {vol\+Name}
+    \subitem {boot\+\_\+sector}, \hyperpage{6}
+  \item {volatile}
+    \subitem {system.\+h}, \hyperpage{90}
+
+  \indexspace
+
+  \item {W\+ED}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {W\+R\+I\+TE}
+    \subitem {mpx\+\_\+supt.\+h}, \hyperpage{63}
+  \item {write\+\_\+gdt\+\_\+ptr}
+    \subitem {tables.\+c}, \hyperpage{121}
+  \item {write\+\_\+idt\+\_\+ptr}
+    \subitem {tables.\+c}, \hyperpage{121}
+  \item {writeable}
+    \subitem {page\+\_\+entry}, \hyperpage{20}
+
+  \indexspace
+
+  \item {Y\+E\+AR}
+    \subitem {time.\+h}, \hyperpage{94}
+  \item {year}
+    \subitem {date\+\_\+time}, \hyperpage{9}
+  \item {yield}
+    \subitem {r3commands.\+c}, \hyperpage{152}
+    \subitem {r3commands.\+h}, \hyperpage{78}
+
+  \indexspace
+
+  \item {zero}
+    \subitem {idt\+\_\+entry\+\_\+struct}, \hyperpage{15}
+    \subitem {tables.\+h}, \hyperpage{50}
+
+\end{theindex}

@@ -1,0 +1,356 @@
+\hypertarget{fat_8h}{}\section{r6/fat.h File Reference}
+\label{fat_8h}\index{r6/fat.\+h@{r6/fat.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for fat.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{fat_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{fat_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structboot__sector}{boot\+\_\+sector}
+\item 
+struct \hyperlink{structdir__entry}{dir\+\_\+entry}
+\item 
+struct \hyperlink{structfat__tables}{fat\+\_\+tables}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fat_8h_ae3d6ffb7ce73b92de2e4c01ae5226958}{B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}~0
+\item 
+\#define \hyperlink{fat_8h_ac923a470c973f0dca1c88047b0c3a24b}{F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}~1
+\item 
+\#define \hyperlink{fat_8h_ac5497510c1653d4c3a6c86e4ae97baa5}{F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}~10
+\item 
+\#define \hyperlink{fat_8h_a4a26abc982411bd583dfc2e63b92c19d}{R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}~19
+\item 
+\#define \hyperlink{fat_8h_afe623fe9f5e92dea10c3df95fab42a29}{D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}~33
+\item 
+\#define \hyperlink{fat_8h_addf5ec070e9499d36b7f2009ce736076}{U\+N\+U\+S\+ED}~0x00
+\item 
+\#define \hyperlink{fat_8h_a4aa2d61390080a82bd237b208002f97d}{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}~0x\+F\+F0
+\item 
+\#define \hyperlink{fat_8h_a83698f0becc93a5ab207ab39c5c46361}{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}~0x\+F\+F6
+\item 
+\#define \hyperlink{fat_8h_a4bc0e3cac76c4796c4afb227c84a2794}{B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}~0x\+F\+F7
+\item 
+\#define \hyperlink{fat_8h_a3c8f2102be37bd79b36dc42a04d80815}{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}~0x\+F\+F8
+\item 
+\#define \hyperlink{fat_8h_aaf9637cce81eb3fc2766daedd8f2af4a}{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}~0x\+F\+FF
+\item 
+\#define \hyperlink{fat_8h_af035426824dc95b1a1ceb1b591e82a57}{R\+E\+A\+D\+\_\+\+O\+N\+LY}~0x01
+\item 
+\#define \hyperlink{fat_8h_ab42ef41116f8f2fe447484e2844cf0df}{H\+I\+D\+D\+EN}~0x02
+\item 
+\#define \hyperlink{fat_8h_a21b97df85e65556468b28a576311271c}{S\+Y\+S\+T\+EM}~0x04
+\item 
+\#define \hyperlink{fat_8h_a4ca48866c33da3c81aec1dfd571f2054}{V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}~0x08
+\item 
+\#define \hyperlink{fat_8h_a5005b5ecb0ac555c370dc0b657df2b54}{S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}~0x10
+\item 
+\#define \hyperlink{fat_8h_a16f293f5117d4ab69140566862a352ca}{A\+R\+C\+H\+I\+VE}~0x20
+\item 
+\#define \hyperlink{fat_8h_a708effadc6982b89faaf84eab0d56d76}{D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}~32
+\item 
+\#define \hyperlink{fat_8h_a6773b93f3093658c3dcb569de3b4bdb2}{M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}~8
+\item 
+\#define \hyperlink{fat_8h_a78749ceaa7668554f01e9722db82b600}{M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}~3
+\item 
+\#define \hyperlink{fat_8h_ab792dfd97ab00abb6a5fc20191a9e952}{D\+E\+L\+E\+T\+ED}~0x\+E5
+\item 
+\#define \hyperlink{fat_8h_af06661a8b33971e51d5b8c24a06345bb}{R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}~0x00
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fat_8h_a82b85885f5c51dddc952a68407221a6f}{initialize} (F\+I\+LE $\ast$\hyperlink{main_8c_aa6461bd8251cfc900494669827de82ca}{disk\+Image})
+\item 
+void \hyperlink{fat_8h_a3a80b6032f86a56bec74609034b3246f}{destroy} ()
+\item 
+\hyperlink{structboot__sector}{boot\+\_\+sector} $\ast$ \hyperlink{fat_8h_a44bd66e1d074d891c499073a420feb8e}{get\+Boot\+Sector} ()
+\item 
+\hyperlink{structfat__tables}{fat\+\_\+tables} $\ast$ \hyperlink{fat_8h_a38133534c997dd40af7ca5c70509392d}{get\+F\+A\+T\+Tables} ()
+\item 
+\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$ \hyperlink{fat_8h_a182d894f50903b61a99d12af4869a1e8}{get\+Current\+Directory} ()
+\item 
+int \hyperlink{fat_8h_a5357a10098bdc73dba5af74fc33e0993}{get\+Current\+Directory\+Max\+Size} ()
+\item 
+unsigned char $\ast$ \hyperlink{fat_8h_a5e5fd55bf31d9863aeb11a9862eb400b}{get\+File\+From\+Sector} (uint16\+\_\+t cluster, int size)
+\item 
+int \hyperlink{fat_8h_aada2857fb6dc9af14c81fc2a06e86607}{change\+To\+Directory} (uint16\+\_\+t cluster)
+\item 
+int \hyperlink{fat_8h_ad0e18c3ef6ed876ba1ae96072a85c81f}{change\+To\+Parent\+Directory} ()
+\item 
+void \hyperlink{fat_8h_a08b83b6d73cc1d4d258134b3b67fbc52}{set\+Filename} (int idx, const char $\ast$\hyperlink{main_8c_aeac90097f29f7529968697163cea5c18}{filename}, const char $\ast$file\+Ext)
+\item 
+bool \hyperlink{fat_8h_a63b4b90c13e2bfe45261e255b1365cd6}{move\+File} (int idx, uint16\+\_\+t dest\+Sector)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{fat.\+h@{fat.\+h}!A\+R\+C\+H\+I\+VE@{A\+R\+C\+H\+I\+VE}}
+\index{A\+R\+C\+H\+I\+VE@{A\+R\+C\+H\+I\+VE}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{A\+R\+C\+H\+I\+VE}{ARCHIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+C\+H\+I\+VE~0x20}\hypertarget{fat_8h_a16f293f5117d4ab69140566862a352ca}{}\label{fat_8h_a16f293f5117d4ab69140566862a352ca}
+\index{fat.\+h@{fat.\+h}!B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER@{B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}}
+\index{B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER@{B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER}{BAD_CLUSTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+D\+\_\+\+C\+L\+U\+S\+T\+ER~0x\+F\+F7}\hypertarget{fat_8h_a4bc0e3cac76c4796c4afb227c84a2794}{}\label{fat_8h_a4bc0e3cac76c4796c4afb227c84a2794}
+\index{fat.\+h@{fat.\+h}!B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET@{B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET@{B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET}{BOOT_SECTOR_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+O\+O\+T\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+O\+F\+F\+S\+ET~0}\hypertarget{fat_8h_ae3d6ffb7ce73b92de2e4c01ae5226958}{}\label{fat_8h_ae3d6ffb7ce73b92de2e4c01ae5226958}
+\index{fat.\+h@{fat.\+h}!D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET@{D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}}
+\index{D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET@{D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET}{DATA_AREA_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+A\+R\+E\+A\+\_\+\+O\+F\+F\+S\+ET~33}\hypertarget{fat_8h_afe623fe9f5e92dea10c3df95fab42a29}{}\label{fat_8h_afe623fe9f5e92dea10c3df95fab42a29}
+\index{fat.\+h@{fat.\+h}!D\+E\+L\+E\+T\+ED@{D\+E\+L\+E\+T\+ED}}
+\index{D\+E\+L\+E\+T\+ED@{D\+E\+L\+E\+T\+ED}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+E\+T\+ED}{DELETED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+E\+T\+ED~0x\+E5}\hypertarget{fat_8h_ab792dfd97ab00abb6a5fc20191a9e952}{}\label{fat_8h_ab792dfd97ab00abb6a5fc20191a9e952}
+\index{fat.\+h@{fat.\+h}!D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE@{D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}}
+\index{D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE@{D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE}{DIR_ENTRY_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE~32}\hypertarget{fat_8h_a708effadc6982b89faaf84eab0d56d76}{}\label{fat_8h_a708effadc6982b89faaf84eab0d56d76}
+\index{fat.\+h@{fat.\+h}!F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET@{F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}}
+\index{F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET@{F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET}{FAT1_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+T1\+\_\+\+O\+F\+F\+S\+ET~1}\hypertarget{fat_8h_ac923a470c973f0dca1c88047b0c3a24b}{}\label{fat_8h_ac923a470c973f0dca1c88047b0c3a24b}
+\index{fat.\+h@{fat.\+h}!F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET@{F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}}
+\index{F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET@{F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET}{FAT2_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+T2\+\_\+\+O\+F\+F\+S\+ET~10}\hypertarget{fat_8h_ac5497510c1653d4c3a6c86e4ae97baa5}{}\label{fat_8h_ac5497510c1653d4c3a6c86e4ae97baa5}
+\index{fat.\+h@{fat.\+h}!H\+I\+D\+D\+EN@{H\+I\+D\+D\+EN}}
+\index{H\+I\+D\+D\+EN@{H\+I\+D\+D\+EN}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{H\+I\+D\+D\+EN}{HIDDEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+I\+D\+D\+EN~0x02}\hypertarget{fat_8h_ab42ef41116f8f2fe447484e2844cf0df}{}\label{fat_8h_ab42ef41116f8f2fe447484e2844cf0df}
+\index{fat.\+h@{fat.\+h}!L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN@{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}}
+\index{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN@{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}{LAST_CLUSTER_BEGIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN~0x\+F\+F8}\hypertarget{fat_8h_a3c8f2102be37bd79b36dc42a04d80815}{}\label{fat_8h_a3c8f2102be37bd79b36dc42a04d80815}
+\index{fat.\+h@{fat.\+h}!L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND@{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}}
+\index{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND@{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}{LAST_CLUSTER_END}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+S\+T\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND~0x\+F\+FF}\hypertarget{fat_8h_aaf9637cce81eb3fc2766daedd8f2af4a}{}\label{fat_8h_aaf9637cce81eb3fc2766daedd8f2af4a}
+\index{fat.\+h@{fat.\+h}!M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}{MAX_EXT_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH~3}\hypertarget{fat_8h_a78749ceaa7668554f01e9722db82b600}{}\label{fat_8h_a78749ceaa7668554f01e9722db82b600}
+\index{fat.\+h@{fat.\+h}!M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}{MAX_FILENAME_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH~8}\hypertarget{fat_8h_a6773b93f3093658c3dcb569de3b4bdb2}{}\label{fat_8h_a6773b93f3093658c3dcb569de3b4bdb2}
+\index{fat.\+h@{fat.\+h}!R\+E\+A\+D\+\_\+\+O\+N\+LY@{R\+E\+A\+D\+\_\+\+O\+N\+LY}}
+\index{R\+E\+A\+D\+\_\+\+O\+N\+LY@{R\+E\+A\+D\+\_\+\+O\+N\+LY}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+D\+\_\+\+O\+N\+LY}{READ_ONLY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+A\+D\+\_\+\+O\+N\+LY~0x01}\hypertarget{fat_8h_af035426824dc95b1a1ceb1b591e82a57}{}\label{fat_8h_af035426824dc95b1a1ceb1b591e82a57}
+\index{fat.\+h@{fat.\+h}!R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE@{R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}}
+\index{R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE@{R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE}{REMAINING_FREE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+M\+A\+I\+N\+I\+N\+G\+\_\+\+F\+R\+EE~0x00}\hypertarget{fat_8h_af06661a8b33971e51d5b8c24a06345bb}{}\label{fat_8h_af06661a8b33971e51d5b8c24a06345bb}
+\index{fat.\+h@{fat.\+h}!R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}}
+\index{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN}{RESERVED_CLUSTER_BEGIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+B\+E\+G\+IN~0x\+F\+F0}\hypertarget{fat_8h_a4aa2d61390080a82bd237b208002f97d}{}\label{fat_8h_a4aa2d61390080a82bd237b208002f97d}
+\index{fat.\+h@{fat.\+h}!R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}}
+\index{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND}{RESERVED_CLUSTER_END}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+ND~0x\+F\+F6}\hypertarget{fat_8h_a83698f0becc93a5ab207ab39c5c46361}{}\label{fat_8h_a83698f0becc93a5ab207ab39c5c46361}
+\index{fat.\+h@{fat.\+h}!R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET@{R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}}
+\index{R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET@{R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET}{ROOT_DIRECTORY_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+O\+O\+T\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+O\+F\+F\+S\+ET~19}\hypertarget{fat_8h_a4a26abc982411bd583dfc2e63b92c19d}{}\label{fat_8h_a4a26abc982411bd583dfc2e63b92c19d}
+\index{fat.\+h@{fat.\+h}!S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY@{S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}}
+\index{S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY@{S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY}{SUBDIRECTORY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+U\+B\+D\+I\+R\+E\+C\+T\+O\+RY~0x10}\hypertarget{fat_8h_a5005b5ecb0ac555c370dc0b657df2b54}{}\label{fat_8h_a5005b5ecb0ac555c370dc0b657df2b54}
+\index{fat.\+h@{fat.\+h}!S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{S\+Y\+S\+T\+EM}{SYSTEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+S\+T\+EM~0x04}\hypertarget{fat_8h_a21b97df85e65556468b28a576311271c}{}\label{fat_8h_a21b97df85e65556468b28a576311271c}
+\index{fat.\+h@{fat.\+h}!U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}}
+\index{U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{U\+N\+U\+S\+ED}{UNUSED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+U\+S\+ED~0x00}\hypertarget{fat_8h_addf5ec070e9499d36b7f2009ce736076}{}\label{fat_8h_addf5ec070e9499d36b7f2009ce736076}
+\index{fat.\+h@{fat.\+h}!V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL@{V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}}
+\index{V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL@{V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL}{VOLUME_LABEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+L\+U\+M\+E\+\_\+\+L\+A\+B\+EL~0x08}\hypertarget{fat_8h_a4ca48866c33da3c81aec1dfd571f2054}{}\label{fat_8h_a4ca48866c33da3c81aec1dfd571f2054}
+
+
+\subsection{Function Documentation}
+\index{fat.\+h@{fat.\+h}!change\+To\+Directory@{change\+To\+Directory}}
+\index{change\+To\+Directory@{change\+To\+Directory}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{change\+To\+Directory(uint16\+\_\+t cluster)}{changeToDirectory(uint16_t cluster)}}]{\setlength{\rightskip}{0pt plus 5cm}int change\+To\+Directory (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_aada2857fb6dc9af14c81fc2a06e86607}{}\label{fat_8h_aada2857fb6dc9af14c81fc2a06e86607}
+Changes to the directory specified by the given logical cluster.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cluster} & The starting logical cluster of the directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum number of entries that can appear in this directory.
+\end{DoxyReturn}
+Changes to the directory specified by the given logical sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The starting logical sector of the directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum number of entries that can appear in this directory. 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!change\+To\+Parent\+Directory@{change\+To\+Parent\+Directory}}
+\index{change\+To\+Parent\+Directory@{change\+To\+Parent\+Directory}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{change\+To\+Parent\+Directory()}{changeToParentDirectory()}}]{\setlength{\rightskip}{0pt plus 5cm}int change\+To\+Parent\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_ad0e18c3ef6ed876ba1ae96072a85c81f}{}\label{fat_8h_ad0e18c3ef6ed876ba1ae96072a85c81f}
+Changes the current directory to the parent of the current.
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the new current directory.
+\end{DoxyReturn}
+Changes the current directory to the parent of the current.
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the new current directory, or -\/1 if the directory didn\textquotesingle{}t switch. 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!destroy@{destroy}}
+\index{destroy@{destroy}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{destroy()}{destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a3a80b6032f86a56bec74609034b3246f}{}\label{fat_8h_a3a80b6032f86a56bec74609034b3246f}
+Destroys the F\+AT abstraction, freeing any memory used internally. \index{fat.\+h@{fat.\+h}!get\+Boot\+Sector@{get\+Boot\+Sector}}
+\index{get\+Boot\+Sector@{get\+Boot\+Sector}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{get\+Boot\+Sector()}{getBootSector()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boot\+\_\+sector}$\ast$ get\+Boot\+Sector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a44bd66e1d074d891c499073a420feb8e}{}\label{fat_8h_a44bd66e1d074d891c499073a420feb8e}
+Gets the boot sector of the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The boot sector of the F\+AT File System 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!get\+Current\+Directory@{get\+Current\+Directory}}
+\index{get\+Current\+Directory@{get\+Current\+Directory}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{get\+Current\+Directory()}{getCurrentDirectory()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dir\+\_\+entry}$\ast$ get\+Current\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a182d894f50903b61a99d12af4869a1e8}{}\label{fat_8h_a182d894f50903b61a99d12af4869a1e8}
+Gets the current directory of the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The current directory as an array of directory entries. 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!get\+Current\+Directory\+Max\+Size@{get\+Current\+Directory\+Max\+Size}}
+\index{get\+Current\+Directory\+Max\+Size@{get\+Current\+Directory\+Max\+Size}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{get\+Current\+Directory\+Max\+Size()}{getCurrentDirectoryMaxSize()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Directory\+Max\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a5357a10098bdc73dba5af74fc33e0993}{}\label{fat_8h_a5357a10098bdc73dba5af74fc33e0993}
+Gets the maximum size of the current directory.
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the current directory. 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!get\+F\+A\+T\+Tables@{get\+F\+A\+T\+Tables}}
+\index{get\+F\+A\+T\+Tables@{get\+F\+A\+T\+Tables}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{get\+F\+A\+T\+Tables()}{getFATTables()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fat\+\_\+tables}$\ast$ get\+F\+A\+T\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a38133534c997dd40af7ca5c70509392d}{}\label{fat_8h_a38133534c997dd40af7ca5c70509392d}
+Gets the F\+AT Tables for the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The F\+AT Tables for the F\+AT File System 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!get\+File\+From\+Sector@{get\+File\+From\+Sector}}
+\index{get\+File\+From\+Sector@{get\+File\+From\+Sector}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{get\+File\+From\+Sector(uint16\+\_\+t cluster, int size)}{getFileFromSector(uint16_t cluster, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ get\+File\+From\+Sector (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a5e5fd55bf31d9863aeb11a9862eb400b}{}\label{fat_8h_a5e5fd55bf31d9863aeb11a9862eb400b}
+Gets the file specified by the given cluster.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cluster} & The starting logical cluster of the file \\
+\hline
+{\em size} & The size of the file (in bytes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of bytes representing the file.
+\end{DoxyReturn}
+Gets the file specified by the given sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The starting logical sector of the file \\
+\hline
+{\em size} & The size of the file (in bytes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of bytes representing the file. 
+\end{DoxyReturn}
+\index{fat.\+h@{fat.\+h}!initialize@{initialize}}
+\index{initialize@{initialize}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{initialize(\+F\+I\+L\+E $\ast$disk\+Image)}{initialize(FILE *diskImage)}}]{\setlength{\rightskip}{0pt plus 5cm}void initialize (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{disk\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a82b85885f5c51dddc952a68407221a6f}{}\label{fat_8h_a82b85885f5c51dddc952a68407221a6f}
+Initializes the F\+AT abstraction with the given disk image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em disk\+Image} & The pointer to an opened file that is a F\+A\+T12 disk image. \\
+\hline
+\end{DoxyParams}
+\index{fat.\+h@{fat.\+h}!move\+File@{move\+File}}
+\index{move\+File@{move\+File}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{move\+File(int idx, uint16\+\_\+t dest\+Sector)}{moveFile(int idx, uint16_t destSector)}}]{\setlength{\rightskip}{0pt plus 5cm}bool move\+File (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{uint16\+\_\+t}]{dest\+Sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a63b4b90c13e2bfe45261e255b1365cd6}{}\label{fat_8h_a63b4b90c13e2bfe45261e255b1365cd6}
+Moves a file at the specified index of the current directory to the directory at the destination sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the listing in the current direcory \\
+\hline
+{\em dest\+Sector} & The beginning sector of the target directory \\
+\hline
+\end{DoxyParams}
+\index{fat.\+h@{fat.\+h}!set\+Filename@{set\+Filename}}
+\index{set\+Filename@{set\+Filename}!fat.\+h@{fat.\+h}}
+\subsubsection[{\texorpdfstring{set\+Filename(int idx, const char $\ast$filename, const char $\ast$file\+Ext)}{setFilename(int idx, const char *filename, const char *fileExt)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Filename (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{file\+Ext}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8h_a08b83b6d73cc1d4d258134b3b67fbc52}{}\label{fat_8h_a08b83b6d73cc1d4d258134b3b67fbc52}
+Sets the name of the file at the specified index of the current list of directory entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the listing in the current directory \\
+\hline
+{\em filename} & The name of the file (max 8 characters) \\
+\hline
+{\em file\+Ext} & The extension of the file (max 3 characters) \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,241 @@
+\hypertarget{main_8c}{}\section{r6/main.c File Reference}
+\label{main_8c}\index{r6/main.\+c@{r6/main.\+c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}fat.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_af9752a2dc9005bacfd7b79ca4f2d2167}{\+\_\+launch\+Command\+Interface} ()
+\item 
+void \hyperlink{main_8c_a3f6a67fcb1bbcdf677fdd105a658f31c}{\+\_\+print\+Boot\+Sector\+Info} ()
+\item 
+void \hyperlink{main_8c_a5f6a8acef4ad604b30c5a3a5e3fbf6aa}{\+\_\+print\+F\+A\+T\+Table\+Info} ()
+\item 
+void \hyperlink{main_8c_a576d4dce762db4f769f2feef36b33963}{\+\_\+print\+Directory\+Entries} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$entries, int max\+Entries)
+\item 
+void \hyperlink{main_8c_a1ad14c471b5fd431efe5ee7611704f8e}{\+\_\+print\+Directory\+Entries\+By\+Type} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$entries, int max\+Entries, char $\ast$ext)
+\item 
+void \hyperlink{main_8c_aa6e51497c025178507f2ffd1d5bed890}{\+\_\+print\+Directory\+Entries\+By\+File\+Name} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$entries, int max\+Entries, char $\ast$name, char $\ast$file\+Ext)
+\item 
+int \hyperlink{main_8c_ab600490a550c8680c2779bd4a2db2478}{\+\_\+get\+Cluster\+Of\+File\+With\+Name} (const char $\ast$name, const char $\ast$ext)
+\item 
+int \hyperlink{main_8c_ae58f05a0f386d20abb6f7e15d2bbc78b}{\+\_\+get\+Size\+Of\+File\+With\+Name} (const char $\ast$name, const char $\ast$ext)
+\item 
+void \hyperlink{main_8c_a35a6dd0e255e120bfbdb7883b64932bf}{\+\_\+print\+File} (uint16\+\_\+t sector, int file\+Size, bool pag)
+\item 
+int \hyperlink{main_8c_aeba0df9c9ec78b731673ef04eed37197}{\+\_\+get\+Index\+Of\+File\+With\+Name} (const char $\ast$name, const char $\ast$ext)
+\item 
+bool \hyperlink{main_8c_a7a153fbc6c905cc9ca8aa3190e2fda3a}{\+\_\+fncmp} (const char $\ast$n1, const char $\ast$n2)
+\item 
+bool \hyperlink{main_8c_a648b76d08db8ee71be7ef5f97846bba7}{\+\_\+extcmp} (const char $\ast$n1, const char $\ast$n2)
+\item 
+bool \hyperlink{main_8c_a3ab2e1f0ff07afc22b6dd9d86701f97b}{\+\_\+name\+Cmp\+Helper} (const char $\ast$n1, const char $\ast$n2, int max\+Elements)
+\item 
+void \hyperlink{main_8c_ab25af98a804c5b3cf2ed750c0dd5b9c9}{\+\_\+call\+Command} (char $\ast$command)
+\item 
+int \hyperlink{main_8c_acdb2ae7732afbf160e670834272f9d20}{main} (int num\+Args, char $\ast$args\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{main_8c_a8bfcb4d3f1eb4b77805a8749cc6937c5}{paths} \mbox{[}256\mbox{]}
+\item 
+int \hyperlink{main_8c_acb5ba97551079e0b072c62c21d784ac5}{depth} = 0
+\item 
+const char $\ast$ \hyperlink{main_8c_a8c0196d3be42aa4639022c11eb70c08e}{image\+Name} = \char`\"{}\char`\"{}
+\item 
+bool \hyperlink{main_8c_aa2e260ed11e000fe33ce4daee3de0ec6}{print\+File\+Flag} = \hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{false}
+\item 
+char $\ast$ \hyperlink{main_8c_aeac90097f29f7529968697163cea5c18}{filename} = \char`\"{}\char`\"{}
+\item 
+F\+I\+LE $\ast$ \hyperlink{main_8c_aa6461bd8251cfc900494669827de82ca}{disk\+Image}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!\+\_\+call\+Command@{\+\_\+call\+Command}}
+\index{\+\_\+call\+Command@{\+\_\+call\+Command}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+call\+Command(char $\ast$command)}{_callCommand(char *command)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+call\+Command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ab25af98a804c5b3cf2ed750c0dd5b9c9}{}\label{main_8c_ab25af98a804c5b3cf2ed750c0dd5b9c9}
+Handles parsing of command and calling of correct operations \index{main.\+c@{main.\+c}!\+\_\+extcmp@{\+\_\+extcmp}}
+\index{\+\_\+extcmp@{\+\_\+extcmp}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+extcmp(const char $\ast$n1, const char $\ast$n2)}{_extcmp(const char *n1, const char *n2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+extcmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{n1, }
+\item[{const char $\ast$}]{n2}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a648b76d08db8ee71be7ef5f97846bba7}{}\label{main_8c_a648b76d08db8ee71be7ef5f97846bba7}
+Compares the extension with the given extension to determine equality. // T\+O\+DO\+: Words are hard 
+\begin{DoxyParams}{Parameters}
+{\em n1} & The first name of the comparison (no null terminator) \\
+\hline
+{\em n2} & The second name of the comparison (null terminated)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the names are equal 
+\end{DoxyReturn}
+\index{main.\+c@{main.\+c}!\+\_\+fncmp@{\+\_\+fncmp}}
+\index{\+\_\+fncmp@{\+\_\+fncmp}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+fncmp(const char $\ast$n1, const char $\ast$n2)}{_fncmp(const char *n1, const char *n2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+fncmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{n1, }
+\item[{const char $\ast$}]{n2}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a7a153fbc6c905cc9ca8aa3190e2fda3a}{}\label{main_8c_a7a153fbc6c905cc9ca8aa3190e2fda3a}
+Compares the filename with the given filename to determine equality. // T\+O\+DO\+: Words are hard 
+\begin{DoxyParams}{Parameters}
+{\em n1} & The first name of the comparison (no null terminator) \\
+\hline
+{\em n2} & The second name of the comparison (null terminated)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the names are equal 
+\end{DoxyReturn}
+\index{main.\+c@{main.\+c}!\+\_\+get\+Cluster\+Of\+File\+With\+Name@{\+\_\+get\+Cluster\+Of\+File\+With\+Name}}
+\index{\+\_\+get\+Cluster\+Of\+File\+With\+Name@{\+\_\+get\+Cluster\+Of\+File\+With\+Name}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+Cluster\+Of\+File\+With\+Name(const char $\ast$name, const char $\ast$ext)}{_getClusterOfFileWithName(const char *name, const char *ext)}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+get\+Cluster\+Of\+File\+With\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ab600490a550c8680c2779bd4a2db2478}{}\label{main_8c_ab600490a550c8680c2779bd4a2db2478}
+Gets the cluster of the file with the given name \index{main.\+c@{main.\+c}!\+\_\+get\+Index\+Of\+File\+With\+Name@{\+\_\+get\+Index\+Of\+File\+With\+Name}}
+\index{\+\_\+get\+Index\+Of\+File\+With\+Name@{\+\_\+get\+Index\+Of\+File\+With\+Name}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+Index\+Of\+File\+With\+Name(const char $\ast$name, const char $\ast$ext)}{_getIndexOfFileWithName(const char *name, const char *ext)}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+get\+Index\+Of\+File\+With\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aeba0df9c9ec78b731673ef04eed37197}{}\label{main_8c_aeba0df9c9ec78b731673ef04eed37197}
+Gets the index of the file with the specified name and extension \index{main.\+c@{main.\+c}!\+\_\+get\+Size\+Of\+File\+With\+Name@{\+\_\+get\+Size\+Of\+File\+With\+Name}}
+\index{\+\_\+get\+Size\+Of\+File\+With\+Name@{\+\_\+get\+Size\+Of\+File\+With\+Name}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+Size\+Of\+File\+With\+Name(const char $\ast$name, const char $\ast$ext)}{_getSizeOfFileWithName(const char *name, const char *ext)}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+get\+Size\+Of\+File\+With\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae58f05a0f386d20abb6f7e15d2bbc78b}{}\label{main_8c_ae58f05a0f386d20abb6f7e15d2bbc78b}
+Gets the size of the file with the given name \index{main.\+c@{main.\+c}!\+\_\+launch\+Command\+Interface@{\+\_\+launch\+Command\+Interface}}
+\index{\+\_\+launch\+Command\+Interface@{\+\_\+launch\+Command\+Interface}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+launch\+Command\+Interface()}{_launchCommandInterface()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+launch\+Command\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_af9752a2dc9005bacfd7b79ca4f2d2167}{}\label{main_8c_af9752a2dc9005bacfd7b79ca4f2d2167}
+Starts the interactive shell session. \index{main.\+c@{main.\+c}!\+\_\+name\+Cmp\+Helper@{\+\_\+name\+Cmp\+Helper}}
+\index{\+\_\+name\+Cmp\+Helper@{\+\_\+name\+Cmp\+Helper}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+name\+Cmp\+Helper(const char $\ast$n1, const char $\ast$n2, int max\+Elements)}{_nameCmpHelper(const char *n1, const char *n2, int maxElements)}}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+name\+Cmp\+Helper (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{n1, }
+\item[{const char $\ast$}]{n2, }
+\item[{int}]{max\+Elements}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3ab2e1f0ff07afc22b6dd9d86701f97b}{}\label{main_8c_a3ab2e1f0ff07afc22b6dd9d86701f97b}
+Compares two string name with up to \textquotesingle{}max\+Elements\textquotesingle{} number of characters. // T\+O\+DO\+: Words are hard 
+\begin{DoxyParams}{Parameters}
+{\em n1} & The first name of the comparison (no null terminator) \\
+\hline
+{\em n2} & The second name of the comparison (null terminated) \\
+\hline
+{\em max\+Elements} & The number of elements to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the names are equal 
+\end{DoxyReturn}
+\index{main.\+c@{main.\+c}!\+\_\+print\+Boot\+Sector\+Info@{\+\_\+print\+Boot\+Sector\+Info}}
+\index{\+\_\+print\+Boot\+Sector\+Info@{\+\_\+print\+Boot\+Sector\+Info}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+Boot\+Sector\+Info()}{_printBootSectorInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+Boot\+Sector\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3f6a67fcb1bbcdf677fdd105a658f31c}{}\label{main_8c_a3f6a67fcb1bbcdf677fdd105a658f31c}
+Prints information for the boot sector \index{main.\+c@{main.\+c}!\+\_\+print\+Directory\+Entries@{\+\_\+print\+Directory\+Entries}}
+\index{\+\_\+print\+Directory\+Entries@{\+\_\+print\+Directory\+Entries}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+Directory\+Entries(dir\+\_\+entry $\ast$entries, int max\+Entries)}{_printDirectoryEntries(dir_entry *entries, int maxEntries)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+Directory\+Entries (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{entries, }
+\item[{int}]{max\+Entries}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a576d4dce762db4f769f2feef36b33963}{}\label{main_8c_a576d4dce762db4f769f2feef36b33963}
+Prints all directory entries in current dir \index{main.\+c@{main.\+c}!\+\_\+print\+Directory\+Entries\+By\+File\+Name@{\+\_\+print\+Directory\+Entries\+By\+File\+Name}}
+\index{\+\_\+print\+Directory\+Entries\+By\+File\+Name@{\+\_\+print\+Directory\+Entries\+By\+File\+Name}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+Directory\+Entries\+By\+File\+Name(dir\+\_\+entry $\ast$entries, int max\+Entries, char $\ast$name, char $\ast$file\+Ext)}{_printDirectoryEntriesByFileName(dir_entry *entries, int maxEntries, char *name, char *fileExt)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+Directory\+Entries\+By\+File\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{entries, }
+\item[{int}]{max\+Entries, }
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{file\+Ext}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aa6e51497c025178507f2ffd1d5bed890}{}\label{main_8c_aa6e51497c025178507f2ffd1d5bed890}
+Prints any files with given name \index{main.\+c@{main.\+c}!\+\_\+print\+Directory\+Entries\+By\+Type@{\+\_\+print\+Directory\+Entries\+By\+Type}}
+\index{\+\_\+print\+Directory\+Entries\+By\+Type@{\+\_\+print\+Directory\+Entries\+By\+Type}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+Directory\+Entries\+By\+Type(dir\+\_\+entry $\ast$entries, int max\+Entries, char $\ast$ext)}{_printDirectoryEntriesByType(dir_entry *entries, int maxEntries, char *ext)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+Directory\+Entries\+By\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{entries, }
+\item[{int}]{max\+Entries, }
+\item[{char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a1ad14c471b5fd431efe5ee7611704f8e}{}\label{main_8c_a1ad14c471b5fd431efe5ee7611704f8e}
+Prints all directory entries in the current dir with the provided extension \index{main.\+c@{main.\+c}!\+\_\+print\+F\+A\+T\+Table\+Info@{\+\_\+print\+F\+A\+T\+Table\+Info}}
+\index{\+\_\+print\+F\+A\+T\+Table\+Info@{\+\_\+print\+F\+A\+T\+Table\+Info}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+F\+A\+T\+Table\+Info()}{_printFATTableInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+F\+A\+T\+Table\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a5f6a8acef4ad604b30c5a3a5e3fbf6aa}{}\label{main_8c_a5f6a8acef4ad604b30c5a3a5e3fbf6aa}
+Prints fat table information \index{main.\+c@{main.\+c}!\+\_\+print\+File@{\+\_\+print\+File}}
+\index{\+\_\+print\+File@{\+\_\+print\+File}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+print\+File(uint16\+\_\+t sector, int file\+Size, bool pag)}{_printFile(uint16_t sector, int fileSize, bool pag)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+print\+File (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector, }
+\item[{int}]{file\+Size, }
+\item[{bool}]{pag}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a35a6dd0e255e120bfbdb7883b64932bf}{}\label{main_8c_a35a6dd0e255e120bfbdb7883b64932bf}
+Prints contents of given file \index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(int num\+Args, char $\ast$args[])}{main(int numArgs, char *args[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Args, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_acdb2ae7732afbf160e670834272f9d20}{}\label{main_8c_acdb2ae7732afbf160e670834272f9d20}
+
+
+\subsection{Variable Documentation}
+\index{main.\+c@{main.\+c}!depth@{depth}}
+\index{depth@{depth}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{depth}{depth}}]{\setlength{\rightskip}{0pt plus 5cm}int depth = 0}\hypertarget{main_8c_acb5ba97551079e0b072c62c21d784ac5}{}\label{main_8c_acb5ba97551079e0b072c62c21d784ac5}
+\index{main.\+c@{main.\+c}!disk\+Image@{disk\+Image}}
+\index{disk\+Image@{disk\+Image}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{disk\+Image}{diskImage}}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+LE$\ast$ disk\+Image}\hypertarget{main_8c_aa6461bd8251cfc900494669827de82ca}{}\label{main_8c_aa6461bd8251cfc900494669827de82ca}
+\index{main.\+c@{main.\+c}!filename@{filename}}
+\index{filename@{filename}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{filename}{filename}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ filename = \char`\"{}\char`\"{}}\hypertarget{main_8c_aeac90097f29f7529968697163cea5c18}{}\label{main_8c_aeac90097f29f7529968697163cea5c18}
+\index{main.\+c@{main.\+c}!image\+Name@{image\+Name}}
+\index{image\+Name@{image\+Name}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{image\+Name}{imageName}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ image\+Name = \char`\"{}\char`\"{}}\hypertarget{main_8c_a8c0196d3be42aa4639022c11eb70c08e}{}\label{main_8c_a8c0196d3be42aa4639022c11eb70c08e}
+\index{main.\+c@{main.\+c}!paths@{paths}}
+\index{paths@{paths}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{paths}{paths}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ paths\mbox{[}256\mbox{]}}\hypertarget{main_8c_a8bfcb4d3f1eb4b77805a8749cc6937c5}{}\label{main_8c_a8bfcb4d3f1eb4b77805a8749cc6937c5}
+\index{main.\+c@{main.\+c}!print\+File\+Flag@{print\+File\+Flag}}
+\index{print\+File\+Flag@{print\+File\+Flag}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{print\+File\+Flag}{printFileFlag}}]{\setlength{\rightskip}{0pt plus 5cm}bool print\+File\+Flag = {\bf false}}\hypertarget{main_8c_aa2e260ed11e000fe33ce4daee3de0ec6}{}\label{main_8c_aa2e260ed11e000fe33ce4daee3de0ec6}

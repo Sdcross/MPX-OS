@@ -1,0 +1,34 @@
+\hypertarget{interrupts_8h}{}\section{include/core/interrupts.h File Reference}
+\label{interrupts_8h}\index{include/core/interrupts.\+h@{include/core/interrupts.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{interrupts_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interrupts_8h_ad17d9a8aa78440af8fc40d3fd55dbad8}{init\+\_\+irq} (void)
+\item 
+void \hyperlink{interrupts_8h_afbc0dbef6f15e2df21b38724ea38c483}{init\+\_\+pic} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interrupts.\+h@{interrupts.\+h}!init\+\_\+irq@{init\+\_\+irq}}
+\index{init\+\_\+irq@{init\+\_\+irq}!interrupts.\+h@{interrupts.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+irq(void)}{init_irq(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{interrupts_8h_ad17d9a8aa78440af8fc40d3fd55dbad8}{}\label{interrupts_8h_ad17d9a8aa78440af8fc40d3fd55dbad8}
+Installs the initial interrupt handlers for the first 32 irq lines. Most do a panic for now. \index{interrupts.\+h@{interrupts.\+h}!init\+\_\+pic@{init\+\_\+pic}}
+\index{init\+\_\+pic@{init\+\_\+pic}!interrupts.\+h@{interrupts.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+pic(void)}{init_pic(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+pic (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{interrupts_8h_afbc0dbef6f15e2df21b38724ea38c483}{}\label{interrupts_8h_afbc0dbef6f15e2df21b38724ea38c483}
+Initializes the programmable interrupt controllers and performs the necessary remapping of I\+R\+Qs. Leaves interrupts turned off. 

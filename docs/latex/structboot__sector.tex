@@ -1,0 +1,115 @@
+\hypertarget{structboot__sector}{}\section{boot\+\_\+sector Struct Reference}
+\label{structboot__sector}\index{boot\+\_\+sector@{boot\+\_\+sector}}
+
+
+{\ttfamily \#include $<$fat.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a4a5f044c4af1ec63539b4d313aabb92a}{ignore\+\_\+1} \mbox{[}11\mbox{]}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_adb2ddeae74baf681103d21d724814a63}{bytes\+Per\+Sector}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a3ce07376c286acd8393a18a32d7ca4c0}{sectors\+Per\+Cluster}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_a9837d510dc3b5f71fffea972a5ddcca4}{num\+Reserved\+Sectors}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a248319edc283c2789351510caa983680}{num\+F\+A\+T\+Copies}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_ab233d94ef0ebef743305b206a1fad236}{max\+Root\+Dir\+Entries}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_a089c1fc6d861771cad3c35c875e7b6d9}{num\+Sectors}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a0b21e9d53cf987278e208805bc8500c8}{ignore\+\_\+2} \mbox{[}1\mbox{]}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_a863410095bdf8e95fa196716be36d91b}{sectors\+Per\+F\+AT}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_a42886f9109ee1759d5972e871f0689a8}{sectors\+Per\+Track}
+\item 
+uint16\+\_\+t \hyperlink{structboot__sector_a59a74774238113cb621818427f11a877}{num\+Heads}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a7b56f8c85b389a72d0885f574f2d2161}{ignore\+\_\+3} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structboot__sector_a381d6892c473adfd2847a08ed022d81c}{sector\+Count\+F\+A\+T32}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a85aa9de3f0400bf29bff2bf715f50054}{ignore\+\_\+4} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a6c8098ef528b68696452b3caeaced159}{boot\+Sig}
+\item 
+uint32\+\_\+t \hyperlink{structboot__sector_a86483b972623ebdcf816ef6fc098c1c6}{vol\+Id}
+\item 
+unsigned char \hyperlink{structboot__sector_abf99e855e09d7505a608b31f619535a6}{vol\+Name} \mbox{[}12\mbox{]}
+\item 
+unsigned char \hyperlink{structboot__sector_a490bf602a1750aea0d5bdb7c64a0f08e}{file\+System\+Type} \mbox{[}9\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structboot__sector_a04c57fb0a1efb4695f297caae351f295}{ignore\+\_\+5} \mbox{[}450\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct representing the boot sector 
+
+\subsection{Field Documentation}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!boot\+Sig@{boot\+Sig}}
+\index{boot\+Sig@{boot\+Sig}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{boot\+Sig}{bootSig}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t boot\+Sig}\hypertarget{structboot__sector_a6c8098ef528b68696452b3caeaced159}{}\label{structboot__sector_a6c8098ef528b68696452b3caeaced159}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!bytes\+Per\+Sector@{bytes\+Per\+Sector}}
+\index{bytes\+Per\+Sector@{bytes\+Per\+Sector}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{bytes\+Per\+Sector}{bytesPerSector}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t bytes\+Per\+Sector}\hypertarget{structboot__sector_adb2ddeae74baf681103d21d724814a63}{}\label{structboot__sector_adb2ddeae74baf681103d21d724814a63}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!file\+System\+Type@{file\+System\+Type}}
+\index{file\+System\+Type@{file\+System\+Type}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{file\+System\+Type}{fileSystemType}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char file\+System\+Type\mbox{[}9\mbox{]}}\hypertarget{structboot__sector_a490bf602a1750aea0d5bdb7c64a0f08e}{}\label{structboot__sector_a490bf602a1750aea0d5bdb7c64a0f08e}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!ignore\+\_\+1@{ignore\+\_\+1}}
+\index{ignore\+\_\+1@{ignore\+\_\+1}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{ignore\+\_\+1}{ignore_1}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t ignore\+\_\+1\mbox{[}11\mbox{]}}\hypertarget{structboot__sector_a4a5f044c4af1ec63539b4d313aabb92a}{}\label{structboot__sector_a4a5f044c4af1ec63539b4d313aabb92a}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!ignore\+\_\+2@{ignore\+\_\+2}}
+\index{ignore\+\_\+2@{ignore\+\_\+2}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{ignore\+\_\+2}{ignore_2}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t ignore\+\_\+2\mbox{[}1\mbox{]}}\hypertarget{structboot__sector_a0b21e9d53cf987278e208805bc8500c8}{}\label{structboot__sector_a0b21e9d53cf987278e208805bc8500c8}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!ignore\+\_\+3@{ignore\+\_\+3}}
+\index{ignore\+\_\+3@{ignore\+\_\+3}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{ignore\+\_\+3}{ignore_3}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t ignore\+\_\+3\mbox{[}4\mbox{]}}\hypertarget{structboot__sector_a7b56f8c85b389a72d0885f574f2d2161}{}\label{structboot__sector_a7b56f8c85b389a72d0885f574f2d2161}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!ignore\+\_\+4@{ignore\+\_\+4}}
+\index{ignore\+\_\+4@{ignore\+\_\+4}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{ignore\+\_\+4}{ignore_4}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t ignore\+\_\+4\mbox{[}2\mbox{]}}\hypertarget{structboot__sector_a85aa9de3f0400bf29bff2bf715f50054}{}\label{structboot__sector_a85aa9de3f0400bf29bff2bf715f50054}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!ignore\+\_\+5@{ignore\+\_\+5}}
+\index{ignore\+\_\+5@{ignore\+\_\+5}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{ignore\+\_\+5}{ignore_5}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t ignore\+\_\+5\mbox{[}450\mbox{]}}\hypertarget{structboot__sector_a04c57fb0a1efb4695f297caae351f295}{}\label{structboot__sector_a04c57fb0a1efb4695f297caae351f295}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!max\+Root\+Dir\+Entries@{max\+Root\+Dir\+Entries}}
+\index{max\+Root\+Dir\+Entries@{max\+Root\+Dir\+Entries}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{max\+Root\+Dir\+Entries}{maxRootDirEntries}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t max\+Root\+Dir\+Entries}\hypertarget{structboot__sector_ab233d94ef0ebef743305b206a1fad236}{}\label{structboot__sector_ab233d94ef0ebef743305b206a1fad236}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!num\+F\+A\+T\+Copies@{num\+F\+A\+T\+Copies}}
+\index{num\+F\+A\+T\+Copies@{num\+F\+A\+T\+Copies}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{num\+F\+A\+T\+Copies}{numFATCopies}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t num\+F\+A\+T\+Copies}\hypertarget{structboot__sector_a248319edc283c2789351510caa983680}{}\label{structboot__sector_a248319edc283c2789351510caa983680}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!num\+Heads@{num\+Heads}}
+\index{num\+Heads@{num\+Heads}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{num\+Heads}{numHeads}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t num\+Heads}\hypertarget{structboot__sector_a59a74774238113cb621818427f11a877}{}\label{structboot__sector_a59a74774238113cb621818427f11a877}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!num\+Reserved\+Sectors@{num\+Reserved\+Sectors}}
+\index{num\+Reserved\+Sectors@{num\+Reserved\+Sectors}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{num\+Reserved\+Sectors}{numReservedSectors}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t num\+Reserved\+Sectors}\hypertarget{structboot__sector_a9837d510dc3b5f71fffea972a5ddcca4}{}\label{structboot__sector_a9837d510dc3b5f71fffea972a5ddcca4}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!num\+Sectors@{num\+Sectors}}
+\index{num\+Sectors@{num\+Sectors}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{num\+Sectors}{numSectors}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t num\+Sectors}\hypertarget{structboot__sector_a089c1fc6d861771cad3c35c875e7b6d9}{}\label{structboot__sector_a089c1fc6d861771cad3c35c875e7b6d9}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!sector\+Count\+F\+A\+T32@{sector\+Count\+F\+A\+T32}}
+\index{sector\+Count\+F\+A\+T32@{sector\+Count\+F\+A\+T32}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{sector\+Count\+F\+A\+T32}{sectorCountFAT32}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t sector\+Count\+F\+A\+T32}\hypertarget{structboot__sector_a381d6892c473adfd2847a08ed022d81c}{}\label{structboot__sector_a381d6892c473adfd2847a08ed022d81c}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!sectors\+Per\+Cluster@{sectors\+Per\+Cluster}}
+\index{sectors\+Per\+Cluster@{sectors\+Per\+Cluster}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{sectors\+Per\+Cluster}{sectorsPerCluster}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t sectors\+Per\+Cluster}\hypertarget{structboot__sector_a3ce07376c286acd8393a18a32d7ca4c0}{}\label{structboot__sector_a3ce07376c286acd8393a18a32d7ca4c0}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!sectors\+Per\+F\+AT@{sectors\+Per\+F\+AT}}
+\index{sectors\+Per\+F\+AT@{sectors\+Per\+F\+AT}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{sectors\+Per\+F\+AT}{sectorsPerFAT}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sectors\+Per\+F\+AT}\hypertarget{structboot__sector_a863410095bdf8e95fa196716be36d91b}{}\label{structboot__sector_a863410095bdf8e95fa196716be36d91b}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!sectors\+Per\+Track@{sectors\+Per\+Track}}
+\index{sectors\+Per\+Track@{sectors\+Per\+Track}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{sectors\+Per\+Track}{sectorsPerTrack}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sectors\+Per\+Track}\hypertarget{structboot__sector_a42886f9109ee1759d5972e871f0689a8}{}\label{structboot__sector_a42886f9109ee1759d5972e871f0689a8}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!vol\+Id@{vol\+Id}}
+\index{vol\+Id@{vol\+Id}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{vol\+Id}{volId}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t vol\+Id}\hypertarget{structboot__sector_a86483b972623ebdcf816ef6fc098c1c6}{}\label{structboot__sector_a86483b972623ebdcf816ef6fc098c1c6}
+\index{boot\+\_\+sector@{boot\+\_\+sector}!vol\+Name@{vol\+Name}}
+\index{vol\+Name@{vol\+Name}!boot\+\_\+sector@{boot\+\_\+sector}}
+\subsubsection[{\texorpdfstring{vol\+Name}{volName}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char vol\+Name\mbox{[}12\mbox{]}}\hypertarget{structboot__sector_abf99e855e09d7505a608b31f619535a6}{}\label{structboot__sector_abf99e855e09d7505a608b31f619535a6}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+r6/\hyperlink{fat_8h}{fat.\+h}\end{DoxyCompactItemize}

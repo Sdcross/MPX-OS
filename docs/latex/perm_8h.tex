@@ -1,0 +1,169 @@
+\hypertarget{perm_8h}{}\section{include/modules/\+R2/commands/perm.h File Reference}
+\label{perm_8h}\index{include/modules/\+R2/commands/perm.\+h@{include/modules/\+R2/commands/perm.\+h}}
+{\ttfamily \#include \char`\"{}help.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}status.\+h\char`\"{}}\\*
+Include dependency graph for perm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{perm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{perm_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{perm_8h_a81a1071e7a98eaced2f1b4a418df87cb}{register\+R2\+Perm\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{perm_8h_aeb3891b8b6fa80f3307b8c83bf8c6178}{suspend\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{perm_8h_a3107aea4894efdf8a23240ee68869822}{resume\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{perm_8h_a4aca0351fa322b227ff3114f0c7b8a04}{set\+Priority\+Pcb} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{perm_8h_a4ece86bfd9ed049b2779020662b8b022}{show\+Pcb\+Info} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{perm.\+h@{perm.\+h}!register\+R2\+Perm\+Commands@{register\+R2\+Perm\+Commands}}
+\index{register\+R2\+Perm\+Commands@{register\+R2\+Perm\+Commands}!perm.\+h@{perm.\+h}}
+\subsubsection[{\texorpdfstring{register\+R2\+Perm\+Commands()}{registerR2PermCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R2\+Perm\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{perm_8h_a81a1071e7a98eaced2f1b4a418df87cb}{}\label{perm_8h_a81a1071e7a98eaced2f1b4a418df87cb}
+Registers the permanent commands in the command handler \index{perm.\+h@{perm.\+h}!resume\+Pcb@{resume\+Pcb}}
+\index{resume\+Pcb@{resume\+Pcb}!perm.\+h@{perm.\+h}}
+\subsubsection[{\texorpdfstring{resume\+Pcb(char $\ast$$\ast$args, int num\+Args)}{resumePcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ resume\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{perm_8h_a3107aea4894efdf8a23240ee68869822}{}\label{perm_8h_a3107aea4894efdf8a23240ee68869822}
+Places a P\+CB into the not suspended state and reinserts it into the appropriate queue.
+
+Usage\+: rpcb name
+
+Args\+: name -\/ The name of the process to resume (must exist)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure
+\end{DoxyReturn}
+Places a P\+CB into the not suspended state and reinserts it into the appropriate queue.
+
+Usage\+: rpcb name
+
+Args\+: name -\/ The name of the process to resume (must exist) --all -\/ Resumes all processes
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{perm.\+h@{perm.\+h}!set\+Priority\+Pcb@{set\+Priority\+Pcb}}
+\index{set\+Priority\+Pcb@{set\+Priority\+Pcb}!perm.\+h@{perm.\+h}}
+\subsubsection[{\texorpdfstring{set\+Priority\+Pcb(char $\ast$$\ast$args, int num\+Args)}{setPriorityPcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ set\+Priority\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{perm_8h_a4aca0351fa322b227ff3114f0c7b8a04}{}\label{perm_8h_a4aca0351fa322b227ff3114f0c7b8a04}
+Sets a P\+CB\textquotesingle{}s priority and reinserts the process into the correct place in the correct queue.
+
+Usage\+: ppcb name priority
+
+Args\+: name -\/ The name of the process to set the priority on (must exist) priority -\/ The new priority (between 0 and 9)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{perm.\+h@{perm.\+h}!show\+Pcb\+Info@{show\+Pcb\+Info}}
+\index{show\+Pcb\+Info@{show\+Pcb\+Info}!perm.\+h@{perm.\+h}}
+\subsubsection[{\texorpdfstring{show\+Pcb\+Info(char $\ast$$\ast$args, int num\+Args)}{showPcbInfo(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ show\+Pcb\+Info (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{perm_8h_a4ece86bfd9ed049b2779020662b8b022}{}\label{perm_8h_a4ece86bfd9ed049b2779020662b8b022}
+Displays the following information for the specified P\+C\+Bs\+: Process Name\+: Class\+: State\+: Suspended Status\+: Priority\+:
+
+Usage\+: showpcb \mbox{[}--all\mbox{]} \mbox{[}--ready\mbox{]} \mbox{[}--blocked\mbox{]} \mbox{[}--name pcb\+Name\mbox{]} (at least 1 must be specified)
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Shows the help for this command --all -\/ Displays information for all P\+C\+Bs --ready -\/ Displays information for ready P\+C\+Bs --blocked -\/ Displays information for blocked P\+C\+Bs --suspended -\/ Displays information for suspended P\+C\+Bs --name -\/ Displays information for the specified P\+CB (can be used multiple times)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure
+\end{DoxyReturn}
+Displays the following information for the specified P\+C\+Bs\+: Process Name\+: Class\+: State\+: Suspended Status\+: Priority\+:
+
+Usage\+: showpcb \mbox{[}--all\mbox{]} \mbox{[}--ready\mbox{]} \mbox{[}--blocked\mbox{]} \mbox{[}--suspended\mbox{]} \mbox{[}--name pcb\+Name\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Shows the help for this command --all -\/ Displays information for all P\+C\+Bs --ready -\/ Displays information for ready P\+C\+Bs --blocked -\/ Displays information for blocked P\+C\+Bs --suspended -\/ Displays information for suspended P\+C\+Bs --name -\/ Displays information for the specified P\+CB
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}
+\index{perm.\+h@{perm.\+h}!suspend\+Pcb@{suspend\+Pcb}}
+\index{suspend\+Pcb@{suspend\+Pcb}!perm.\+h@{perm.\+h}}
+\subsubsection[{\texorpdfstring{suspend\+Pcb(char $\ast$$\ast$args, int num\+Args)}{suspendPcb(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ suspend\+Pcb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{perm_8h_aeb3891b8b6fa80f3307b8c83bf8c6178}{}\label{perm_8h_aeb3891b8b6fa80f3307b8c83bf8c6178}
+Places a P\+CB into the suspended state and reinserts it into the appropriate queue.
+
+Usage\+: spcb name
+
+Args\+: name -\/ The name of the process to suspend (must exist) --all -\/ Resumes all processes
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}

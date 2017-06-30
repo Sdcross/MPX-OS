@@ -1,0 +1,330 @@
+\hypertarget{queue_8c}{}\section{kernel/core/queue.c File Reference}
+\label{queue_8c}\index{kernel/core/queue.\+c@{kernel/core/queue.\+c}}
+{\ttfamily \#include $<$core/queue.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for queue.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{queue_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252}{queue} \{ \hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252ac1e6786c6962440fa9d84219c3fbe310}{Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED} = B\+L\+O\+C\+K\+ED, 
+\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252ae8b542287d9fd119727cd725dd7f85bc}{Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY} = R\+E\+A\+DY, 
+\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252a517f2bdf7fbc2b0685ea6239e75ea2eb}{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED} = B\+L\+O\+C\+K\+ED + 0x02, 
+\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252a3c0d2a516cebaa644d3d33b90a72eae2}{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY} = R\+E\+A\+DY + 0x02
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_ab5fe783879920de44fb073479f953ee1}{\+\_\+new\+Node} (\hyperlink{structpcb}{pcb} $\ast$p)
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_ad7d680029a1c4cbce198a46ace61e1a1}{\+\_\+find\+Node} (const char $\ast$process\+Name)
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_a50a836c6a8ee8a88165f94b3ce5bc759}{\+\_\+find\+Node\+In\+Queue} (\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252}{queue} q, const char $\ast$process\+Name)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8c_afcc18f8fc0c9c3a03fcfddd9e2139073}{\+\_\+insert\+Priority} (\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252}{queue} q, \hyperlink{structnode}{node} $\ast$new\+Node)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8c_af6348041a7ac4f0dccaecd75d7eb9621}{\+\_\+insert\+F\+I\+FO} (\hyperlink{queue_8c_af8ceabb22d9297bd28382151f35a2252}{queue} q, \hyperlink{structnode}{node} $\ast$new\+Node)
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_a90ecf077bdf2731051966c1fc72f619b}{get\+Ready\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_a5170ee107f4bc7e352d4407395d57da7}{get\+Blocked\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_a10529b60bfa07efe56794a575af1721d}{get\+Suspended\+Ready\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_a9f027fce172315eed8a8893192af6421}{get\+Suspended\+Blocked\+Queue} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8c_a9d45db295536fc5e43d7ba34b1984157}{pop\+Ready} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8c_a349201cc823df4797c37a24bf34d2014}{pop\+Blocked} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8c_a2986335d1a7e14f5b65173253a911882}{pop\+Suspended\+Ready} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8c_a1a011f09bcd31aa910535aba088ab537}{pop\+Suspended\+Blocked} ()
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8c_a7d2249981425ab391895a81820d3f221}{insert\+P\+CB} (\hyperlink{structpcb}{pcb} $\ast$p)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8c_a305ebe6c5f7cdd7731706cae59d43e33}{remove\+P\+CB} (\hyperlink{structpcb}{pcb} $\ast$p)
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8c_a291648ddfe62eec41c502cee840c98da}{find\+P\+CB} (const char $\ast$process\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8c_afaa9a763ae084ea6e73d34c9af08c6ba}{queues} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{queue.\+c@{queue.\+c}!queue@{queue}}
+\index{queue@{queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{queue}{queue}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf queue}}\hypertarget{queue_8c_af8ceabb22d9297bd28382151f35a2252}{}\label{queue_8c_af8ceabb22d9297bd28382151f35a2252}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED@{Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED}!queue.\+c@{queue.\+c}}\index{queue.\+c@{queue.\+c}!Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED@{Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED}}\item[{\em 
+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+ED\hypertarget{queue_8c_af8ceabb22d9297bd28382151f35a2252ac1e6786c6962440fa9d84219c3fbe310}{}\label{queue_8c_af8ceabb22d9297bd28382151f35a2252ac1e6786c6962440fa9d84219c3fbe310}
+}]\index{Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY@{Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY}!queue.\+c@{queue.\+c}}\index{queue.\+c@{queue.\+c}!Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY@{Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY}}\item[{\em 
+Q\+U\+E\+U\+E\+\_\+\+R\+E\+A\+DY\hypertarget{queue_8c_af8ceabb22d9297bd28382151f35a2252ae8b542287d9fd119727cd725dd7f85bc}{}\label{queue_8c_af8ceabb22d9297bd28382151f35a2252ae8b542287d9fd119727cd725dd7f85bc}
+}]\index{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED@{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED}!queue.\+c@{queue.\+c}}\index{queue.\+c@{queue.\+c}!Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED@{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED}}\item[{\em 
+Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+B\+L\+O\+C\+K\+ED\hypertarget{queue_8c_af8ceabb22d9297bd28382151f35a2252a517f2bdf7fbc2b0685ea6239e75ea2eb}{}\label{queue_8c_af8ceabb22d9297bd28382151f35a2252a517f2bdf7fbc2b0685ea6239e75ea2eb}
+}]\index{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY@{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY}!queue.\+c@{queue.\+c}}\index{queue.\+c@{queue.\+c}!Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY@{Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY}}\item[{\em 
+Q\+U\+E\+U\+E\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D\+\_\+\+R\+E\+A\+DY\hypertarget{queue_8c_af8ceabb22d9297bd28382151f35a2252a3c0d2a516cebaa644d3d33b90a72eae2}{}\label{queue_8c_af8ceabb22d9297bd28382151f35a2252a3c0d2a516cebaa644d3d33b90a72eae2}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{queue.\+c@{queue.\+c}!\+\_\+find\+Node@{\+\_\+find\+Node}}
+\index{\+\_\+find\+Node@{\+\_\+find\+Node}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+find\+Node(const char $\ast$process\+Name)}{_findNode(const char *processName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ \+\_\+find\+Node (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{process\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_ad7d680029a1c4cbce198a46ace61e1a1}{}\label{queue_8c_ad7d680029a1c4cbce198a46ace61e1a1}
+Internal function to find the node containing the P\+CB with the given process name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & The process name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node containing the P\+CB with the given process name, or null if not found 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!\+\_\+find\+Node\+In\+Queue@{\+\_\+find\+Node\+In\+Queue}}
+\index{\+\_\+find\+Node\+In\+Queue@{\+\_\+find\+Node\+In\+Queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+find\+Node\+In\+Queue(queue q, const char $\ast$process\+Name)}{_findNodeInQueue(queue q, const char *processName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ \+\_\+find\+Node\+In\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf queue}}]{q, }
+\item[{const char $\ast$}]{process\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a50a836c6a8ee8a88165f94b3ce5bc759}{}\label{queue_8c_a50a836c6a8ee8a88165f94b3ce5bc759}
+Internal function for finding a node in a specific queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & The queue to search in \\
+\hline
+{\em process\+Name} & The process name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node containing the P\+CB with the given name, or null if not found 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!\+\_\+insert\+F\+I\+FO@{\+\_\+insert\+F\+I\+FO}}
+\index{\+\_\+insert\+F\+I\+FO@{\+\_\+insert\+F\+I\+FO}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+insert\+F\+I\+F\+O(queue q, node $\ast$new\+Node)}{_insertFIFO(queue q, node *newNode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} \+\_\+insert\+F\+I\+FO (
+\begin{DoxyParamCaption}
+\item[{{\bf queue}}]{q, }
+\item[{{\bf node} $\ast$}]{new\+Node}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_af6348041a7ac4f0dccaecd75d7eb9621}{}\label{queue_8c_af6348041a7ac4f0dccaecd75d7eb9621}
+Inserts a node into a F\+I\+FO queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & The queue to insert into \\
+\hline
+{\em new\+Node} & The node to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the node was inserted, false otherwise 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!\+\_\+insert\+Priority@{\+\_\+insert\+Priority}}
+\index{\+\_\+insert\+Priority@{\+\_\+insert\+Priority}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+insert\+Priority(queue q, node $\ast$new\+Node)}{_insertPriority(queue q, node *newNode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} \+\_\+insert\+Priority (
+\begin{DoxyParamCaption}
+\item[{{\bf queue}}]{q, }
+\item[{{\bf node} $\ast$}]{new\+Node}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_afcc18f8fc0c9c3a03fcfddd9e2139073}{}\label{queue_8c_afcc18f8fc0c9c3a03fcfddd9e2139073}
+Internal function for inserting a node into a given queue in order by priority.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & The queue to insert into \\
+\hline
+{\em new\+Node} & The node to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the node was inserted, false otherwise 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!\+\_\+new\+Node@{\+\_\+new\+Node}}
+\index{\+\_\+new\+Node@{\+\_\+new\+Node}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+new\+Node(pcb $\ast$p)}{_newNode(pcb *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ \+\_\+new\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{pcb}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_ab5fe783879920de44fb073479f953ee1}{}\label{queue_8c_ab5fe783879920de44fb073479f953ee1}
+Internal function to create a new list node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pcb} & The pcb to store in the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created node, or N\+U\+LL if the node can\textquotesingle{}t be created 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!find\+P\+CB@{find\+P\+CB}}
+\index{find\+P\+CB@{find\+P\+CB}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{find\+P\+C\+B(const char $\ast$process\+Name)}{findPCB(const char *processName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ find\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{process\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a291648ddfe62eec41c502cee840c98da}{}\label{queue_8c_a291648ddfe62eec41c502cee840c98da}
+Finds the P\+CB with the given process name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & The name of the process to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the P\+CB, or null if not found 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!get\+Blocked\+Queue@{get\+Blocked\+Queue}}
+\index{get\+Blocked\+Queue@{get\+Blocked\+Queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{get\+Blocked\+Queue()}{getBlockedQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Blocked\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a5170ee107f4bc7e352d4407395d57da7}{}\label{queue_8c_a5170ee107f4bc7e352d4407395d57da7}
+Gets the head node of the blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the blocked queue 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!get\+Ready\+Queue@{get\+Ready\+Queue}}
+\index{get\+Ready\+Queue@{get\+Ready\+Queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{get\+Ready\+Queue()}{getReadyQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Ready\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a90ecf077bdf2731051966c1fc72f619b}{}\label{queue_8c_a90ecf077bdf2731051966c1fc72f619b}
+Gets the head node of the ready queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the ready queue 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!get\+Suspended\+Blocked\+Queue@{get\+Suspended\+Blocked\+Queue}}
+\index{get\+Suspended\+Blocked\+Queue@{get\+Suspended\+Blocked\+Queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{get\+Suspended\+Blocked\+Queue()}{getSuspendedBlockedQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Suspended\+Blocked\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a9f027fce172315eed8a8893192af6421}{}\label{queue_8c_a9f027fce172315eed8a8893192af6421}
+Gets the head node of the suspended-\/blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the suspended-\/blocked queue 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!get\+Suspended\+Ready\+Queue@{get\+Suspended\+Ready\+Queue}}
+\index{get\+Suspended\+Ready\+Queue@{get\+Suspended\+Ready\+Queue}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{get\+Suspended\+Ready\+Queue()}{getSuspendedReadyQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Suspended\+Ready\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a10529b60bfa07efe56794a575af1721d}{}\label{queue_8c_a10529b60bfa07efe56794a575af1721d}
+Gets the head node of the suspended-\/ready queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the suspended-\/ready queue 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!insert\+P\+CB@{insert\+P\+CB}}
+\index{insert\+P\+CB@{insert\+P\+CB}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{insert\+P\+C\+B(pcb $\ast$p)}{insertPCB(pcb *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} insert\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a7d2249981425ab391895a81820d3f221}{}\label{queue_8c_a7d2249981425ab391895a81820d3f221}
+Inserts the P\+CB into the appropriate queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The P\+CB to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the P\+CB was inserted, false otherwise 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!pop\+Blocked@{pop\+Blocked}}
+\index{pop\+Blocked@{pop\+Blocked}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{pop\+Blocked()}{popBlocked()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Blocked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a349201cc823df4797c37a24bf34d2014}{}\label{queue_8c_a349201cc823df4797c37a24bf34d2014}
+Pops the next node off of the blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the blocked queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!pop\+Ready@{pop\+Ready}}
+\index{pop\+Ready@{pop\+Ready}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{pop\+Ready()}{popReady()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a9d45db295536fc5e43d7ba34b1984157}{}\label{queue_8c_a9d45db295536fc5e43d7ba34b1984157}
+Pops the next node off of the ready queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the ready queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!pop\+Suspended\+Blocked@{pop\+Suspended\+Blocked}}
+\index{pop\+Suspended\+Blocked@{pop\+Suspended\+Blocked}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{pop\+Suspended\+Blocked()}{popSuspendedBlocked()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Suspended\+Blocked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a1a011f09bcd31aa910535aba088ab537}{}\label{queue_8c_a1a011f09bcd31aa910535aba088ab537}
+Pops the next node off of the suspended-\/blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the suspended-\/blocked queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!pop\+Suspended\+Ready@{pop\+Suspended\+Ready}}
+\index{pop\+Suspended\+Ready@{pop\+Suspended\+Ready}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{pop\+Suspended\+Ready()}{popSuspendedReady()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Suspended\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a2986335d1a7e14f5b65173253a911882}{}\label{queue_8c_a2986335d1a7e14f5b65173253a911882}
+Pops the next node off of the suspended-\/ready queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the suspended-\/ready queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+c@{queue.\+c}!remove\+P\+CB@{remove\+P\+CB}}
+\index{remove\+P\+CB@{remove\+P\+CB}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{remove\+P\+C\+B(pcb $\ast$p)}{removePCB(pcb *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} remove\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8c_a305ebe6c5f7cdd7731706cae59d43e33}{}\label{queue_8c_a305ebe6c5f7cdd7731706cae59d43e33}
+Removes the given P\+CB from it\textquotesingle{}s queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The P\+CB to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the P\+CB was removed, false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{queue.\+c@{queue.\+c}!queues@{queues}}
+\index{queues@{queues}!queue.\+c@{queue.\+c}}
+\subsubsection[{\texorpdfstring{queues}{queues}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ queues\mbox{[}4\mbox{]}}\hypertarget{queue_8c_afaa9a763ae084ea6e73d34c9af08c6ba}{}\label{queue_8c_afaa9a763ae084ea6e73d34c9af08c6ba}

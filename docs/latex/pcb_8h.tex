@@ -1,0 +1,202 @@
+\hypertarget{pcb_8h}{}\section{include/core/pcb.h File Reference}
+\label{pcb_8h}\index{include/core/pcb.\+h@{include/core/pcb.\+h}}
+{\ttfamily \#include $<$system.\+h$>$}\\*
+Include dependency graph for pcb.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{pcb_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pcb_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpcb}{pcb}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pcb_8h_a48f6457243719e7031768d4100741159}{B\+L\+O\+C\+K\+ED}~0
+\item 
+\#define \hyperlink{pcb_8h_ad1235d5ce36f7267285e82dccd428aa6}{R\+E\+A\+DY}~1
+\item 
+\#define \hyperlink{pcb_8h_a6fb7181d994ee98e735494be55809708}{R\+U\+N\+N\+I\+NG}~2
+\item 
+\#define \hyperlink{pcb_8h_a21b97df85e65556468b28a576311271c}{S\+Y\+S\+T\+EM}~0
+\item 
+\#define \hyperlink{pcb_8h_a796bd7c6ba2e59281760fb155c6287e8}{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structpcb}{pcb} \hyperlink{pcb_8h_a1344afeb2018949c9ac2311b1faea6dc}{pcb}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{pcb_8h_abaf5a209b901d0648067e94079dffe22}{allocate\+P\+CB} ()
+\item 
+int \hyperlink{pcb_8h_a3cee34bfa271f759a131e81daa5d0072}{free\+P\+CB} (\hyperlink{structpcb}{pcb} $\ast$pcb\+Ptr)
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{pcb_8h_a1065e090df16a86b2a477b62e41fa930}{setup\+P\+CB} (const char $\ast$process\+Name, int process\+Class, int priority)
+\item 
+int \hyperlink{pcb_8h_aaed194f50a1015f4eb373410c81ff23e}{check\+Param\+Name} (const char $\ast$process\+Name)
+\item 
+int \hyperlink{pcb_8h_ab90a90289554c475abb4f74b71db8163}{check\+Param\+Class} (int process\+Class)
+\item 
+int \hyperlink{pcb_8h_a0af587ecb3f21b5049b335b62dd44fcf}{check\+Param\+Priority} (int priority)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{pcb.\+h@{pcb.\+h}!A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}
+\index{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}{APPLICATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+P\+L\+I\+C\+A\+T\+I\+ON~1}\hypertarget{pcb_8h_a796bd7c6ba2e59281760fb155c6287e8}{}\label{pcb_8h_a796bd7c6ba2e59281760fb155c6287e8}
+\index{pcb.\+h@{pcb.\+h}!B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}}
+\index{B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{B\+L\+O\+C\+K\+ED}{BLOCKED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+O\+C\+K\+ED~0}\hypertarget{pcb_8h_a48f6457243719e7031768d4100741159}{}\label{pcb_8h_a48f6457243719e7031768d4100741159}
+\index{pcb.\+h@{pcb.\+h}!R\+E\+A\+DY@{R\+E\+A\+DY}}
+\index{R\+E\+A\+DY@{R\+E\+A\+DY}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+DY}{READY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+A\+DY~1}\hypertarget{pcb_8h_ad1235d5ce36f7267285e82dccd428aa6}{}\label{pcb_8h_ad1235d5ce36f7267285e82dccd428aa6}
+\index{pcb.\+h@{pcb.\+h}!R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}}
+\index{R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{R\+U\+N\+N\+I\+NG}{RUNNING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+N\+N\+I\+NG~2}\hypertarget{pcb_8h_a6fb7181d994ee98e735494be55809708}{}\label{pcb_8h_a6fb7181d994ee98e735494be55809708}
+\index{pcb.\+h@{pcb.\+h}!S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}}
+\index{S\+Y\+S\+T\+EM@{S\+Y\+S\+T\+EM}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{S\+Y\+S\+T\+EM}{SYSTEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+S\+T\+EM~0}\hypertarget{pcb_8h_a21b97df85e65556468b28a576311271c}{}\label{pcb_8h_a21b97df85e65556468b28a576311271c}
+
+
+\subsection{Typedef Documentation}
+\index{pcb.\+h@{pcb.\+h}!pcb@{pcb}}
+\index{pcb@{pcb}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{pcb}{pcb}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pcb}  {\bf pcb}}\hypertarget{pcb_8h_a1344afeb2018949c9ac2311b1faea6dc}{}\label{pcb_8h_a1344afeb2018949c9ac2311b1faea6dc}
+
+
+\subsection{Function Documentation}
+\index{pcb.\+h@{pcb.\+h}!allocate\+P\+CB@{allocate\+P\+CB}}
+\index{allocate\+P\+CB@{allocate\+P\+CB}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{allocate\+P\+C\+B()}{allocatePCB()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ allocate\+P\+CB (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_abaf5a209b901d0648067e94079dffe22}{}\label{pcb_8h_abaf5a209b901d0648067e94079dffe22}
+Allocates memory for a new P\+CB and returns a pointer to it
+
+\begin{DoxyReturn}{Returns}
+P\+CB pointer or Null if error occurs
+\end{DoxyReturn}
+Allocates memory for a new P\+CB and returns a pointer to it
+
+free\+P\+CB should be used when done using the pcb to free the memory in use
+
+\begin{DoxyReturn}{Returns}
+P\+CB pointer or Null if error occurs 
+\end{DoxyReturn}
+\index{pcb.\+h@{pcb.\+h}!check\+Param\+Class@{check\+Param\+Class}}
+\index{check\+Param\+Class@{check\+Param\+Class}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{check\+Param\+Class(int process\+Class)}{checkParamClass(int processClass)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Param\+Class (
+\begin{DoxyParamCaption}
+\item[{int}]{process\+Class}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_ab90a90289554c475abb4f74b71db8163}{}\label{pcb_8h_ab90a90289554c475abb4f74b71db8163}
+Validates that the process\+Class is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Class} & -\/ int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 or 1 if valid 
+\end{DoxyReturn}
+\index{pcb.\+h@{pcb.\+h}!check\+Param\+Name@{check\+Param\+Name}}
+\index{check\+Param\+Name@{check\+Param\+Name}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{check\+Param\+Name(const char $\ast$process\+Name)}{checkParamName(const char *processName)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Param\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{process\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_aaed194f50a1015f4eb373410c81ff23e}{}\label{pcb_8h_aaed194f50a1015f4eb373410c81ff23e}
+Validates that the process\+Name is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & -\/ const char $\ast$ process\+Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 or 1 if valid 
+\end{DoxyReturn}
+\index{pcb.\+h@{pcb.\+h}!check\+Param\+Priority@{check\+Param\+Priority}}
+\index{check\+Param\+Priority@{check\+Param\+Priority}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{check\+Param\+Priority(int priority)}{checkParamPriority(int priority)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Param\+Priority (
+\begin{DoxyParamCaption}
+\item[{int}]{priority}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_a0af587ecb3f21b5049b335b62dd44fcf}{}\label{pcb_8h_a0af587ecb3f21b5049b335b62dd44fcf}
+Validates that the priority is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & -\/ int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 or 1 if valid 
+\end{DoxyReturn}
+\index{pcb.\+h@{pcb.\+h}!free\+P\+CB@{free\+P\+CB}}
+\index{free\+P\+CB@{free\+P\+CB}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{free\+P\+C\+B(pcb $\ast$pcb\+Ptr)}{freePCB(pcb *pcbPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}int free\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{pcb\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_a3cee34bfa271f759a131e81daa5d0072}{}\label{pcb_8h_a3cee34bfa271f759a131e81daa5d0072}
+Frees memory that is allocated for the pcb provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em pcb\+Ptr} & pointer to pcb to be freed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer code -\/ 1 if successful, -\/1 otherwise
+\end{DoxyReturn}
+Frees memory that is allocated for the pcb provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em pcb\+Ptr} & pointer to pcb to be freed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer code -\/ 1 if successful, 0 otherwise 
+\end{DoxyReturn}
+\index{pcb.\+h@{pcb.\+h}!setup\+P\+CB@{setup\+P\+CB}}
+\index{setup\+P\+CB@{setup\+P\+CB}!pcb.\+h@{pcb.\+h}}
+\subsubsection[{\texorpdfstring{setup\+P\+C\+B(const char $\ast$process\+Name, int process\+Class, int priority)}{setupPCB(const char *processName, int processClass, int priority)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ setup\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{process\+Name, }
+\item[{int}]{process\+Class, }
+\item[{int}]{priority}
+\end{DoxyParamCaption}
+)}\hypertarget{pcb_8h_a1065e090df16a86b2a477b62e41fa930}{}\label{pcb_8h_a1065e090df16a86b2a477b62e41fa930}
+Allocates memory for a new P\+CB and sets it with given params
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & -\/ const string name \\
+\hline
+{\em process\+Class} & -\/ integer identifying as system or application process (0, 1) \\
+\hline
+{\em priority} & -\/ integer between 0 and 9 indicating priority \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+CB pointer to new pcb or N\+U\+LL if there were errors 
+\end{DoxyReturn}

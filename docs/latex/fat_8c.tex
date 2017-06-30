@@ -1,0 +1,412 @@
+\hypertarget{fat_8c}{}\section{r6/fat.c File Reference}
+\label{fat_8c}\index{r6/fat.\+c@{r6/fat.\+c}}
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}fat.\+h\char`\"{}}\\*
+Include dependency graph for fat.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fat_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fat_8c_a74e1c7503d3cd26d200b3a6cd00fbc89}{\+\_\+load\+Boot\+Sector\+Info} ()
+\item 
+void \hyperlink{fat_8c_a9e2fe537f58c78cef8e5d0c0d1924968}{\+\_\+load\+F\+A\+T\+Tables} ()
+\item 
+void \hyperlink{fat_8c_a58c3af64cd3bdb2d65629416cb676a72}{\+\_\+load\+Root\+Directroy} ()
+\item 
+\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$ \hyperlink{fat_8c_abb1a1da02fc93f0f5d9950e24c72d400}{\+\_\+load\+Sector\+As\+Directory\+Entries} (uint16\+\_\+t sector)
+\item 
+void \hyperlink{fat_8c_a8328345aeb2a20fd2f1d99fb158fe39c}{\+\_\+read\+Directory\+Entry} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$dir)
+\item 
+long \hyperlink{fat_8c_a878a36e1b66ceeee1a5a0f11da83daa1}{\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry} (int idx)
+\item 
+void \hyperlink{fat_8c_a4a54a804730c630ce0cff4f36210916d}{\+\_\+save\+F\+A\+T\+Tables} ()
+\item 
+void \hyperlink{fat_8c_a614670698c0cbb5177ab267475411957}{\+\_\+save\+Dir\+Entry} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$dir)
+\item 
+void \hyperlink{fat_8c_a36c18b23a2b6c5e40ef926807f2b6a54}{\+\_\+refresh\+Directory} ()
+\item 
+void \hyperlink{fat_8c_a7759e492871e7b063b23824e9c0d4f37}{\+\_\+prep\+New\+Dir\+Sector} (uint16\+\_\+t sector)
+\item 
+int \hyperlink{fat_8c_ac08631ffaaeb501e454e8e2682e503ff}{\+\_\+get\+First\+Free\+Index\+In\+Sector} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$dirs)
+\item 
+int \hyperlink{fat_8c_a97efa4bdc2d9077a6c7d6977a4c455e4}{\+\_\+get\+First\+Free\+Index\+In\+Dirs} (\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$dirs, int max\+Size)
+\item 
+uint16\+\_\+t \hyperlink{fat_8c_a194b5683d875076a8cedf9acc53a3f17}{\+\_\+get\+First\+Open\+Sector} ()
+\item 
+void \hyperlink{fat_8c_a82b85885f5c51dddc952a68407221a6f}{initialize} (F\+I\+LE $\ast$\hyperlink{main_8c_aa6461bd8251cfc900494669827de82ca}{disk\+Image})
+\item 
+void \hyperlink{fat_8c_a3a80b6032f86a56bec74609034b3246f}{destroy} ()
+\item 
+\hyperlink{structboot__sector}{boot\+\_\+sector} $\ast$ \hyperlink{fat_8c_a44bd66e1d074d891c499073a420feb8e}{get\+Boot\+Sector} ()
+\item 
+\hyperlink{structfat__tables}{fat\+\_\+tables} $\ast$ \hyperlink{fat_8c_a38133534c997dd40af7ca5c70509392d}{get\+F\+A\+T\+Tables} ()
+\item 
+\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$ \hyperlink{fat_8c_a182d894f50903b61a99d12af4869a1e8}{get\+Current\+Directory} ()
+\item 
+int \hyperlink{fat_8c_a5357a10098bdc73dba5af74fc33e0993}{get\+Current\+Directory\+Max\+Size} ()
+\item 
+unsigned char $\ast$ \hyperlink{fat_8c_a9a8b3abacb61afebe30f40ff69641b18}{get\+File\+From\+Sector} (uint16\+\_\+t sector, int size)
+\item 
+int \hyperlink{fat_8c_a218d997ccec1e1101c305159096cc99d}{change\+To\+Directory} (uint16\+\_\+t sector)
+\item 
+int \hyperlink{fat_8c_ad0e18c3ef6ed876ba1ae96072a85c81f}{change\+To\+Parent\+Directory} ()
+\item 
+void \hyperlink{fat_8c_a08b83b6d73cc1d4d258134b3b67fbc52}{set\+Filename} (int idx, const char $\ast$\hyperlink{main_8c_aeac90097f29f7529968697163cea5c18}{filename}, const char $\ast$file\+Ext)
+\item 
+bool \hyperlink{fat_8c_a63b4b90c13e2bfe45261e255b1365cd6}{move\+File} (int idx, uint16\+\_\+t dest\+Sector)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \hyperlink{fat_8c_ab703d1d8723232f2130086c65ae78a09}{\+\_\+\+Disk\+Image}
+\item 
+\hyperlink{structboot__sector}{boot\+\_\+sector} \hyperlink{fat_8c_a58054b99a6de8ed54c39e0cf1e781bdd}{\+\_\+\+Boot\+Sector}
+\item 
+\hyperlink{structfat__tables}{fat\+\_\+tables} \hyperlink{fat_8c_a719314c55a746bc8972c9814f2cd2d9b}{\+\_\+\+F\+A\+T\+Tables}
+\item 
+\hyperlink{structdir__entry}{dir\+\_\+entry} $\ast$ \hyperlink{fat_8c_ad882c6223f56cf9df444dabfba89eb57}{\+\_\+\+Current\+Directory}
+\item 
+int \hyperlink{fat_8c_a6cdfab102fd0f8ac1632897aa075e349}{\+\_\+\+Curr\+Dir\+Size} = 0
+\item 
+bool \hyperlink{fat_8c_abe342cc7e04860a86b603c533a6638c0}{\+\_\+is\+Current\+Root} = \hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{false}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fat.\+c@{fat.\+c}!\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry@{\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry}}
+\index{\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry@{\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+Disk\+Offset\+For\+Dir\+Entry(int idx)}{_getDiskOffsetForDirEntry(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}long \+\_\+get\+Disk\+Offset\+For\+Dir\+Entry (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a878a36e1b66ceeee1a5a0f11da83daa1}{}\label{fat_8c_a878a36e1b66ceeee1a5a0f11da83daa1}
+Gets the disk offset (in bytes) of the file at the given index of the current directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the current directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The disk offset in byte 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!\+\_\+get\+First\+Free\+Index\+In\+Dirs@{\+\_\+get\+First\+Free\+Index\+In\+Dirs}}
+\index{\+\_\+get\+First\+Free\+Index\+In\+Dirs@{\+\_\+get\+First\+Free\+Index\+In\+Dirs}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+First\+Free\+Index\+In\+Dirs(dir\+\_\+entry $\ast$dirs, int max\+Size)}{_getFirstFreeIndexInDirs(dir_entry *dirs, int maxSize)}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+get\+First\+Free\+Index\+In\+Dirs (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{dirs, }
+\item[{int}]{max\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a97efa4bdc2d9077a6c7d6977a4c455e4}{}\label{fat_8c_a97efa4bdc2d9077a6c7d6977a4c455e4}
+Gets the first free directory entry index in the given array of entries. Supports a variable max size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirs} & The array on entries to search through \\
+\hline
+{\em max\+Size} & The size of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the first free directory entry 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!\+\_\+get\+First\+Free\+Index\+In\+Sector@{\+\_\+get\+First\+Free\+Index\+In\+Sector}}
+\index{\+\_\+get\+First\+Free\+Index\+In\+Sector@{\+\_\+get\+First\+Free\+Index\+In\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+First\+Free\+Index\+In\+Sector(dir\+\_\+entry $\ast$dirs)}{_getFirstFreeIndexInSector(dir_entry *dirs)}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+get\+First\+Free\+Index\+In\+Sector (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{dirs}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_ac08631ffaaeb501e454e8e2682e503ff}{}\label{fat_8c_ac08631ffaaeb501e454e8e2682e503ff}
+Gets the first free directory entry index in the given array of entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirs} & The array on entries to search through \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the first free directory entry 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!\+\_\+get\+First\+Open\+Sector@{\+\_\+get\+First\+Open\+Sector}}
+\index{\+\_\+get\+First\+Open\+Sector@{\+\_\+get\+First\+Open\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+get\+First\+Open\+Sector()}{_getFirstOpenSector()}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \+\_\+get\+First\+Open\+Sector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a194b5683d875076a8cedf9acc53a3f17}{}\label{fat_8c_a194b5683d875076a8cedf9acc53a3f17}
+Gets the first open sector.
+
+\begin{DoxyReturn}{Returns}
+The ID of the first empty sector 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!\+\_\+load\+Boot\+Sector\+Info@{\+\_\+load\+Boot\+Sector\+Info}}
+\index{\+\_\+load\+Boot\+Sector\+Info@{\+\_\+load\+Boot\+Sector\+Info}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+load\+Boot\+Sector\+Info()}{_loadBootSectorInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+load\+Boot\+Sector\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a74e1c7503d3cd26d200b3a6cd00fbc89}{}\label{fat_8c_a74e1c7503d3cd26d200b3a6cd00fbc89}
+Loads boot sector information. \index{fat.\+c@{fat.\+c}!\+\_\+load\+F\+A\+T\+Tables@{\+\_\+load\+F\+A\+T\+Tables}}
+\index{\+\_\+load\+F\+A\+T\+Tables@{\+\_\+load\+F\+A\+T\+Tables}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+load\+F\+A\+T\+Tables()}{_loadFATTables()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+load\+F\+A\+T\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a9e2fe537f58c78cef8e5d0c0d1924968}{}\label{fat_8c_a9e2fe537f58c78cef8e5d0c0d1924968}
+Loads the F\+AT table information \index{fat.\+c@{fat.\+c}!\+\_\+load\+Root\+Directroy@{\+\_\+load\+Root\+Directroy}}
+\index{\+\_\+load\+Root\+Directroy@{\+\_\+load\+Root\+Directroy}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+load\+Root\+Directroy()}{_loadRootDirectroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+load\+Root\+Directroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a58c3af64cd3bdb2d65629416cb676a72}{}\label{fat_8c_a58c3af64cd3bdb2d65629416cb676a72}
+Loads the root directory as the current directory. \index{fat.\+c@{fat.\+c}!\+\_\+load\+Sector\+As\+Directory\+Entries@{\+\_\+load\+Sector\+As\+Directory\+Entries}}
+\index{\+\_\+load\+Sector\+As\+Directory\+Entries@{\+\_\+load\+Sector\+As\+Directory\+Entries}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+load\+Sector\+As\+Directory\+Entries(uint16\+\_\+t sector)}{_loadSectorAsDirectoryEntries(uint16_t sector)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dir\+\_\+entry} $\ast$ \+\_\+load\+Sector\+As\+Directory\+Entries (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_abb1a1da02fc93f0f5d9950e24c72d400}{}\label{fat_8c_abb1a1da02fc93f0f5d9950e24c72d400}
+Loads a sector as an array of (bytes\+Per\+Sector / D\+I\+R\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+I\+ZE) directory entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The sector to load from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of directory entries. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!\+\_\+prep\+New\+Dir\+Sector@{\+\_\+prep\+New\+Dir\+Sector}}
+\index{\+\_\+prep\+New\+Dir\+Sector@{\+\_\+prep\+New\+Dir\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+prep\+New\+Dir\+Sector(uint16\+\_\+t sector)}{_prepNewDirSector(uint16_t sector)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+prep\+New\+Dir\+Sector (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a7759e492871e7b063b23824e9c0d4f37}{}\label{fat_8c_a7759e492871e7b063b23824e9c0d4f37}
+Preps the given sector to be a new directory sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The sector ID to set \\
+\hline
+\end{DoxyParams}
+\index{fat.\+c@{fat.\+c}!\+\_\+read\+Directory\+Entry@{\+\_\+read\+Directory\+Entry}}
+\index{\+\_\+read\+Directory\+Entry@{\+\_\+read\+Directory\+Entry}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+read\+Directory\+Entry(dir\+\_\+entry $\ast$dir)}{_readDirectoryEntry(dir_entry *dir)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+read\+Directory\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a8328345aeb2a20fd2f1d99fb158fe39c}{}\label{fat_8c_a8328345aeb2a20fd2f1d99fb158fe39c}
+Reads a single directory entry into the passed entry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & directory entry to store the information in \\
+\hline
+\end{DoxyParams}
+\index{fat.\+c@{fat.\+c}!\+\_\+refresh\+Directory@{\+\_\+refresh\+Directory}}
+\index{\+\_\+refresh\+Directory@{\+\_\+refresh\+Directory}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+refresh\+Directory()}{_refreshDirectory()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+refresh\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a36c18b23a2b6c5e40ef926807f2b6a54}{}\label{fat_8c_a36c18b23a2b6c5e40ef926807f2b6a54}
+Refreshes (reloads) the current directory. \index{fat.\+c@{fat.\+c}!\+\_\+save\+Dir\+Entry@{\+\_\+save\+Dir\+Entry}}
+\index{\+\_\+save\+Dir\+Entry@{\+\_\+save\+Dir\+Entry}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+save\+Dir\+Entry(dir\+\_\+entry $\ast$dir)}{_saveDirEntry(dir_entry *dir)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+save\+Dir\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf dir\+\_\+entry} $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a614670698c0cbb5177ab267475411957}{}\label{fat_8c_a614670698c0cbb5177ab267475411957}
+Saves the passed directory entry to the disc. \index{fat.\+c@{fat.\+c}!\+\_\+save\+F\+A\+T\+Tables@{\+\_\+save\+F\+A\+T\+Tables}}
+\index{\+\_\+save\+F\+A\+T\+Tables@{\+\_\+save\+F\+A\+T\+Tables}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+save\+F\+A\+T\+Tables()}{_saveFATTables()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+save\+F\+A\+T\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a4a54a804730c630ce0cff4f36210916d}{}\label{fat_8c_a4a54a804730c630ce0cff4f36210916d}
+Saves the F\+AT Tables to the disc. \index{fat.\+c@{fat.\+c}!change\+To\+Directory@{change\+To\+Directory}}
+\index{change\+To\+Directory@{change\+To\+Directory}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{change\+To\+Directory(uint16\+\_\+t sector)}{changeToDirectory(uint16_t sector)}}]{\setlength{\rightskip}{0pt plus 5cm}int change\+To\+Directory (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a218d997ccec1e1101c305159096cc99d}{}\label{fat_8c_a218d997ccec1e1101c305159096cc99d}
+Changes to the directory specified by the given logical sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The starting logical sector of the directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum number of entries that can appear in this directory. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!change\+To\+Parent\+Directory@{change\+To\+Parent\+Directory}}
+\index{change\+To\+Parent\+Directory@{change\+To\+Parent\+Directory}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{change\+To\+Parent\+Directory()}{changeToParentDirectory()}}]{\setlength{\rightskip}{0pt plus 5cm}int change\+To\+Parent\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_ad0e18c3ef6ed876ba1ae96072a85c81f}{}\label{fat_8c_ad0e18c3ef6ed876ba1ae96072a85c81f}
+Changes the current directory to the parent of the current.
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the new current directory, or -\/1 if the directory didn\textquotesingle{}t switch. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!destroy@{destroy}}
+\index{destroy@{destroy}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{destroy()}{destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a3a80b6032f86a56bec74609034b3246f}{}\label{fat_8c_a3a80b6032f86a56bec74609034b3246f}
+Destroys the F\+AT abstraction, freeing any memory used internally. \index{fat.\+c@{fat.\+c}!get\+Boot\+Sector@{get\+Boot\+Sector}}
+\index{get\+Boot\+Sector@{get\+Boot\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{get\+Boot\+Sector()}{getBootSector()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boot\+\_\+sector}$\ast$ get\+Boot\+Sector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a44bd66e1d074d891c499073a420feb8e}{}\label{fat_8c_a44bd66e1d074d891c499073a420feb8e}
+Gets the boot sector of the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The boot sector of the F\+AT File System 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!get\+Current\+Directory@{get\+Current\+Directory}}
+\index{get\+Current\+Directory@{get\+Current\+Directory}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{get\+Current\+Directory()}{getCurrentDirectory()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dir\+\_\+entry}$\ast$ get\+Current\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a182d894f50903b61a99d12af4869a1e8}{}\label{fat_8c_a182d894f50903b61a99d12af4869a1e8}
+Gets the current directory of the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The current directory as an array of directory entries. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!get\+Current\+Directory\+Max\+Size@{get\+Current\+Directory\+Max\+Size}}
+\index{get\+Current\+Directory\+Max\+Size@{get\+Current\+Directory\+Max\+Size}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{get\+Current\+Directory\+Max\+Size()}{getCurrentDirectoryMaxSize()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Current\+Directory\+Max\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a5357a10098bdc73dba5af74fc33e0993}{}\label{fat_8c_a5357a10098bdc73dba5af74fc33e0993}
+Gets the maximum size of the current directory.
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the current directory. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!get\+F\+A\+T\+Tables@{get\+F\+A\+T\+Tables}}
+\index{get\+F\+A\+T\+Tables@{get\+F\+A\+T\+Tables}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{get\+F\+A\+T\+Tables()}{getFATTables()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fat\+\_\+tables}$\ast$ get\+F\+A\+T\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a38133534c997dd40af7ca5c70509392d}{}\label{fat_8c_a38133534c997dd40af7ca5c70509392d}
+Gets the F\+AT Tables for the F\+AT File System.
+
+\begin{DoxyReturn}{Returns}
+The F\+AT Tables for the F\+AT File System 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!get\+File\+From\+Sector@{get\+File\+From\+Sector}}
+\index{get\+File\+From\+Sector@{get\+File\+From\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{get\+File\+From\+Sector(uint16\+\_\+t sector, int size)}{getFileFromSector(uint16_t sector, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ get\+File\+From\+Sector (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{sector, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a9a8b3abacb61afebe30f40ff69641b18}{}\label{fat_8c_a9a8b3abacb61afebe30f40ff69641b18}
+Gets the file specified by the given sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sector} & The starting logical sector of the file \\
+\hline
+{\em size} & The size of the file (in bytes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of bytes representing the file. 
+\end{DoxyReturn}
+\index{fat.\+c@{fat.\+c}!initialize@{initialize}}
+\index{initialize@{initialize}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{initialize(\+F\+I\+L\+E $\ast$disk\+Image)}{initialize(FILE *diskImage)}}]{\setlength{\rightskip}{0pt plus 5cm}void initialize (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{disk\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a82b85885f5c51dddc952a68407221a6f}{}\label{fat_8c_a82b85885f5c51dddc952a68407221a6f}
+Initializes the F\+AT abstraction with the given disk image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em disk\+Image} & The pointer to an opened file that is a F\+A\+T12 disk image. \\
+\hline
+\end{DoxyParams}
+\index{fat.\+c@{fat.\+c}!move\+File@{move\+File}}
+\index{move\+File@{move\+File}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{move\+File(int idx, uint16\+\_\+t dest\+Sector)}{moveFile(int idx, uint16_t destSector)}}]{\setlength{\rightskip}{0pt plus 5cm}bool move\+File (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{uint16\+\_\+t}]{dest\+Sector}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a63b4b90c13e2bfe45261e255b1365cd6}{}\label{fat_8c_a63b4b90c13e2bfe45261e255b1365cd6}
+Moves a file at the specified index of the current directory to the directory at the destination sector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the listing in the current direcory \\
+\hline
+{\em dest\+Sector} & The beginning sector of the target directory \\
+\hline
+\end{DoxyParams}
+\index{fat.\+c@{fat.\+c}!set\+Filename@{set\+Filename}}
+\index{set\+Filename@{set\+Filename}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{set\+Filename(int idx, const char $\ast$filename, const char $\ast$file\+Ext)}{setFilename(int idx, const char *filename, const char *fileExt)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Filename (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{file\+Ext}
+\end{DoxyParamCaption}
+)}\hypertarget{fat_8c_a08b83b6d73cc1d4d258134b3b67fbc52}{}\label{fat_8c_a08b83b6d73cc1d4d258134b3b67fbc52}
+Sets the name of the file at the specified index of the current list of directory entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the listing in the current directory \\
+\hline
+{\em filename} & The name of the file (max 8 characters) \\
+\hline
+{\em file\+Ext} & The extension of the file (max 3 characters) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{fat.\+c@{fat.\+c}!\+\_\+\+Boot\+Sector@{\+\_\+\+Boot\+Sector}}
+\index{\+\_\+\+Boot\+Sector@{\+\_\+\+Boot\+Sector}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Boot\+Sector}{_BootSector}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boot\+\_\+sector} \+\_\+\+Boot\+Sector}\hypertarget{fat_8c_a58054b99a6de8ed54c39e0cf1e781bdd}{}\label{fat_8c_a58054b99a6de8ed54c39e0cf1e781bdd}
+\index{fat.\+c@{fat.\+c}!\+\_\+\+Curr\+Dir\+Size@{\+\_\+\+Curr\+Dir\+Size}}
+\index{\+\_\+\+Curr\+Dir\+Size@{\+\_\+\+Curr\+Dir\+Size}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Curr\+Dir\+Size}{_CurrDirSize}}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+\+Curr\+Dir\+Size = 0}\hypertarget{fat_8c_a6cdfab102fd0f8ac1632897aa075e349}{}\label{fat_8c_a6cdfab102fd0f8ac1632897aa075e349}
+\index{fat.\+c@{fat.\+c}!\+\_\+\+Current\+Directory@{\+\_\+\+Current\+Directory}}
+\index{\+\_\+\+Current\+Directory@{\+\_\+\+Current\+Directory}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Current\+Directory}{_CurrentDirectory}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dir\+\_\+entry}$\ast$ \+\_\+\+Current\+Directory}\hypertarget{fat_8c_ad882c6223f56cf9df444dabfba89eb57}{}\label{fat_8c_ad882c6223f56cf9df444dabfba89eb57}
+\index{fat.\+c@{fat.\+c}!\+\_\+\+Disk\+Image@{\+\_\+\+Disk\+Image}}
+\index{\+\_\+\+Disk\+Image@{\+\_\+\+Disk\+Image}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Disk\+Image}{_DiskImage}}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+LE$\ast$ \+\_\+\+Disk\+Image}\hypertarget{fat_8c_ab703d1d8723232f2130086c65ae78a09}{}\label{fat_8c_ab703d1d8723232f2130086c65ae78a09}
+\index{fat.\+c@{fat.\+c}!\+\_\+\+F\+A\+T\+Tables@{\+\_\+\+F\+A\+T\+Tables}}
+\index{\+\_\+\+F\+A\+T\+Tables@{\+\_\+\+F\+A\+T\+Tables}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+F\+A\+T\+Tables}{_FATTables}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fat\+\_\+tables} \+\_\+\+F\+A\+T\+Tables}\hypertarget{fat_8c_a719314c55a746bc8972c9814f2cd2d9b}{}\label{fat_8c_a719314c55a746bc8972c9814f2cd2d9b}
+\index{fat.\+c@{fat.\+c}!\+\_\+is\+Current\+Root@{\+\_\+is\+Current\+Root}}
+\index{\+\_\+is\+Current\+Root@{\+\_\+is\+Current\+Root}!fat.\+c@{fat.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+is\+Current\+Root}{_isCurrentRoot}}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+is\+Current\+Root = {\bf false}}\hypertarget{fat_8c_abe342cc7e04860a86b603c533a6638c0}{}\label{fat_8c_abe342cc7e04860a86b603c533a6638c0}

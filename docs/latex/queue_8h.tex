@@ -1,0 +1,209 @@
+\hypertarget{queue_8h}{}\section{include/core/queue.h File Reference}
+\label{queue_8h}\index{include/core/queue.\+h@{include/core/queue.\+h}}
+{\ttfamily \#include \char`\"{}pcb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}boolean.\+h\char`\"{}}\\*
+Include dependency graph for queue.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnode}{node} \hyperlink{queue_8h_ace29f146c273d2654669dc2c710603e2}{node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8h_a90ecf077bdf2731051966c1fc72f619b}{get\+Ready\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8h_a5170ee107f4bc7e352d4407395d57da7}{get\+Blocked\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8h_a10529b60bfa07efe56794a575af1721d}{get\+Suspended\+Ready\+Queue} ()
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{queue_8h_a9f027fce172315eed8a8893192af6421}{get\+Suspended\+Blocked\+Queue} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8h_a9d45db295536fc5e43d7ba34b1984157}{pop\+Ready} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8h_a349201cc823df4797c37a24bf34d2014}{pop\+Blocked} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8h_a2986335d1a7e14f5b65173253a911882}{pop\+Suspended\+Ready} ()
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8h_a1a011f09bcd31aa910535aba088ab537}{pop\+Suspended\+Blocked} ()
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8h_a7d2249981425ab391895a81820d3f221}{insert\+P\+CB} (\hyperlink{structpcb}{pcb} $\ast$p)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{queue_8h_a305ebe6c5f7cdd7731706cae59d43e33}{remove\+P\+CB} (\hyperlink{structpcb}{pcb} $\ast$p)
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{queue_8h_a291648ddfe62eec41c502cee840c98da}{find\+P\+CB} (const char $\ast$process\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{queue.\+h@{queue.\+h}!node@{node}}
+\index{node@{node}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{node}{node}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf node}  {\bf node}}\hypertarget{queue_8h_ace29f146c273d2654669dc2c710603e2}{}\label{queue_8h_ace29f146c273d2654669dc2c710603e2}
+The struct representing a node in a queue 
+
+\subsection{Function Documentation}
+\index{queue.\+h@{queue.\+h}!find\+P\+CB@{find\+P\+CB}}
+\index{find\+P\+CB@{find\+P\+CB}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{find\+P\+C\+B(const char $\ast$process\+Name)}{findPCB(const char *processName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ find\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{process\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a291648ddfe62eec41c502cee840c98da}{}\label{queue_8h_a291648ddfe62eec41c502cee840c98da}
+Finds the P\+CB with the given process name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & The name of the process to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the P\+CB, or null if not found 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!get\+Blocked\+Queue@{get\+Blocked\+Queue}}
+\index{get\+Blocked\+Queue@{get\+Blocked\+Queue}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{get\+Blocked\+Queue()}{getBlockedQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Blocked\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a5170ee107f4bc7e352d4407395d57da7}{}\label{queue_8h_a5170ee107f4bc7e352d4407395d57da7}
+Gets the head node of the blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the blocked queue 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!get\+Ready\+Queue@{get\+Ready\+Queue}}
+\index{get\+Ready\+Queue@{get\+Ready\+Queue}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{get\+Ready\+Queue()}{getReadyQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Ready\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a90ecf077bdf2731051966c1fc72f619b}{}\label{queue_8h_a90ecf077bdf2731051966c1fc72f619b}
+Gets the head node of the ready queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the ready queue 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!get\+Suspended\+Blocked\+Queue@{get\+Suspended\+Blocked\+Queue}}
+\index{get\+Suspended\+Blocked\+Queue@{get\+Suspended\+Blocked\+Queue}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{get\+Suspended\+Blocked\+Queue()}{getSuspendedBlockedQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Suspended\+Blocked\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a9f027fce172315eed8a8893192af6421}{}\label{queue_8h_a9f027fce172315eed8a8893192af6421}
+Gets the head node of the suspended-\/blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the suspended-\/blocked queue 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!get\+Suspended\+Ready\+Queue@{get\+Suspended\+Ready\+Queue}}
+\index{get\+Suspended\+Ready\+Queue@{get\+Suspended\+Ready\+Queue}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{get\+Suspended\+Ready\+Queue()}{getSuspendedReadyQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node}$\ast$ get\+Suspended\+Ready\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a10529b60bfa07efe56794a575af1721d}{}\label{queue_8h_a10529b60bfa07efe56794a575af1721d}
+Gets the head node of the suspended-\/ready queue.
+
+\begin{DoxyReturn}{Returns}
+The head node of the suspended-\/ready queue 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!insert\+P\+CB@{insert\+P\+CB}}
+\index{insert\+P\+CB@{insert\+P\+CB}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{insert\+P\+C\+B(pcb $\ast$p)}{insertPCB(pcb *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} insert\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a7d2249981425ab391895a81820d3f221}{}\label{queue_8h_a7d2249981425ab391895a81820d3f221}
+Inserts the P\+CB into the appropriate queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The P\+CB to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the P\+CB was inserted, false otherwise 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!pop\+Blocked@{pop\+Blocked}}
+\index{pop\+Blocked@{pop\+Blocked}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{pop\+Blocked()}{popBlocked()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Blocked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a349201cc823df4797c37a24bf34d2014}{}\label{queue_8h_a349201cc823df4797c37a24bf34d2014}
+Pops the next node off of the blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the blocked queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!pop\+Ready@{pop\+Ready}}
+\index{pop\+Ready@{pop\+Ready}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{pop\+Ready()}{popReady()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a9d45db295536fc5e43d7ba34b1984157}{}\label{queue_8h_a9d45db295536fc5e43d7ba34b1984157}
+Pops the next node off of the ready queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the ready queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!pop\+Suspended\+Blocked@{pop\+Suspended\+Blocked}}
+\index{pop\+Suspended\+Blocked@{pop\+Suspended\+Blocked}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{pop\+Suspended\+Blocked()}{popSuspendedBlocked()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Suspended\+Blocked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a1a011f09bcd31aa910535aba088ab537}{}\label{queue_8h_a1a011f09bcd31aa910535aba088ab537}
+Pops the next node off of the suspended-\/blocked queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the suspended-\/blocked queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!pop\+Suspended\+Ready@{pop\+Suspended\+Ready}}
+\index{pop\+Suspended\+Ready@{pop\+Suspended\+Ready}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{pop\+Suspended\+Ready()}{popSuspendedReady()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ pop\+Suspended\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a2986335d1a7e14f5b65173253a911882}{}\label{queue_8h_a2986335d1a7e14f5b65173253a911882}
+Pops the next node off of the suspended-\/ready queue.
+
+\begin{DoxyReturn}{Returns}
+The next node of the suspended-\/ready queue, or N\+U\+LL if it is empty 
+\end{DoxyReturn}
+\index{queue.\+h@{queue.\+h}!remove\+P\+CB@{remove\+P\+CB}}
+\index{remove\+P\+CB@{remove\+P\+CB}!queue.\+h@{queue.\+h}}
+\subsubsection[{\texorpdfstring{remove\+P\+C\+B(pcb $\ast$p)}{removePCB(pcb *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} remove\+P\+CB (
+\begin{DoxyParamCaption}
+\item[{{\bf pcb} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{queue_8h_a305ebe6c5f7cdd7731706cae59d43e33}{}\label{queue_8h_a305ebe6c5f7cdd7731706cae59d43e33}
+Removes the given P\+CB from it\textquotesingle{}s queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The P\+CB to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the P\+CB was removed, false otherwise 
+\end{DoxyReturn}

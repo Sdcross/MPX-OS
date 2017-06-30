@@ -1,0 +1,81 @@
+\hypertarget{r3commands_8h}{}\section{include/modules/\+R3/commands/r3commands.h File Reference}
+\label{r3commands_8h}\index{include/modules/\+R3/commands/r3commands.\+h@{include/modules/\+R3/commands/r3commands.\+h}}
+{\ttfamily \#include $<$modules/\+R3/commands/help.\+h$>$}\\*
+Include dependency graph for r3commands.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{r3commands_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{r3commands_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{r3commands_8h_ac3eaf8777396a53fec4521ca264f5dcc}{register\+R3\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{r3commands_8h_a560ff05de4721b7ee4008437c4597cd3}{yield} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{r3commands_8h_ac06ea22234ec47eb995772ac6d355743}{loadr3} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{r3commands.\+h@{r3commands.\+h}!loadr3@{loadr3}}
+\index{loadr3@{loadr3}!r3commands.\+h@{r3commands.\+h}}
+\subsubsection[{\texorpdfstring{loadr3(char $\ast$$\ast$args, int num\+Args)}{loadr3(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ loadr3 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{r3commands_8h_ac06ea22234ec47eb995772ac6d355743}{}\label{r3commands_8h_ac06ea22234ec47eb995772ac6d355743}
+Loads the r3 processes to the queue.~\newline
+")
+
+Usage\+: loadr3
+
+Args\+: \mbox{[}no args\mbox{]} -\/ loads processes
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\char`\"{} 
+\end{DoxyReturn}
+\index{r3commands.\+h@{r3commands.\+h}!register\+R3\+Commands@{register\+R3\+Commands}}
+\index{register\+R3\+Commands@{register\+R3\+Commands}!r3commands.\+h@{r3commands.\+h}}
+\subsubsection[{\texorpdfstring{register\+R3\+Commands()}{registerR3Commands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R3\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{r3commands_8h_ac3eaf8777396a53fec4521ca264f5dcc}{}\label{r3commands_8h_ac3eaf8777396a53fec4521ca264f5dcc}
+Registers commands in command handler \index{r3commands.\+h@{r3commands.\+h}!yield@{yield}}
+\index{yield@{yield}!r3commands.\+h@{r3commands.\+h}}
+\subsubsection[{\texorpdfstring{yield(char $\ast$$\ast$args, int num\+Args)}{yield(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ yield (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{r3commands_8h_a560ff05de4721b7ee4008437c4597cd3}{}\label{r3commands_8h_a560ff05de4721b7ee4008437c4597cd3}
+Yields command handler to allow other processes to run.
+
+Usage\+: yield
+
+Args\+: \mbox{[}no args\mbox{]} -\/ yields command handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\char`\"{} 
+\end{DoxyReturn}

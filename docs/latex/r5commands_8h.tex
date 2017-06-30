@@ -1,0 +1,60 @@
+\hypertarget{r5commands_8h}{}\section{include/modules/\+R5/commands/r5commands.h File Reference}
+\label{r5commands_8h}\index{include/modules/\+R5/commands/r5commands.\+h@{include/modules/\+R5/commands/r5commands.\+h}}
+{\ttfamily \#include $<$modules/\+R5/commands/help.\+h$>$}\\*
+Include dependency graph for r5commands.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{r5commands_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{r5commands_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{r5commands_8h_a21eac9fef5e4c61e3c5e516237dfd611}{register\+R5\+Perm\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{r5commands_8h_a2213472154067610a41f70642395892b}{show\+Memory} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{r5commands.\+h@{r5commands.\+h}!register\+R5\+Perm\+Commands@{register\+R5\+Perm\+Commands}}
+\index{register\+R5\+Perm\+Commands@{register\+R5\+Perm\+Commands}!r5commands.\+h@{r5commands.\+h}}
+\subsubsection[{\texorpdfstring{register\+R5\+Perm\+Commands()}{registerR5PermCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R5\+Perm\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8h_a21eac9fef5e4c61e3c5e516237dfd611}{}\label{r5commands_8h_a21eac9fef5e4c61e3c5e516237dfd611}
+Registers commands in command handler
+
+Registers the permanent commands in the command handler \index{r5commands.\+h@{r5commands.\+h}!show\+Memory@{show\+Memory}}
+\index{show\+Memory@{show\+Memory}!r5commands.\+h@{r5commands.\+h}}
+\subsubsection[{\texorpdfstring{show\+Memory(char $\ast$$\ast$args, int num\+Args)}{showMemory(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ show\+Memory (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8h_a2213472154067610a41f70642395892b}{}\label{r5commands_8h_a2213472154067610a41f70642395892b}
+Displays the following information for the specified C\+M\+CB\textquotesingle{}s\+: C\+M\+CB Type\+: Begining Memory Address\+: Block Size\+: Memory Size\+: Process Name\+:
+
+Usage\+: show\+Memory \mbox{[}--all\mbox{]} \mbox{[}--free\mbox{]} \mbox{[}--allocated\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Shows the help for this command --all -\/ Displays both free and allocated memory --free -\/ Displays free memory --allocated -\/ Displays allocated memory
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}

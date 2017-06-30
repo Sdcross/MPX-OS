@@ -1,0 +1,8 @@
+<map id="kernel/core/pcb.c" name="kernel/core/pcb.c">
+<area shape="rect" id="node3" href="$string_8h.html" title="string.h" alt="" coords="56,155,121,181"/>
+<area shape="rect" id="node4" href="$system_8h.html" title="system.h" alt="" coords="147,304,223,331"/>
+<area shape="rect" id="node5" href="$mpx__supt_8h.html" title="modules/mpx_supt.h" alt="" coords="197,80,340,107"/>
+<area shape="rect" id="node7" href="$pcb_8h.html" title="pcb.h" alt="" coords="392,229,447,256"/>
+<area shape="rect" id="node6" href="$queue_8h.html" title="core/queue.h" alt="" coords="299,155,396,181"/>
+<area shape="rect" id="node8" href="$boolean_8h.html" title="boolean.h" alt="" coords="276,229,355,256"/>
+</map>

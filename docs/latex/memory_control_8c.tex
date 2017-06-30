@@ -1,0 +1,195 @@
+\hypertarget{memory_control_8c}{}\section{kernel/mem/memory\+Control.c File Reference}
+\label{memory_control_8c}\index{kernel/mem/memory\+Control.\+c@{kernel/mem/memory\+Control.\+c}}
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include $<$mem/heap.\+h$>$}\\*
+{\ttfamily \#include $<$mem/memory\+Control.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+{\ttfamily \#include $<$boolean.\+h$>$}\\*
+Include dependency graph for memory\+Control.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memory_control_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcmcb}{cmcb} $\ast$ \hyperlink{memory_control_8c_aa01de63fca7545aa409e01bfbf23edff}{\+\_\+place\+Structs} (int size, void $\ast$pos, int type, \hyperlink{structcmcb}{cmcb} $\ast$prev, \hyperlink{structcmcb}{cmcb} $\ast$next)
+\item 
+void \hyperlink{memory_control_8c_a44b9896b6ec82c51c469a1e3664b99e9}{\+\_\+merge\+Adjacent\+Free} ()
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{memory_control_8c_af9f876f6d6cea9ef14b5c457f8835ab1}{initialize\+Heap} (int size)
+\item 
+void $\ast$ \hyperlink{memory_control_8c_ae841b4b92ac63a904d3b357cd0277a0e}{allocate\+Memory} (int size)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{memory_control_8c_af17f3ec8ec711d793814e7afb5fb416b}{deallocate\+Memory} (void $\ast$mem\+Pointer)
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{memory_control_8c_aa71d41fd3d95c354d4d5e922c6c21210}{is\+Empty} ()
+\item 
+\hyperlink{structcmcb}{cmcb} $\ast$ \hyperlink{memory_control_8c_aa8d430c05a8323b5f5570e4f000d033b}{get\+Free\+Head} ()
+\item 
+\hyperlink{structcmcb}{cmcb} $\ast$ \hyperlink{memory_control_8c_a5bf2a856d94db1ea1af87b4dcf95b830}{get\+Allocated\+Head} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcmcb}{cmcb} $\ast$ \hyperlink{memory_control_8c_a7be0624c35a182d70513bb678ee85127}{free\+Head}
+\item 
+\hyperlink{structcmcb}{cmcb} $\ast$ \hyperlink{memory_control_8c_a4eace240c1aefe0d2500fb0b09b7f527}{allocated\+Head}
+\item 
+void $\ast$ \hyperlink{memory_control_8c_a79a81e6c02670215e4abd8128d38ef7c}{mem\+Heap}
+\item 
+int \hyperlink{memory_control_8c_ac5f0f47af972c06d9261e387fb85d6ba}{is\+Initialized} = \hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{false}
+\item 
+int \hyperlink{memory_control_8c_af9658f4d1c59d6d251445c83931f0e55}{mem\+Size}
+\item 
+int \hyperlink{memory_control_8c_aca9f2ec417adafeb70dc9ee09114a1e4}{mem\+Allocated}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!\+\_\+merge\+Adjacent\+Free@{\+\_\+merge\+Adjacent\+Free}}
+\index{\+\_\+merge\+Adjacent\+Free@{\+\_\+merge\+Adjacent\+Free}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+merge\+Adjacent\+Free()}{_mergeAdjacentFree()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+merge\+Adjacent\+Free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_a44b9896b6ec82c51c469a1e3664b99e9}{}\label{memory_control_8c_a44b9896b6ec82c51c469a1e3664b99e9}
+Private helper function to merge all adjacent memory blocks \index{memory\+Control.\+c@{memory\+Control.\+c}!\+\_\+place\+Structs@{\+\_\+place\+Structs}}
+\index{\+\_\+place\+Structs@{\+\_\+place\+Structs}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+place\+Structs(int size, void $\ast$pos, int type, cmcb $\ast$prev, cmcb $\ast$next)}{_placeStructs(int size, void *pos, int type, cmcb *prev, cmcb *next)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmcb} $\ast$ \+\_\+place\+Structs (
+\begin{DoxyParamCaption}
+\item[{int}]{size, }
+\item[{void $\ast$}]{pos, }
+\item[{int}]{type, }
+\item[{{\bf cmcb} $\ast$}]{prev, }
+\item[{{\bf cmcb} $\ast$}]{next}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_aa01de63fca7545aa409e01bfbf23edff}{}\label{memory_control_8c_aa01de63fca7545aa409e01bfbf23edff}
+Private helper function to create structs to denote the beginning and end of a memory block
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of block in bytes \\
+\hline
+{\em pos} & -\/ mem location of beginning \\
+\hline
+{\em type} & -\/ type of mem block, either A\+L\+L\+O\+C\+A\+T\+ED or F\+R\+EE \\
+\hline
+{\em prev} & -\/ pointer to previous cmcb \\
+\hline
+{\em next} & -\/ pointer to next cmcb \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to create cmcb at beginning of memory block 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!allocate\+Memory@{allocate\+Memory}}
+\index{allocate\+Memory@{allocate\+Memory}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{allocate\+Memory(int size)}{allocateMemory(int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ allocate\+Memory (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_ae841b4b92ac63a904d3b357cd0277a0e}{}\label{memory_control_8c_ae841b4b92ac63a904d3b357cd0277a0e}
+Allocates a memory block if enough memory is availabel
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of memory to allocate in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the me 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!deallocate\+Memory@{deallocate\+Memory}}
+\index{deallocate\+Memory@{deallocate\+Memory}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{deallocate\+Memory(void $\ast$mem\+Pointer)}{deallocateMemory(void *memPointer)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} deallocate\+Memory (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mem\+Pointer}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_af17f3ec8ec711d793814e7afb5fb416b}{}\label{memory_control_8c_af17f3ec8ec711d793814e7afb5fb416b}
+Deallocates the block of memory at the mempointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+Pointer} & -\/ pointer to the mem block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean -\/ boolean telling whether succesful dealloc 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!get\+Allocated\+Head@{get\+Allocated\+Head}}
+\index{get\+Allocated\+Head@{get\+Allocated\+Head}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{get\+Allocated\+Head()}{getAllocatedHead()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmcb}$\ast$ get\+Allocated\+Head (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_a5bf2a856d94db1ea1af87b4dcf95b830}{}\label{memory_control_8c_a5bf2a856d94db1ea1af87b4dcf95b830}
+Returns the head to the allocated list
+
+\begin{DoxyReturn}{Returns}
+cmcb $\ast$ to the allocated list head 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!get\+Free\+Head@{get\+Free\+Head}}
+\index{get\+Free\+Head@{get\+Free\+Head}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{get\+Free\+Head()}{getFreeHead()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmcb}$\ast$ get\+Free\+Head (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_aa8d430c05a8323b5f5570e4f000d033b}{}\label{memory_control_8c_aa8d430c05a8323b5f5570e4f000d033b}
+Returns the head of the free list
+
+\begin{DoxyReturn}{Returns}
+cmcb $\ast$ to the free list head 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!initialize\+Heap@{initialize\+Heap}}
+\index{initialize\+Heap@{initialize\+Heap}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{initialize\+Heap(int size)}{initializeHeap(int size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} initialize\+Heap (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_af9f876f6d6cea9ef14b5c457f8835ab1}{}\label{memory_control_8c_af9f876f6d6cea9ef14b5c457f8835ab1}
+Initializes the heap to the provided size and creates a free mem block across it
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of heap in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean -\/ boolean denoting if heap was initialized 
+\end{DoxyReturn}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memory_control_8c_aa71d41fd3d95c354d4d5e922c6c21210}{}\label{memory_control_8c_aa71d41fd3d95c354d4d5e922c6c21210}
+Returns a boolean telling if all the memory is empty
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!allocated\+Head@{allocated\+Head}}
+\index{allocated\+Head@{allocated\+Head}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{allocated\+Head}{allocatedHead}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmcb}$\ast$ allocated\+Head}\hypertarget{memory_control_8c_a4eace240c1aefe0d2500fb0b09b7f527}{}\label{memory_control_8c_a4eace240c1aefe0d2500fb0b09b7f527}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!free\+Head@{free\+Head}}
+\index{free\+Head@{free\+Head}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{free\+Head}{freeHead}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cmcb}$\ast$ free\+Head}\hypertarget{memory_control_8c_a7be0624c35a182d70513bb678ee85127}{}\label{memory_control_8c_a7be0624c35a182d70513bb678ee85127}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!is\+Initialized@{is\+Initialized}}
+\index{is\+Initialized@{is\+Initialized}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{is\+Initialized}{isInitialized}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Initialized = {\bf false}}\hypertarget{memory_control_8c_ac5f0f47af972c06d9261e387fb85d6ba}{}\label{memory_control_8c_ac5f0f47af972c06d9261e387fb85d6ba}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!mem\+Allocated@{mem\+Allocated}}
+\index{mem\+Allocated@{mem\+Allocated}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{mem\+Allocated}{memAllocated}}]{\setlength{\rightskip}{0pt plus 5cm}int mem\+Allocated}\hypertarget{memory_control_8c_aca9f2ec417adafeb70dc9ee09114a1e4}{}\label{memory_control_8c_aca9f2ec417adafeb70dc9ee09114a1e4}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!mem\+Heap@{mem\+Heap}}
+\index{mem\+Heap@{mem\+Heap}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{mem\+Heap}{memHeap}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ mem\+Heap}\hypertarget{memory_control_8c_a79a81e6c02670215e4abd8128d38ef7c}{}\label{memory_control_8c_a79a81e6c02670215e4abd8128d38ef7c}
+\index{memory\+Control.\+c@{memory\+Control.\+c}!mem\+Size@{mem\+Size}}
+\index{mem\+Size@{mem\+Size}!memory\+Control.\+c@{memory\+Control.\+c}}
+\subsubsection[{\texorpdfstring{mem\+Size}{memSize}}]{\setlength{\rightskip}{0pt plus 5cm}int mem\+Size}\hypertarget{memory_control_8c_af9658f4d1c59d6d251445c83931f0e55}{}\label{memory_control_8c_af9658f4d1c59d6d251445c83931f0e55}

@@ -1,0 +1,44 @@
+\hypertarget{regex_8h}{}\section{include/regex.h File Reference}
+\label{regex_8h}\index{include/regex.\+h@{include/regex.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{regex_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{regex_8h_a7ee5ec72fdd808d5959aa552df970761}{test\+Regex} (const char $\ast$regex, const char $\ast$string\+To\+Check)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{regex.\+h@{regex.\+h}!test\+Regex@{test\+Regex}}
+\index{test\+Regex@{test\+Regex}!regex.\+h@{regex.\+h}}
+\subsubsection[{\texorpdfstring{test\+Regex(const char $\ast$regex, const char $\ast$string\+To\+Check)}{testRegex(const char *regex, const char *stringToCheck)}}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Regex (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{regex, }
+\item[{const char $\ast$}]{string\+To\+Check}
+\end{DoxyParamCaption}
+)}\hypertarget{regex_8h_a7ee5ec72fdd808d5959aa552df970761}{}\label{regex_8h_a7ee5ec72fdd808d5959aa552df970761}
+Tests if the string\+To\+Check adheres to the given regex string
+
+The regex string is comprised of\+: d matches digits 0-\/9 c matches characters a-\/z\+A-\/Z u matches uppercase character, A-\/Z l matches lowercase character, a-\/z
+\begin{DoxyItemize}
+\item matches any char /char for a literal character, ex\+: \char`\"{}/a\char`\"{} matches \textquotesingle{}a\textquotesingle{}, /d matches \textquotesingle{}d\textquotesingle{}
+\end{DoxyItemize}
+
+Example \+: regex \char`\"{}dcd/a\char`\"{} matches any string with the pattern \char`\"{}digit character digit \textquotesingle{}a\textquotesingle{}\char`\"{}, ex \char`\"{}1b3a\char`\"{}, \char`\"{}6b9a\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em regex} & \\
+\hline
+{\em string\+To\+Check} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if adheres, 0 otherwise 
+\end{DoxyReturn}

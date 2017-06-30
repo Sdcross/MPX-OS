@@ -1,0 +1,44 @@
+digraph "include/string.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/string.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="include/core/comHandler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$com_handler_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="include/modules/R5\l/memCommands.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mem_commands_8h.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="kernel/core/comHandler.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$com_handler_8c.html"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="modules/R5/memCommands.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mem_commands_8c.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="kernel/core/kmain.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kmain_8c.html"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="modules/R2/commands\l/perm.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$perm_8c.html"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="modules/R2/commands\l/temp.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$temp_8c.html"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="modules/R3/commands\l/r3commands.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$r3commands_8c.html"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="modules/R5/commands\l/r5commands.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$r5commands_8c.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="kernel/core/commands.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$commands_8c.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="kernel/core/pcb.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pcb_8c.html"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="kernel/core/queue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8c.html"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="kernel/core/serial.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$serial_8c.html"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="kernel/core/system.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$system_8c.html"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="kernel/mem/heap.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$heap_8c.html"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="lib/regex.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="lib/string.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string_8c.html"];
+}

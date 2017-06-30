@@ -1,0 +1,307 @@
+\hypertarget{com_handler_8c}{}\section{kernel/core/com\+Handler.c File Reference}
+\label{com_handler_8c}\index{kernel/core/com\+Handler.\+c@{kernel/core/com\+Handler.\+c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$core/com\+Handler.\+h$>$}\\*
+{\ttfamily \#include $<$core/io.\+h$>$}\\*
+{\ttfamily \#include $<$core/serial.\+h$>$}\\*
+{\ttfamily \#include $<$core/help.\+h$>$}\\*
+{\ttfamily \#include $<$core/commands.\+h$>$}\\*
+{\ttfamily \#include $<$core/queue.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R2/commands/temp.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R2/commands/perm.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R3/commands/r3commands.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R5/commands/r5commands.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R5/mem\+Commands.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+Include dependency graph for com\+Handler.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{com_handler_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{com_handler_8c_af45611c390f08b72ad7f4d38fe845bfa}{add\+Function\+Def} (char $\ast$name, const char $\ast$help\+String, const char $\ast$(func\+Pointer)(char $\ast$$\ast$args, int num\+Args))
+\item 
+\hyperlink{structfunction_def}{function\+Def} \hyperlink{com_handler_8c_a99dff4fd4af5facdfe9fe8155334c8b6}{get\+Function\+Def} (char $\ast$name)
+\item 
+const char $\ast$ \hyperlink{com_handler_8c_ae1b11eb92e3c4ef3057c1a2f60d9adcf}{get\+Help\+String} (char $\ast$name)
+\item 
+char $\ast$ \hyperlink{com_handler_8c_a4621d2e1cae8afd63373d11fd4b8d86e}{get\+Com\+History} (int is\+Prev)
+\item 
+void \hyperlink{com_handler_8c_ad0ac0a9ea55a932af636e6144c66c4f3}{add\+Com\+History} (char $\ast$new\+Com)
+\item 
+void \hyperlink{com_handler_8c_a1c6d163609fc84e07bb82328327b7ccb}{print\+Start} ()
+\item 
+void \hyperlink{com_handler_8c_a097adaa24dfcbf6d84597f5e5e3aea60}{return\+To\+Insertion\+Point} (int end\+Index, int insertion\+Index)
+\item 
+void \hyperlink{com_handler_8c_adf56ec7300bb290a48fa5c8773950ea2}{erase\+Current\+Row} (int end\+Index, int insertion\+Index)
+\item 
+char $\ast$ \hyperlink{com_handler_8c_a0701e1cbaa274af91081cdcad3117843}{get\+Input} ()
+\item 
+void \hyperlink{com_handler_8c_a0b179909cd052ce4a00df79e8a14fbd2}{execute\+Command} (char $\ast$command\+String)
+\item 
+const char $\ast$ \hyperlink{com_handler_8c_ab388efb50a8d62df56aa2bcc116a953d}{help} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{com_handler_8c_afe28183461aff181386fd07baf93bf6d}{shutdown} (char $\ast$$\ast$args, int num\+Args)
+\item 
+void \hyperlink{com_handler_8c_a29b919eb7d98b3fc272d7c084437d1ef}{setup\+Commands} ()
+\item 
+void \hyperlink{com_handler_8c_ae3c8ec1adeb87234023d4b93112397e2}{init\+Command\+Handler} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{com_handler_8c_a1b2179c5a7470316adbffc1f927fd3a2}{continue\+Handle} = 1
+\item 
+char \hyperlink{com_handler_8c_ad5e2d3a85512c52e869f6ad9a4c2808e}{buffer} \mbox{[}256\mbox{]}
+\item 
+\hyperlink{structfunction_def}{function\+Def} \hyperlink{com_handler_8c_a8470eaa69830a9d14dc06380c66cc647}{function\+Defs} \mbox{[}256\mbox{]}
+\item 
+int \hyperlink{com_handler_8c_a85ea1d3963c62a47df936444b05bce6e}{function\+Insert\+Point} = 0
+\item 
+char \hyperlink{com_handler_8c_aa1828754322d7607f8c9f9abbbbd7861}{com\+History} \mbox{[}10\mbox{]}\mbox{[}256\mbox{]}
+\item 
+int \hyperlink{com_handler_8c_acbdaa914326c2699c401993dc52ef419}{com\+History\+Pos} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!add\+Com\+History@{add\+Com\+History}}
+\index{add\+Com\+History@{add\+Com\+History}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{add\+Com\+History(char $\ast$new\+Com)}{addComHistory(char *newCom)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Com\+History (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{new\+Com}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_ad0ac0a9ea55a932af636e6144c66c4f3}{}\label{com_handler_8c_ad0ac0a9ea55a932af636e6144c66c4f3}
+Helper function to add a command to the command history array
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Com} & string to add to the command history \\
+\hline
+\end{DoxyParams}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!add\+Function\+Def@{add\+Function\+Def}}
+\index{add\+Function\+Def@{add\+Function\+Def}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{add\+Function\+Def(char $\ast$name, const char $\ast$help\+String, const char $\ast$(func\+Pointer)(char $\ast$$\ast$args, int num\+Args))}{addFunctionDef(char *name, const char *helpString, const char *(funcPointer)(char **args, int numArgs))}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Function\+Def (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{const char $\ast$}]{help\+String, }
+\item[{const char $\ast$}]{func\+Pointer)(char $\ast$$\ast$args, int num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_af45611c390f08b72ad7f4d38fe845bfa}{}\label{com_handler_8c_af45611c390f08b72ad7f4d38fe845bfa}
+Adds function definition struct, created from provided params to the function\+Defs array This allows the function to be called in the command handler by its name
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ string representation of the function \\
+\hline
+{\em help\+String} & -\/ const string to be displayed for help \\
+\hline
+{\em func\+Pointer} & -\/ pointer to the function, must return const char$\ast$ and take in arguments\+: char$\ast$$\ast$ args and int num\+Args \\
+\hline
+\end{DoxyParams}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!erase\+Current\+Row@{erase\+Current\+Row}}
+\index{erase\+Current\+Row@{erase\+Current\+Row}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{erase\+Current\+Row(int end\+Index, int insertion\+Index)}{eraseCurrentRow(int endIndex, int insertionIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void erase\+Current\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{end\+Index, }
+\item[{int}]{insertion\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_adf56ec7300bb290a48fa5c8773950ea2}{}\label{com_handler_8c_adf56ec7300bb290a48fa5c8773950ea2}
+Helper function to remove all printed chars on the current line of input back to the $>$$>$
+
+
+\begin{DoxyParams}{Parameters}
+{\em end\+Index} & -\/ index of last char printed \\
+\hline
+{\em insertion\+Index} & -\/ index of where insertion point should be \\
+\hline
+\end{DoxyParams}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!execute\+Command@{execute\+Command}}
+\index{execute\+Command@{execute\+Command}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{execute\+Command(char $\ast$command\+String)}{executeCommand(char *commandString)}}]{\setlength{\rightskip}{0pt plus 5cm}void execute\+Command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{command\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a0b179909cd052ce4a00df79e8a14fbd2}{}\label{com_handler_8c_a0b179909cd052ce4a00df79e8a14fbd2}
+Gets the command in the given command\+String param and executes it, printing the provided output string
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+String} & string contianing the command name and any args \\
+\hline
+\end{DoxyParams}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!get\+Com\+History@{get\+Com\+History}}
+\index{get\+Com\+History@{get\+Com\+History}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{get\+Com\+History(int is\+Prev)}{getComHistory(int isPrev)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Com\+History (
+\begin{DoxyParamCaption}
+\item[{int}]{is\+Prev}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a4621d2e1cae8afd63373d11fd4b8d86e}{}\label{com_handler_8c_a4621d2e1cae8afd63373d11fd4b8d86e}
+Helper function to get the next or previous command from the command history
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Prev} & integer denoting if to get the previous command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string of the command 
+\end{DoxyReturn}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!get\+Function\+Def@{get\+Function\+Def}}
+\index{get\+Function\+Def@{get\+Function\+Def}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{get\+Function\+Def(char $\ast$name)}{getFunctionDef(char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function\+Def} get\+Function\+Def (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a99dff4fd4af5facdfe9fe8155334c8b6}{}\label{com_handler_8c_a99dff4fd4af5facdfe9fe8155334c8b6}
+Gets the \hyperlink{structfunction_def}{function\+Def} struct corresponding to the name provided, returns a \hyperlink{structfunction_def}{function\+Def} with null func\+Pointer if none are found
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of the \hyperlink{structfunction_def}{function\+Def} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structfunction_def}{function\+Def} 
+\end{DoxyReturn}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!get\+Help\+String@{get\+Help\+String}}
+\index{get\+Help\+String@{get\+Help\+String}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{get\+Help\+String(char $\ast$name)}{getHelpString(char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\+Help\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_ae1b11eb92e3c4ef3057c1a2f60d9adcf}{}\label{com_handler_8c_ae1b11eb92e3c4ef3057c1a2f60d9adcf}
+Gets the help string from the struct for the function name provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name associated witht he struct from which to get the help string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char$\ast$ help string 
+\end{DoxyReturn}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!get\+Input@{get\+Input}}
+\index{get\+Input@{get\+Input}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{get\+Input()}{getInput()}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a0701e1cbaa274af91081cdcad3117843}{}\label{com_handler_8c_a0701e1cbaa274af91081cdcad3117843}
+Polls the input for characters and handles special key strokes such as delete, backspace, arrows, etc. and returns the input string
+
+\begin{DoxyReturn}{Returns}
+string that was input 
+\end{DoxyReturn}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!help@{help}}
+\index{help@{help}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{help(char $\ast$$\ast$args, int num\+Args)}{help(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ help (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_ab388efb50a8d62df56aa2bcc116a953d}{}\label{com_handler_8c_ab388efb50a8d62df56aa2bcc116a953d}
+Returns help for the specified commands.
+
+Usage\+: help command\+Name
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Returns the help for the help command command\+Name -\/ The name of the command to get help for
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The help string 
+\end{DoxyReturn}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!init\+Command\+Handler@{init\+Command\+Handler}}
+\index{init\+Command\+Handler@{init\+Command\+Handler}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{init\+Command\+Handler()}{initCommandHandler()}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Command\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_ae3c8ec1adeb87234023d4b93112397e2}{}\label{com_handler_8c_ae3c8ec1adeb87234023d4b93112397e2}
+Main function of the com\+Handler that initializes the command handler, continually loops taking in input commands, manages the com\+History, and executes given commands \index{com\+Handler.\+c@{com\+Handler.\+c}!print\+Start@{print\+Start}}
+\index{print\+Start@{print\+Start}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{print\+Start()}{printStart()}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a1c6d163609fc84e07bb82328327b7ccb}{}\label{com_handler_8c_a1c6d163609fc84e07bb82328327b7ccb}
+Helper function to print out the beginning line tag\+: \char`\"{}$>$$>$\char`\"{} \index{com\+Handler.\+c@{com\+Handler.\+c}!return\+To\+Insertion\+Point@{return\+To\+Insertion\+Point}}
+\index{return\+To\+Insertion\+Point@{return\+To\+Insertion\+Point}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{return\+To\+Insertion\+Point(int end\+Index, int insertion\+Index)}{returnToInsertionPoint(int endIndex, int insertionIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void return\+To\+Insertion\+Point (
+\begin{DoxyParamCaption}
+\item[{int}]{end\+Index, }
+\item[{int}]{insertion\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a097adaa24dfcbf6d84597f5e5e3aea60}{}\label{com_handler_8c_a097adaa24dfcbf6d84597f5e5e3aea60}
+Helper function to move the insertion point from the end of the line to the correct placement
+
+
+\begin{DoxyParams}{Parameters}
+{\em end\+Index} & -\/ index of last char printed \\
+\hline
+{\em insertion\+Index} & -\/ index of where insertion point should be \\
+\hline
+\end{DoxyParams}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!setup\+Commands@{setup\+Commands}}
+\index{setup\+Commands@{setup\+Commands}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{setup\+Commands()}{setupCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void setup\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_a29b919eb7d98b3fc272d7c084437d1ef}{}\label{com_handler_8c_a29b919eb7d98b3fc272d7c084437d1ef}
+Initialization function to add commands ot the function\+Defs array \index{com\+Handler.\+c@{com\+Handler.\+c}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{shutdown(char $\ast$$\ast$args, int num\+Args)}{shutdown(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ shutdown (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{com_handler_8c_afe28183461aff181386fd07baf93bf6d}{}\label{com_handler_8c_afe28183461aff181386fd07baf93bf6d}
+Shuts down the OS after asking for confirmation.
+
+Usage\+: shutdown \mbox{[}--confirm\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Displays confirmation prompt --confirm -\/ Auto-\/confirms shutdown
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if shutdown was confirmed 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!buffer@{buffer}}
+\index{buffer@{buffer}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{buffer}{buffer}}]{\setlength{\rightskip}{0pt plus 5cm}char buffer\mbox{[}256\mbox{]}}\hypertarget{com_handler_8c_ad5e2d3a85512c52e869f6ad9a4c2808e}{}\label{com_handler_8c_ad5e2d3a85512c52e869f6ad9a4c2808e}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!com\+History@{com\+History}}
+\index{com\+History@{com\+History}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{com\+History}{comHistory}}]{\setlength{\rightskip}{0pt plus 5cm}char com\+History\mbox{[}10\mbox{]}\mbox{[}256\mbox{]}}\hypertarget{com_handler_8c_aa1828754322d7607f8c9f9abbbbd7861}{}\label{com_handler_8c_aa1828754322d7607f8c9f9abbbbd7861}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!com\+History\+Pos@{com\+History\+Pos}}
+\index{com\+History\+Pos@{com\+History\+Pos}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{com\+History\+Pos}{comHistoryPos}}]{\setlength{\rightskip}{0pt plus 5cm}int com\+History\+Pos = 0}\hypertarget{com_handler_8c_acbdaa914326c2699c401993dc52ef419}{}\label{com_handler_8c_acbdaa914326c2699c401993dc52ef419}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!continue\+Handle@{continue\+Handle}}
+\index{continue\+Handle@{continue\+Handle}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{continue\+Handle}{continueHandle}}]{\setlength{\rightskip}{0pt plus 5cm}int continue\+Handle = 1}\hypertarget{com_handler_8c_a1b2179c5a7470316adbffc1f927fd3a2}{}\label{com_handler_8c_a1b2179c5a7470316adbffc1f927fd3a2}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!function\+Defs@{function\+Defs}}
+\index{function\+Defs@{function\+Defs}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{function\+Defs}{functionDefs}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function\+Def} function\+Defs\mbox{[}256\mbox{]}}\hypertarget{com_handler_8c_a8470eaa69830a9d14dc06380c66cc647}{}\label{com_handler_8c_a8470eaa69830a9d14dc06380c66cc647}
+\index{com\+Handler.\+c@{com\+Handler.\+c}!function\+Insert\+Point@{function\+Insert\+Point}}
+\index{function\+Insert\+Point@{function\+Insert\+Point}!com\+Handler.\+c@{com\+Handler.\+c}}
+\subsubsection[{\texorpdfstring{function\+Insert\+Point}{functionInsertPoint}}]{\setlength{\rightskip}{0pt plus 5cm}int function\+Insert\+Point = 0}\hypertarget{com_handler_8c_a85ea1d3963c62a47df936444b05bce6e}{}\label{com_handler_8c_a85ea1d3963c62a47df936444b05bce6e}

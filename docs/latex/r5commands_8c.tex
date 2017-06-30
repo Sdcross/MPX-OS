@@ -1,0 +1,74 @@
+\hypertarget{r5commands_8c}{}\section{modules/\+R5/commands/r5commands.c File Reference}
+\label{r5commands_8c}\index{modules/\+R5/commands/r5commands.\+c@{modules/\+R5/commands/r5commands.\+c}}
+{\ttfamily \#include $<$boolean.\+h$>$}\\*
+{\ttfamily \#include $<$core/com\+Handler.\+h$>$}\\*
+{\ttfamily \#include $<$core/help.\+h$>$}\\*
+{\ttfamily \#include $<$core/queue.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R5/commands/r5commands.\+h$>$}\\*
+{\ttfamily \#include $<$mem/memory\+Control.\+h$>$}\\*
+Include dependency graph for r5commands.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{r5commands_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{r5commands_8c_a28dbec21bd7c117daf79769ca9753d3b}{print\+Block\+Info} (\hyperlink{structcmcb}{cmcb} $\ast$block\+List)
+\item 
+void \hyperlink{r5commands_8c_a5c3c8b40491ceb7269c733bc7aa678d4}{print\+Cmcb\+Info} (\hyperlink{structcmcb}{cmcb} $\ast$block)
+\item 
+void \hyperlink{r5commands_8c_a21eac9fef5e4c61e3c5e516237dfd611}{register\+R5\+Perm\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{r5commands_8c_a2213472154067610a41f70642395892b}{show\+Memory} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{r5commands.\+c@{r5commands.\+c}!print\+Block\+Info@{print\+Block\+Info}}
+\index{print\+Block\+Info@{print\+Block\+Info}!r5commands.\+c@{r5commands.\+c}}
+\subsubsection[{\texorpdfstring{print\+Block\+Info(cmcb $\ast$block\+List)}{printBlockInfo(cmcb *blockList)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Block\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf cmcb} $\ast$}]{block\+List}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8c_a28dbec21bd7c117daf79769ca9753d3b}{}\label{r5commands_8c_a28dbec21bd7c117daf79769ca9753d3b}
+\index{r5commands.\+c@{r5commands.\+c}!print\+Cmcb\+Info@{print\+Cmcb\+Info}}
+\index{print\+Cmcb\+Info@{print\+Cmcb\+Info}!r5commands.\+c@{r5commands.\+c}}
+\subsubsection[{\texorpdfstring{print\+Cmcb\+Info(cmcb $\ast$block)}{printCmcbInfo(cmcb *block)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Cmcb\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf cmcb} $\ast$}]{block}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8c_a5c3c8b40491ceb7269c733bc7aa678d4}{}\label{r5commands_8c_a5c3c8b40491ceb7269c733bc7aa678d4}
+\index{r5commands.\+c@{r5commands.\+c}!register\+R5\+Perm\+Commands@{register\+R5\+Perm\+Commands}}
+\index{register\+R5\+Perm\+Commands@{register\+R5\+Perm\+Commands}!r5commands.\+c@{r5commands.\+c}}
+\subsubsection[{\texorpdfstring{register\+R5\+Perm\+Commands()}{registerR5PermCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R5\+Perm\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8c_a21eac9fef5e4c61e3c5e516237dfd611}{}\label{r5commands_8c_a21eac9fef5e4c61e3c5e516237dfd611}
+Registers the permanent commands in the command handler \index{r5commands.\+c@{r5commands.\+c}!show\+Memory@{show\+Memory}}
+\index{show\+Memory@{show\+Memory}!r5commands.\+c@{r5commands.\+c}}
+\subsubsection[{\texorpdfstring{show\+Memory(char $\ast$$\ast$args, int num\+Args)}{showMemory(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ show\+Memory (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{r5commands_8c_a2213472154067610a41f70642395892b}{}\label{r5commands_8c_a2213472154067610a41f70642395892b}
+Displays the following information for the specified C\+M\+CB\textquotesingle{}s\+: C\+M\+CB Type\+: Begining Memory Address\+: Block Size\+: Memory Size\+: Process Name\+:
+
+Usage\+: show\+Memory \mbox{[}--all\mbox{]} \mbox{[}--free\mbox{]} \mbox{[}--allocated\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Shows the help for this command --all -\/ Displays both free and allocated memory --free -\/ Displays free memory --allocated -\/ Displays allocated memory
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status message indicating success/failure 
+\end{DoxyReturn}

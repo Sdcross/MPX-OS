@@ -1,0 +1,147 @@
+\hypertarget{commands_8h}{}\section{include/core/commands.h File Reference}
+\label{commands_8h}\index{include/core/commands.\+h@{include/core/commands.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{commands_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{commands_8h_a52a5f8d5a6cddf91cd85fb09b8d48dce}{version} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{commands_8h_ab388efb50a8d62df56aa2bcc116a953d}{help} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{commands_8h_afe28183461aff181386fd07baf93bf6d}{shutdown} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{commands_8h_ad9c2acc4a9daa1ebf06b295a4cef9aed}{date} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{commands.\+h@{commands.\+h}!date@{date}}
+\index{date@{date}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{date(char $\ast$$\ast$args, int num\+Args)}{date(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ date (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_ad9c2acc4a9daa1ebf06b295a4cef9aed}{}\label{commands_8h_ad9c2acc4a9daa1ebf06b295a4cef9aed}
+Returns the current date/time in I\+S\+O-\/8601 format. Improperly specified date/times are ignored.
+
+Usage\+: date \mbox{[}--date\mbox{]} \mbox{[}--time\mbox{]} \mbox{[}--setdate yyyy-\/\+M\+M-\/dd\mbox{]} \mbox{[}--settime hh\+:mm\+:ss\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Return the date and time --date -\/ Return the date --time -\/ Return the time --setdate -\/ Sets the date to the specified date (returns the new date/time) --settime -\/ Sets the time to the specified time (returns the new date/time)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The I\+S\+O-\/8601 formatted date
+\end{DoxyReturn}
+Returns the current date/time in I\+S\+O-\/8601 format. Improperly specified date/times are ignored.
+
+Usage\+: date \mbox{[}--date\mbox{]} \mbox{[}--time\mbox{]} \mbox{[}--setdate yyyy-\/\+M\+M-\/dd\mbox{]} \mbox{[}--settime hh\+:mm\+:ss\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Return the date and time --date -\/ Return the date --time -\/ Return the time --setdate -\/ Sets the date to the specified date (returns the new date) --settime -\/ Sets the time to the specified time (returns the new time)
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The I\+S\+O-\/8601 formatted date 
+\end{DoxyReturn}
+\index{commands.\+h@{commands.\+h}!help@{help}}
+\index{help@{help}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{help(char $\ast$$\ast$args, int num\+Args)}{help(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ help (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_ab388efb50a8d62df56aa2bcc116a953d}{}\label{commands_8h_ab388efb50a8d62df56aa2bcc116a953d}
+Returns help for the specified commands.
+
+Usage\+: help command\+Name
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Returns the help for the help command command\+Name -\/ The name of the command to get help for
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The help string 
+\end{DoxyReturn}
+\index{commands.\+h@{commands.\+h}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{shutdown(char $\ast$$\ast$args, int num\+Args)}{shutdown(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ shutdown (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_afe28183461aff181386fd07baf93bf6d}{}\label{commands_8h_afe28183461aff181386fd07baf93bf6d}
+Shuts down the OS after asking for confirmation.
+
+Usage\+: shutdown \mbox{[}--confirm\mbox{]}
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Displays confirmation prompt --confirm -\/ Auto-\/confirms shutdown
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if shutdown was confirmed 
+\end{DoxyReturn}
+\index{commands.\+h@{commands.\+h}!version@{version}}
+\index{version@{version}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{version(char $\ast$$\ast$args, int num\+Args)}{version(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ version (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_a52a5f8d5a6cddf91cd85fb09b8d48dce}{}\label{commands_8h_a52a5f8d5a6cddf91cd85fb09b8d48dce}
+Returns the current version of the OS.
+
+Usage\+: version
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Returns the version
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+{\em num\+Args} & The number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The version of the OS.
+\end{DoxyReturn}
+Returns the current version of the OS.
+
+Usage\+: version
+
+Args\+: \mbox{[}no args\mbox{]} -\/ Returns the version
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The version of the OS. 
+\end{DoxyReturn}

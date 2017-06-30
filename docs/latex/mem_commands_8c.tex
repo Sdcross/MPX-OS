@@ -1,0 +1,95 @@
+\hypertarget{mem_commands_8c}{}\section{modules/\+R5/mem\+Commands.c File Reference}
+\label{mem_commands_8c}\index{modules/\+R5/mem\+Commands.\+c@{modules/\+R5/mem\+Commands.\+c}}
+{\ttfamily \#include $<$mem/memory\+Control.\+h$>$}\\*
+{\ttfamily \#include $<$boolean.\+h$>$}\\*
+{\ttfamily \#include $<$core/com\+Handler.\+h$>$}\\*
+{\ttfamily \#include $<$core/help.\+h$>$}\\*
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R5/mem\+Commands.\+h$>$}\\*
+{\ttfamily \#include $<$modules/\+R5/help.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+Include dependency graph for mem\+Commands.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mem_commands_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mem_commands_8c_a7ac22a33e0c40829431c45c393ef3ece}{register\+R5\+Temp\+Commands} ()
+\item 
+const char $\ast$ \hyperlink{mem_commands_8c_a26a3d6f0c06211cf1fdb0d69febb0624}{init\+Heap} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{mem_commands_8c_a8c34ba132332867bae929ac6bce37cc7}{allocate\+Mem} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{mem_commands_8c_a5cb6fcfaf13055b8a30f1b4def59699c}{free\+Memory} (char $\ast$$\ast$args, int num\+Args)
+\item 
+const char $\ast$ \hyperlink{mem_commands_8c_afa60e4452b25cba25054ba9319184a8c}{is\+Empty\+Com} (char $\ast$$\ast$args, int num\+Args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mem\+Commands.\+c@{mem\+Commands.\+c}!allocate\+Mem@{allocate\+Mem}}
+\index{allocate\+Mem@{allocate\+Mem}!mem\+Commands.\+c@{mem\+Commands.\+c}}
+\subsubsection[{\texorpdfstring{allocate\+Mem(char $\ast$$\ast$args, int num\+Args)}{allocateMem(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ allocate\+Mem (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{mem_commands_8c_a8c34ba132332867bae929ac6bce37cc7}{}\label{mem_commands_8c_a8c34ba132332867bae929ac6bce37cc7}
+Allocates a memory block if enough memory is available
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of memory to allocate in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the me 
+\end{DoxyReturn}
+\index{mem\+Commands.\+c@{mem\+Commands.\+c}!free\+Memory@{free\+Memory}}
+\index{free\+Memory@{free\+Memory}!mem\+Commands.\+c@{mem\+Commands.\+c}}
+\subsubsection[{\texorpdfstring{free\+Memory(char $\ast$$\ast$args, int num\+Args)}{freeMemory(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ free\+Memory (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{mem_commands_8c_a5cb6fcfaf13055b8a30f1b4def59699c}{}\label{mem_commands_8c_a5cb6fcfaf13055b8a30f1b4def59699c}
+Deallocates the block of memory at the mempointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+Pointer} & -\/ pointer to the mem block \\
+\hline
+\end{DoxyParams}
+\index{mem\+Commands.\+c@{mem\+Commands.\+c}!init\+Heap@{init\+Heap}}
+\index{init\+Heap@{init\+Heap}!mem\+Commands.\+c@{mem\+Commands.\+c}}
+\subsubsection[{\texorpdfstring{init\+Heap(char $\ast$$\ast$args, int num\+Args)}{initHeap(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ init\+Heap (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{mem_commands_8c_a26a3d6f0c06211cf1fdb0d69febb0624}{}\label{mem_commands_8c_a26a3d6f0c06211cf1fdb0d69febb0624}
+Initializes the heap to the provided size and creates a free mem block across it
+
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\index{mem\+Commands.\+c@{mem\+Commands.\+c}!is\+Empty\+Com@{is\+Empty\+Com}}
+\index{is\+Empty\+Com@{is\+Empty\+Com}!mem\+Commands.\+c@{mem\+Commands.\+c}}
+\subsubsection[{\texorpdfstring{is\+Empty\+Com(char $\ast$$\ast$args, int num\+Args)}{isEmptyCom(char **args, int numArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ is\+Empty\+Com (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{args, }
+\item[{int}]{num\+Args}
+\end{DoxyParamCaption}
+)}\hypertarget{mem_commands_8c_afa60e4452b25cba25054ba9319184a8c}{}\label{mem_commands_8c_afa60e4452b25cba25054ba9319184a8c}
+Check if memory is empty \index{mem\+Commands.\+c@{mem\+Commands.\+c}!register\+R5\+Temp\+Commands@{register\+R5\+Temp\+Commands}}
+\index{register\+R5\+Temp\+Commands@{register\+R5\+Temp\+Commands}!mem\+Commands.\+c@{mem\+Commands.\+c}}
+\subsubsection[{\texorpdfstring{register\+R5\+Temp\+Commands()}{registerR5TempCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+R5\+Temp\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{mem_commands_8c_a7ac22a33e0c40829431c45c393ef3ece}{}\label{mem_commands_8c_a7ac22a33e0c40829431c45c393ef3ece}
+Registers the permanent commands in the command handler 

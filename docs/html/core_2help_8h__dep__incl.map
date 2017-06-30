@@ -1,0 +1,9 @@
+<map id="include/core/help.h" name="include/core/help.h">
+<area shape="rect" id="node2" href="$mem_commands_8h.html" title="include/modules/R5\l/memCommands.h" alt="" coords="129,80,266,121"/>
+<area shape="rect" id="node3" href="$com_handler_8c.html" title="kernel/core/comHandler.c" alt="" coords="5,169,176,196"/>
+<area shape="rect" id="node4" href="$mem_commands_8c.html" title="modules/R5/memCommands.c" alt="" coords="201,169,404,196"/>
+<area shape="rect" id="node5" href="$commands_8c.html" title="kernel/core/commands.c" alt="" coords="341,87,507,114"/>
+<area shape="rect" id="node6" href="$perm_8c.html" title="modules/R2/commands\l/perm.c" alt="" coords="531,80,691,121"/>
+<area shape="rect" id="node7" href="$temp_8c.html" title="modules/R2/commands\l/temp.c" alt="" coords="715,80,875,121"/>
+<area shape="rect" id="node8" href="$r5commands_8c.html" title="modules/R5/commands\l/r5commands.c" alt="" coords="899,80,1059,121"/>
+</map>

@@ -1,0 +1,227 @@
+\hypertarget{mpx__supt_8c}{}\section{modules/mpx\+\_\+supt.c File Reference}
+\label{mpx__supt_8c}\index{modules/mpx\+\_\+supt.\+c@{modules/mpx\+\_\+supt.\+c}}
+{\ttfamily \#include $<$modules/mpx\+\_\+supt.\+h$>$}\\*
+{\ttfamily \#include $<$mem/heap.\+h$>$}\\*
+{\ttfamily \#include $<$core/queue.\+h$>$}\\*
+{\ttfamily \#include $<$core/pcb.\+h$>$}\\*
+Include dependency graph for mpx\+\_\+supt.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{mpx__supt_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} $\ast$ \hyperlink{mpx__supt_8c_aad8093682fcfe15c2669288f19d1c52c}{sys\+\_\+call} (\hyperlink{structcontext}{context} $\ast$registers)
+\item 
+void $\ast$ \hyperlink{mpx__supt_8c_ace6ee45c30e71865e6eb635200379db9}{memset} (void $\ast$s, int c, \hyperlink{system_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t} n)
+\item 
+int \hyperlink{mpx__supt_8c_afb6ff5e2e9bdde9d8971a497b6fe38ae}{sys\+\_\+req} (int op\+\_\+code)
+\item 
+void \hyperlink{mpx__supt_8c_a53332c6a3107a4feed6e2e79690a6ffa}{mpx\+\_\+init} (int cur\+\_\+mod)
+\item 
+void \hyperlink{mpx__supt_8c_a461113326a3bbb80ad5cca937558ca45}{sys\+\_\+set\+\_\+malloc} (void $\ast$($\ast$func)(int))
+\item 
+void \hyperlink{mpx__supt_8c_a339f3d08c4a16455cc58d20dfab4801f}{sys\+\_\+set\+\_\+free} (\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}(func)(void $\ast$))
+\item 
+void $\ast$ \hyperlink{mpx__supt_8c_a61adad2abba0a3a225c2290b3de1fe93}{sys\+\_\+alloc\+\_\+mem} (\hyperlink{system_8h_a757de76cafbcddaac0d1632902fe4cb8}{u32int} size)
+\item 
+int \hyperlink{mpx__supt_8c_a950663d39dbb073c9dff9cf3b5d3392c}{sys\+\_\+free\+\_\+mem} (void $\ast$ptr)
+\item 
+void \hyperlink{mpx__supt_8c_a83abbeda22fc5e6c2b35523b64199c1c}{idle} ()
+\item 
+const char $\ast$ \hyperlink{mpx__supt_8c_ac82ba2233eada42af3611d09821b8906}{get\+C\+O\+P\+Name} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structparam}{param} \hyperlink{mpx__supt_8c_a3b4b77494d0fad58939896ddc5290c99}{params}
+\item 
+int \hyperlink{mpx__supt_8c_a3d19c725b7f9f45e9da97a79ca6a4737}{current\+\_\+module} = -\/1
+\item 
+void $\ast$($\ast$ \hyperlink{mpx__supt_8c_a38f87164058e83a01a5498133ca14ac5}{student\+\_\+malloc} )(int)
+\item 
+\hyperlink{structpcb}{pcb} $\ast$ \hyperlink{mpx__supt_8c_a84b90790e5d7941eb2b41fbb512ebc0e}{cop} = \hyperlink{system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\item 
+\hyperlink{structcontext}{context} $\ast$ \hyperlink{mpx__supt_8c_ae51866d22794030318fe70460429d4f6}{caller\+Context}
+\item 
+\hyperlink{boolean_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$ \hyperlink{mpx__supt_8c_a65208517811ba68a09453fd7f8582e38}{student\+\_\+free} )(void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!get\+C\+O\+P\+Name@{get\+C\+O\+P\+Name}}
+\index{get\+C\+O\+P\+Name@{get\+C\+O\+P\+Name}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{get\+C\+O\+P\+Name()}{getCOPName()}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\+C\+O\+P\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_ac82ba2233eada42af3611d09821b8906}{}\label{mpx__supt_8c_ac82ba2233eada42af3611d09821b8906}
+Gets the name of the C\+OP
+
+\begin{DoxyReturn}{Returns}
+const char pointer name 
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!idle@{idle}}
+\index{idle@{idle}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{idle()}{idle()}}]{\setlength{\rightskip}{0pt plus 5cm}void idle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a83abbeda22fc5e6c2b35523b64199c1c}{}\label{mpx__supt_8c_a83abbeda22fc5e6c2b35523b64199c1c}
+The idle process \index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!memset@{memset}}
+\index{memset@{memset}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{memset(void $\ast$s, int c, size\+\_\+t n)}{memset(void *s, int c, size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ memset (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{s, }
+\item[{int}]{c, }
+\item[{{\bf size\+\_\+t}}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_ace6ee45c30e71865e6eb635200379db9}{}\label{mpx__supt_8c_ace6ee45c30e71865e6eb635200379db9}
+Set a region of memory
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Destination \\
+\hline
+{\em c} & Byte to write \\
+\hline
+{\em n} & Count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s 
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!mpx\+\_\+init@{mpx\+\_\+init}}
+\index{mpx\+\_\+init@{mpx\+\_\+init}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{mpx\+\_\+init(int cur\+\_\+mod)}{mpx_init(int cur_mod)}}]{\setlength{\rightskip}{0pt plus 5cm}void mpx\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{cur\+\_\+mod}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a53332c6a3107a4feed6e2e79690a6ffa}{}\label{mpx__supt_8c_a53332c6a3107a4feed6e2e79690a6ffa}
+Initialize M\+PX support software
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+\_\+mod} & (symbolic constants M\+O\+D\+U\+L\+E\+\_\+\+R1, M\+O\+D\+U\+L\+E\+\_\+\+R2, etc) \\
+\hline
+\end{DoxyParams}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+alloc\+\_\+mem@{sys\+\_\+alloc\+\_\+mem}}
+\index{sys\+\_\+alloc\+\_\+mem@{sys\+\_\+alloc\+\_\+mem}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+alloc\+\_\+mem(u32int size)}{sys_alloc_mem(u32int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ sys\+\_\+alloc\+\_\+mem (
+\begin{DoxyParamCaption}
+\item[{{\bf u32int}}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a61adad2abba0a3a225c2290b3de1fe93}{}\label{mpx__supt_8c_a61adad2abba0a3a225c2290b3de1fe93}
+Allocates a block of memory (similar to malloc)
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Number of bytes to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The allocated memory 
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+call@{sys\+\_\+call}}
+\index{sys\+\_\+call@{sys\+\_\+call}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+call(context $\ast$registers)}{sys_call(context *registers)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32int}$\ast$ sys\+\_\+call (
+\begin{DoxyParamCaption}
+\item[{{\bf context} $\ast$}]{registers}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_aad8093682fcfe15c2669288f19d1c52c}{}\label{mpx__supt_8c_aad8093682fcfe15c2669288f19d1c52c}
+Changes the currently running process to that of the next ready process
+
+
+\begin{DoxyParams}{Parameters}
+{\em registers} & -\/ copy of register values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+u32int position of stack\+Top 
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+free\+\_\+mem@{sys\+\_\+free\+\_\+mem}}
+\index{sys\+\_\+free\+\_\+mem@{sys\+\_\+free\+\_\+mem}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+free\+\_\+mem(void $\ast$ptr)}{sys_free_mem(void *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}int sys\+\_\+free\+\_\+mem (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a950663d39dbb073c9dff9cf3b5d3392c}{}\label{mpx__supt_8c_a950663d39dbb073c9dff9cf3b5d3392c}
+Frees memory
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer to the block of memory to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+req@{sys\+\_\+req}}
+\index{sys\+\_\+req@{sys\+\_\+req}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+req(int op\+\_\+code)}{sys_req(int op_code)}}]{\setlength{\rightskip}{0pt plus 5cm}int sys\+\_\+req (
+\begin{DoxyParamCaption}
+\item[{int}]{op\+\_\+code}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_afb6ff5e2e9bdde9d8971a497b6fe38ae}{}\label{mpx__supt_8c_afb6ff5e2e9bdde9d8971a497b6fe38ae}
+Generates interrupt 60H
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+code} & (I\+D\+LE) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+set\+\_\+free@{sys\+\_\+set\+\_\+free}}
+\index{sys\+\_\+set\+\_\+free@{sys\+\_\+set\+\_\+free}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+set\+\_\+free(boolean(func)(void $\ast$))}{sys_set_free(boolean(func)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}void sys\+\_\+set\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}(func)(void $\ast$)}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a339f3d08c4a16455cc58d20dfab4801f}{}\label{mpx__supt_8c_a339f3d08c4a16455cc58d20dfab4801f}
+Sets the memory free function for sys\+\_\+free\+\_\+mem
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function pointer to the memory free-\/er \\
+\hline
+\end{DoxyParams}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!sys\+\_\+set\+\_\+malloc@{sys\+\_\+set\+\_\+malloc}}
+\index{sys\+\_\+set\+\_\+malloc@{sys\+\_\+set\+\_\+malloc}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{sys\+\_\+set\+\_\+malloc(void $\ast$($\ast$func)(int))}{sys_set_malloc(void *(*func)(int))}}]{\setlength{\rightskip}{0pt plus 5cm}void sys\+\_\+set\+\_\+malloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$($\ast$)(int)}]{func}
+\end{DoxyParamCaption}
+)}\hypertarget{mpx__supt_8c_a461113326a3bbb80ad5cca937558ca45}{}\label{mpx__supt_8c_a461113326a3bbb80ad5cca937558ca45}
+Sets the memory allocation function for sys\+\_\+alloc\+\_\+mem
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function pointer to the memory allocator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!caller\+Context@{caller\+Context}}
+\index{caller\+Context@{caller\+Context}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{caller\+Context}{callerContext}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf context}$\ast$ caller\+Context}\hypertarget{mpx__supt_8c_ae51866d22794030318fe70460429d4f6}{}\label{mpx__supt_8c_ae51866d22794030318fe70460429d4f6}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!cop@{cop}}
+\index{cop@{cop}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{cop}{cop}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pcb}$\ast$ cop = {\bf N\+U\+LL}}\hypertarget{mpx__supt_8c_a84b90790e5d7941eb2b41fbb512ebc0e}{}\label{mpx__supt_8c_a84b90790e5d7941eb2b41fbb512ebc0e}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!current\+\_\+module@{current\+\_\+module}}
+\index{current\+\_\+module@{current\+\_\+module}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{current\+\_\+module}{current_module}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+\_\+module = -\/1}\hypertarget{mpx__supt_8c_a3d19c725b7f9f45e9da97a79ca6a4737}{}\label{mpx__supt_8c_a3d19c725b7f9f45e9da97a79ca6a4737}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!params@{params}}
+\index{params@{params}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{params}{params}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf param} params}\hypertarget{mpx__supt_8c_a3b4b77494d0fad58939896ddc5290c99}{}\label{mpx__supt_8c_a3b4b77494d0fad58939896ddc5290c99}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!student\+\_\+free@{student\+\_\+free}}
+\index{student\+\_\+free@{student\+\_\+free}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{student\+\_\+free}{student_free}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean}($\ast$ student\+\_\+free) (void $\ast$)}\hypertarget{mpx__supt_8c_a65208517811ba68a09453fd7f8582e38}{}\label{mpx__supt_8c_a65208517811ba68a09453fd7f8582e38}
+\index{mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}!student\+\_\+malloc@{student\+\_\+malloc}}
+\index{student\+\_\+malloc@{student\+\_\+malloc}!mpx\+\_\+supt.\+c@{mpx\+\_\+supt.\+c}}
+\subsubsection[{\texorpdfstring{student\+\_\+malloc}{student_malloc}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$($\ast$ student\+\_\+malloc) (int)}\hypertarget{mpx__supt_8c_a38f87164058e83a01a5498133ca14ac5}{}\label{mpx__supt_8c_a38f87164058e83a01a5498133ca14ac5}
